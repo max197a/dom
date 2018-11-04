@@ -27,6 +27,7 @@ $(document).ready(function() {
     initMasks();
     initSelectric();
     initValidations();
+    initSlider();
   }
 
   // this is a master function which should have all functionality
@@ -89,6 +90,94 @@ $(document).ready(function() {
     TweenLite.to(window, 1, {
       scrollTo: targetScroll,
       ease: easingSwing
+    });
+  }
+
+  ////////////////////
+  // SLIDERS
+  ////////////////////
+
+  function personalInfoSliderInit() {
+    if ($(document).width() > 768) {
+      if ($("[js-advantages-slider]").hasClass("slick-initialized"))
+        $("[js-advantages-slider]").slick("unslick");
+    } else {
+      if (!$("[js-advantages-slider]").hasClass("slick-initialized")) {
+        $("[js-advantages-slider]").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true
+        });
+      }
+    }
+  }
+
+  personalInfoSliderInit();
+
+  $(window).resize(function() {
+    personalInfoSliderInit();
+  });
+
+  function stepSlideInit() {
+    if ($(document).width() > 768) {
+      if ($("[js-steps-slider]").hasClass("slick-initialized"))
+        $("[js-steps-slider]").slick("unslick");
+    } else {
+      if (!$("[js-steps-slider]").hasClass("slick-initialized")) {
+        $("[js-steps-slider]").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          loop: true,
+          infinite: true
+        });
+      }
+    }
+  }
+
+  stepSlideInit();
+
+  $(window).resize(function() {
+    stepSlideInit();
+  });
+
+  function initSlider() {
+    $("[js-awards-slider]").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      loop: false,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 550,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
     });
   }
 

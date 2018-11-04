@@ -1,0 +1,141 @@
+.price
+  max-width: 1920px
+  margin: 0 auto
+  &__grid
+    display: flex
+    width: 100%
+    align-items: center
+    justify-content: space-between
+    max-width: 100%
+    margin: 0 auto
+    flex: 1 0
+  &__left
+    min-width: 495px
+    padding-left: 40px
+    width: 55%
+    padding-top: 75px
+    padding-bottom: 65px
+  &__left-container
+    margin-left: auto
+    margin-right: 12.5%
+  &__title
+    font-size: 60px
+    color: $fontColor
+    line-height: 1
+    font-family: $medium
+    max-width: 640px
+    width: 100%
+    margin-left: auto
+  &__desc
+    font-size: 32px
+    color: $fontColor
+    margin: 32px 0 32px auto
+    max-width: 640px
+    width: 100%
+    // margin-left: auto
+    font-family: $regular
+  &__info
+    font-size: 16px
+    color: $fontColor
+    line-height: 1.95
+    padding-right: 50px
+    margin-left: auto
+    max-width: 640px
+    width: 100%
+    font-family: $regular
+  &__right
+    max-width: 854px
+    width: 44.479166666666667%
+  &__image
+    width: 100%
+    img
+      width: auto
+      height: 100%
+      margin-bottom: -5px
+  .btn
+    display: flex
+    align-items: center
+    justify-content: space-around
+    max-width: 400px
+    margin-left: auto
+    margin-top: 34px
+    img
+      height: 40px
+      width: auto
+      margin-right: 15px
+    span
+      font-size: 20px
+    
++r($desktop1068)
+  .price
+    &__left
+      min-width: 310px
+      width: 39%
+    &__right
+      width: 61%
+      overflow: hidden
+    &__image
+      display: flex
+      justify-content: flex-end
+    &__left-container
+      margin-right: 50px
+    &__title
+      margin-left: 0
+      font-size: 36px
+      max-width: 400px
+    &__desc
+      font-size: 20px
+      max-width: 400px
+      margin-left: 0
+    &__info
+      margin-left: 0
+      max-width: 400px
+      font-size: 14px
+      padding-right: 0
+    .btn
+      img
+        height: 35px
+      span
+        font-size: 18px
+
++r($tablet)
+  .price
+    max-width: 100%
+    &__grid
+      flex-direction: column-reverse
+    &__right
+      width: 100%
+      max-width: 100%
+    &__image
+      display: block
+      img
+        width: 100%
+        height: auto
+    &__left
+      width: 100%
+      padding: 25px 20px 48px
+    &__left-container
+      margin-right: 0
+      display: flex
+      flex-direction: column
+    &__title
+      font-size: 26px
+      order: -3
+    &__desc
+      margin: 11px 0
+      font-size: 14px
+      order: -2
+    .btn
+      order: -1
+      padding: 15px
+      max-width: 450px
+      margin-left: 0
+      margin-top: 12px
+      justify-content: center
+      img
+        height: 25px
+      span
+        font-size: 14px
+    &__info
+      margin-top: 12px
+      line-height: 1.5

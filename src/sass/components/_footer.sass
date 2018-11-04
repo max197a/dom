@@ -1,3 +1,107 @@
 // FOOTER
 .footer
-  
+  padding: 70px 0
+  background: #f0f0f0
+  overflow: hidden
+  .container
+    max-width: 1070px
+  &__wrapper
+    display: flex
+    // align-items: center
+    justify-content: space-between
+  &__left
+    width: 47%
+    max-width: 300px
+    p
+      font-size: 13px
+      font-family: $regular
+      line-height: 1.2
+      color: $fontColor
+      margin: 28px 0 7px
+    
+    a
+      &:hover
+        span
+          border-color: transparent
+      span
+        display: inline
+        border-bottom: 1px solid $fontColor
+        transition: all $transitionSpeed $ease
+        font-size: 13px
+
+  &__select
+    max-width: 300px
+
+  &__right
+    max-width: 250px
+    width: 47%
+    margin-left: auto
+    // margin-right: -20px
+    p
+      font-size: 13px
+      color: $fontColor
+      margin-top: 12px
+      letter-spacing: 0.5px
+
+  &__logo
+    width: 139px
+    height: 82px
+    // margin-top: -104px
+    margin-top: -71px
+    img
+      width: 139px
+      height: 82px
+  &__phone
+    font-size: 24px
+    margin-top: 24px
+    display: inline-block
+    letter-spacing: 0.7px
+  &__map
+    margin-top: 8px
+    display: inline-block
+    span
+      display: inline
+      border-bottom: 1px solid $fontColor
+      transition: all $transitionSpeed $ease
+      font-size: 13px
+      color: $fontColor
+    &:hover
+      span
+        border-color: transparent
+  &__minisol
+    display: none
+
++r($tablet)
+  .footer
+    padding-bottom: 23px
+    &__wrapper
+      flex-wrap: wrap
+    &__left
+      width: 100%
+      max-width: 100%
+      order: 2
+    &__right
+      width: 100%
+      max-width: 100%
+      order: -1
+      p
+        margin-top: 23px
+    &__logo
+      width: 121px
+      height: auto
+      img
+        width: 127px
+        height: auto
+    &__phone
+      margin-top: 9px
+    &__map
+      margin-top: 6px
+    &__left
+      margin-top: 32px
+      a
+        span
+          font-size: 12px
+    &__minisol
+      display: inline-block
+      font-size: 13px
+      margin-top: 27px

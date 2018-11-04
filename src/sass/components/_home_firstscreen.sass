@@ -8,65 +8,47 @@
   display: flex
   align-items: center
   justify-content: flex-start
+  position: relative
+  overflow: hidden
   .container
-    max-width: 1436px
-  h1
-    margin: 0
-    font-size: 134px;
-    letter-spacing: -8.5px
-    line-height: 120px
-    color: #fff
-    text-transform: uppercase
-    max-width: 1000px
-    font-family: $extrabold
-    // margin-bottom: -24px
-  p
-    margin-top: 28px
-    font-size: 45px
-    line-height: 53px
-    padding-left: 10px
-    max-width: 740px
-    color: #fff
-    font-family: $extrabold
+    max-width: 1532px
 
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi)
-  .firstscreen
-    background: url(../img/bg-main@2x.jpg) center bottom no-repeat
-    background-size: cover
-
-+r($wide)
-  .firstscreen
-    // padding: 160px 0 140px
-    h1
-      font-size: 104px
-      line-height: 90px
-      letter-spacing: -5px
-      max-width: 800px
-
-+r($desktop1068)
-  .firstscreen
-    h1
-      font-size: 90px
-      line-height: 80px
-      letter-spacing: -4px
-      max-width: 700px
-    p
-      font-size: 36px
-      line-height: 42px
-      max-width: 600px
-
+  .btn
+    max-width: 374px
+    width: 100%
+    margin-top: 43px
+  &__content
+    max-width: 576px
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
+    align-items: flex-end
+    img
+      width: 100%
+      max-width: 576px
+  &__pattern
+    max-width: 726px
+    width: 33%
+    height: auto
+    position: absolute
+    bottom: -180px
+    left: -250px
+  
 +r($tablet)
   .firstscreen
-    // padding: 141px 0 149px
-    h1
-      font-size: 40px
-      line-height: 41px
-      letter-spacing: -2.54px
-      max-width: 280px
-    p
-      margin-top: 2px
-      font-size: 16px
-      line-height: 19px
-      max-width: 270px
-      padding-left: 0
+    min-height: 610px
+    align-items: flex-start
+    padding: 85px 0
+    &__content
+      padding: 0 10px
+      max-width: 400px
+    .btn
+      font-size: 12px
+      padding: 10px 16px
+      width: auto
+      margin-right: 25px
+      margin-top: 18px
+    &__pattern
+      left: -350px
+      bottom: -110px
+      width: 150%

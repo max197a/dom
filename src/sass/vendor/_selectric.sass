@@ -12,7 +12,7 @@
 .selectric
   // border: 1px solid #DDD
   // border-radius: 0px
-  background: #252525
+  background: #fff
   position: relative
   overflow: hidden
   .label
@@ -21,12 +21,11 @@
     overflow: hidden
     text-overflow: ellipsis
     margin: 0 38px 0 10px
-    font-size: 15px
+    font-size: 14px
     line-height: 1
-    font-family: $extrabold
-    color: #fff
-    padding: 22px 10px 23px
-    text-transform: uppercase
+    font-family: $regular
+    color: #fontColor
+    padding: 16px 10px 16px
     -webkit-user-select: none
     -moz-user-select: none
     -ms-user-select: none
@@ -34,8 +33,8 @@
   .button
     display: block
     position: absolute
-    right: 17px
-    top: 21px
+    right: 18px
+    top: 14px
     width: 15px
     height: 15px
     background: url(../../img/arrow-down.svg) center center no-repeat
@@ -143,15 +142,14 @@
     list-style: none
     padding: 0
     margin: 0
-    font-size: 21px
+    font-size: 14px
     line-height: 1.4
     min-height: 20px
     display: block
     padding: 10px 20px
-    color: #252525
+    color: $fontColor
     cursor: pointer
     font-family: $regular
-    border-bottom: 1px solid #979797
     &.selected
       background: #E0E0E0
       color: #444
@@ -159,7 +157,7 @@
       background: #D0D0D0
       color: #444
     &:hover
-      background: #FF3B00
+      background: $hoverRed
       color: #fff
   .disabled
     filter: alpha(opacity = 50)

@@ -5,10 +5,229 @@ extends shared/_layout
 block content
 
   // BEGIN SECTION :: firstscreen
-  section(data-section='0')
+  section
     .firstscreen
+      img.firstscreen__pattern(src="img/pattern.png", alt="")
       .container
-        h1(data-aos='fade-up') The First Digital Party Logistics Provider
-        p(data-aos='fade-up') SaaS driven business delivered to you by the team of logistics experts
+        .firstscreen__content
+          img(src="img/image-1.png", alt="" data-aos="fade-up")
+          a.btn(href="#" data-aos="fade-up") рассчитать стоимость
   
   // END SECTION :: firstscreen
+
+  // BEGIN SECTION :: dom
+  section.dom
+    img.dom__pattern(src="img/pattern-2.png", alt="")
+    .container
+      .dom__grid
+        .dom__left(data-aos="fade-up")
+          p.dom__title ДОМ ТЕХНОНИКОЛЬ -
+          p.dom__info Сумма лучших  строительных материалов компании ТЕХНОНИКОЛЬ, самые эффективные среди канадских и скандинавских технологий, и знания ведущих российский инженеров. 
+          p.dom__info Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+          .dom__formula(data-aos="fade-up")
+            img(src="img/formula.png", alt="")
+        .dom__right(data-aos="fade-up")
+          .dom__image
+            img(src="img/logo.svg", alt="")
+  // END SECTION :: dom
+
+
+  // BEGIN SECTION :: advantages
+  section.advantages
+    .container
+      p.advantages__title(data-aos="fade-up") Преимущества
+      .advantages__carousel-container(data-aos="fade-up")
+        .advantages__carousel(js-advantages-slider)
+          .advantages__item
+            .advantages__head
+              .advantages__image
+                .advantages__image-container
+                  img(src="img/icon-1.svg", alt="")
+              p.advantages__head-info Технология и стандарты
+            .advantages__right
+              p.advantages__head-info Технология и стандарты
+              p.advantages__info Основанные на лучших строительных практиках северных стран мира, стандарты ДОМА ТЕХНОНИКОЛЬ разрабатывались специалистами Канадской Ассоциации каркасного домостроения и ведущими инженерами российских домостроительных комбинатов, при участии инженеров Института пассивного дома, которые сделали дом энергоэффективным.
+
+          .advantages__item
+            .advantages__head
+              .advantages__image
+                .advantages__image-container
+                  img(src="img/icon-2.svg", alt="")
+              p.advantages__head-info Качественные материалы
+            .advantages__right
+              p.advantages__head-info Качественные материалы
+              p.advantages__info ТЕХНОНИКОЛЬ является одним из крупнейших международных производителей надежных и эффективных строительных материалов. Компания предлагает рынку новейшие технологии, сочетающие в себе мировой опыт и разработки собственных Научных центров.  Именно для ДОМА ТЕХНОНИКОЛЬ был создан сбалансированный набор строительных материалов для комплектации домов «под ключ».
+
+          .advantages__item
+            .advantages__head
+              .advantages__image
+                .advantages__image-container
+                  img(src="img/icon-3.svg", alt="")
+              p.advantages__head-info до 70% экономия на отоплении и эксплуатации
+            .advantages__right
+              p.advantages__head-info до 70% экономия на отоплении и эксплуатации
+              p.advantages__info Смета фиксируется при подписании договора и остается неизменной до окончания строительства. А применение энергоэффективных технологий позволяет до 70% снизить затраты на отопление при эксплуатации.
+
+          .advantages__item
+            .advantages__head
+              .advantages__image
+                .advantages__image-container
+                  img(src="img/icon-4.svg", alt="")
+              p.advantages__head-info Готовый тёплый дом за 3 месяца
+            .advantages__right
+              p.advantages__head-info Готовый тёплый дом за 3 месяца
+              p.advantages__info Четкое следование разработанным стандартам и привлечение к строительству сертифицированных подрядчиков существенно снижает риск ошибки, благодаря чему повышается качество и оптимизируется время выполнения работ. К тому же, каркасный дом не требует усадки и жить в нем можно сразу по окончанию строительства.
+
+  // END SECTION :: advantages
+
+  // BEGIN SECTION :: energy
+  section.energy
+    .container
+      .energy__grid
+        .energy__left(data-aos="fade-up")
+          p Энергоэффективный дом
+          p
+            span от 25 000 р/м
+              sup 2
+        .energy__right(data-aos="fade-up" data-aos-delay="150")
+          p Благодаря оптимизации бизнес-процессов вы экономите за счет:
+          .energy__list
+            p оптимизации выработки бригады;
+            p готовой проектной документации; 
+            p автоматизации документооборота;
+            p прямой поставке материалов от  производителя.
+            
+  // END SECTION :: energy
+
+  // BEGIN SECTION :: price
+  section.price
+    .price__grid
+      .price__left(data-aos="fade-up")
+        .price__left-container
+          p.price__title Узнайте стоимость 
+            br
+            | строительства дома 
+          p.price__desc прямо сейчас на нашем калькуляторе
+          p.price__info Технология строительства ДОМ ТЕХНОНИКОЛЬ позволяет построить и затейливый разноуровневый коттедж, облицованный кирпичом, и «домик в деревне», отделанный блокхаусом, и ультрамодный дом в экостиле с панорамными окнами любой планировки.
+          a.btn(href="#")
+            img(src="img/calculator.svg", alt="")
+            span рассчитать стоимость
+      .price__right(data-aos="fade-up" data-aos-delay="150")
+        .price__image
+          img(src="img/price.jpg", alt="")
+    
+  // END SECTION :: price
+
+  // BEGIN SECTION :: steps
+  section.steps
+    .container
+      .steps__head(data-aos="fade-up")
+        .steps__left
+          p.left это
+          p.middle просто
+          p.right за
+        .steps__right
+          .steps__head-image
+            img(src="img/steps.png", alt="")
+      .steps__slider-container(data-aos="fade-up")
+        .steps__slider(js-steps-slider)
+          .steps__item
+            .steps__grid
+              .steps__item-info
+                .steps__number-head
+                  p.steps__number 1
+                  p.steps__title Выбор проекта
+                p.steps__text 
+                  span Индивидуальный
+                  | Вы можете предоставить нам собственный проект или эскиз, либо мы можем разработать проект дома по вашим пожеланиям.
+                p.steps__text 
+                  span готовый
+                  | Посмотрите наши проекты, разработанные с учётом технологий ДОМ ТЕХНОНИКОЛЬ.
+              .steps__item-image
+                .steps__image
+                  img(src="img/step-1.png", alt="")   
+          .steps__item
+            .steps__grid.steps__grid--reverse
+              .steps__item-info
+                .steps__number-head
+                  p.steps__number 2
+                  p.steps__title Выбор подрядчика
+                p.steps__text Мы предоставляем контакты проверенных подрядных организаций и частных бригад прошедших обучение стандартам ДОМ ТЕХНОНИКОЛЬ.
+              .steps__item-image
+                .steps__image
+                  img(src="img/step-2.png", alt="")
+          .steps__item
+            .steps__grid
+              .steps__item-info
+                .steps__number-head
+                  p.steps__number 3
+                  p.steps__title Утверждение сметы
+                p.steps__text Подрядчик по вашему желанию скорректирует проект согласно стандартам ДОМ ТЕХНОНИКОЛЬ, чтобы подготовить подробную и главное фиксированную смету.
+              .steps__item-image
+                .steps__image
+                  img(src="img/step-3.png", alt="")
+          .steps__item
+            .steps__grid.steps__grid--reverse
+              .steps__item-info
+                .steps__number-head
+                  p.steps__number 4
+                  p.steps__title Реализация и контроль
+                p.steps__text Помогаем Заказчику следить за ходом строительства. Контролируем и обеспечиваем прозрачность процесса приёмки клиентом результатов работы — под каждый этап чёткая простая инструкция, что и по каким критериям принимать.
+              .steps__item-image
+                .steps__image
+                  img(src="img/step-4.png", alt="")
+          .steps__item
+            .steps__grid
+              .steps__item-info
+                .steps__number-head
+                  p.steps__number 5
+                  p.steps__title Сдача проекта
+                p.steps__text После того как все работы завершены подрядчик оформляет гарантию на дом.
+              .steps__item-image
+                .steps__image
+                  img(src="img/step-5.png", alt="")
+            
+  // END SECTION :: steps
+
+  // BEGIN SECTION :: awards
+  section.awards
+    .container
+      p.awards__h-title(data-aos="fade-up") Наши награды
+      .awards__slider-container(data-aos="fade-up")
+        .awards__slider(js-awards-slider)
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-1.png", alt="")
+              p.awards__title ENES-2015
+              p.awards__info Лучший малоэтажный энергоэффективный жилой дом
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-2.png", alt="")
+              p.awards__title Конкурс на лучший инновационный проект 2016
+              p.awards__info Лучший проект с применением энергоэффективных решений
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-3.png", alt="")
+              p.awards__title Конкурс "Красивые деревянные дома 2017"
+              p.awards__info Лучший архитектурный объект по итогам онлайн голосования
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-4.png", alt="")
+              p.awards__title Благодарность от World Skills (WSI)
+              p.awards__info Международная ассоциация повышение статуса и стандартов профессиональной подготовки рабочих профессий
+          .awards__item
+            .awards__item-content
+              .awards__image-container
+                .awards__image
+                  img(src="img/awards-1.png", alt="")
+              p.awards__title ENES-2015
+              p.awards__info Лучший малоэтажный энергоэффективный жилой дом
+  // END SECTION :: awards

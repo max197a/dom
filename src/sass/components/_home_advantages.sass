@@ -1,0 +1,120 @@
+.advantages
+  padding-top: 125px
+  padding-bottom: 123px
+  &__title
+    font-size: 60px
+    color: $fontColor
+    font-family: $medium
+    letter-spacing: 0.6px
+  .container
+    max-width: 1162px
+  &__carousel-container
+    padding: 18px 0 0 46px
+  &__item
+    display: flex
+    width: 100%
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 41px
+  &__head
+    flex: 0 1 110px
+    margin-right: 40px
+  &__image-container
+    width: 110px
+    height: 110px
+    border-radius: 50%
+    background: $hoverRed
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    img
+      width: 55%
+      height: auto
+  &__right
+    width: 85%
+    padding-top: 4px
+  &__head-info
+    font-size: 24px
+    text-transform: uppercase
+    font-family: $extrabold
+    color: $fontColor
+  &__info
+    text-align: justify
+    font-size: 16px
+    line-height: 1.5
+    font-family: $light
+    margin-top: 10px
+    letter-spacing: 0.2px
+    max-width: 840px
+  &__head
+    .advantages__head-info
+      display: none
+
++r($desktop)
+  .advantages
+    &__carousel-container
+      padding-left: 0
+
++r($tablet)
+  .advantages
+    padding: 30px 0 50px
+    background: #e7e1e1
+    &__title
+      font-size: 32px
+      width: 100%
+      text-align: center
+    &__head
+      display: flex
+      align-items: center
+      width: 100%
+      flex: 0 1
+      .advantages__head-info
+        display: block
+    &__head-info
+      font-size: 20px
+    &__image-container
+      min-width: 67px
+      min-height: 67px
+      width: 67px
+      height: 67px
+      flex: 1 0 67px
+      margin-right: 20px
+    &__item
+      flex-wrap: wrap
+      margin-top: 10px
+    &__right
+      .advantages__head-info
+        display: none
+    &__right
+      width: 100%
+    &__info
+      font-size: 16px
+      margin-top: 65px
+      line-height: 1.15
+    .slick-dots
+      position: absolute
+      margin: 0 auto
+      top: 112px
+      left: 50%
+      transform: translateX(-50%)
+      line-height: 0
+      height: auto
+      font-size: 0
+      padding: 0
+      li
+        margin: 0 8px
+        &.slick-active
+          button
+            background: $hoverRed
+      button
+        font-size: 0
+        padding: 0
+        margin: 0
+        line-height: 0
+        background: #fff
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        border: none
+        transition: all $transitionSpeed $ease

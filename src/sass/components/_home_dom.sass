@@ -1,0 +1,69 @@
+.dom
+  padding-top: 125px
+  position: relative
+  overflow: hidden
+  .container
+    max-width: 1230px
+  &__pattern
+    max-width: 726px
+    width: 33%
+    height: auto
+    position: absolute
+    top: -180px
+    left: -250px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__title
+    font-family: $bold
+    font-size: 50px
+    text-transform: uppercase
+    color: $fontColor
+  &__left
+    max-width: 680px
+    width: 63%
+    img
+      width: 100%
+      height: auto
+  &__info
+    margin-top: 20px
+    line-height: 1.15
+    font-size: 24px
+    font-family: $light
+    text-align: justify
+  &__right
+    width: 33.5%
+    max-width: 390px
+    padding-top: 16px
+    img
+      width: 100%
+      height: auto
+  &__formula
+    margin-top: 79px
+    max-width: 616px
+    width: 100%
+
++r($tablet)
+  .dom
+    padding-top: 47px
+    padding-bottom: 32px
+    &__title
+      font-size: 24px
+    &__right
+      display: none
+    &__left
+      width: 100%
+      text-align: center
+    &__formula
+      margin-top: 65px
+      img
+        width: 93%
+        margin: 0 auto
+        max-width: 480px
+    &__info
+      margin-top: 20px
+      font-size: 14px
+      line-height: 1.35
+      letter-spacing: 0.1px
+    

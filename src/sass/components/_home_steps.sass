@@ -1,0 +1,216 @@
+.steps
+  background: #cbcbcb
+  padding: 100px 0 40px
+  .container
+    max-width: 1100px
+  &__head
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__right
+    max-width: 495px
+    width: 49%
+    img
+      width: 100%
+      height: auto
+  &__left
+    width: 44%
+    min-width: 420px
+    display: flex
+    align-items: center
+    flex-wrap: wrap
+    flex-direction: column
+    p
+      // width: 100%
+      display: inline-block
+      line-height: 0.7
+      font-size: 72px
+      color: #fff
+      font-family: $extrabold
+      &.left
+        margin-right: auto
+      &.middle
+        margin: 0 auto
+        font-size: 110px
+      &.right
+        margin-left: auto
+  &__slider-container
+    padding-top: 30px
+    padding-right: 70px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    &--reverse
+      flex-direction: row-reverse
+      .steps__item-image
+        max-width: 550px
+        width: 54%
+      .steps__item-info
+        width: 42%
+  &__number
+    width: 66px
+    height: 66px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 30px
+    font-family: $bold
+    margin-left: -22px
+    border-radius: 50%
+    background: $hoverRed
+    line-height: 1
+    color: #fff
+  &__item-info
+    padding-left: 14px
+  &__item
+    margin-top: 40px
+    margin-bottom: -15px
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-top: 53px
+      .steps__item-image
+        width: 53%
+    &:nth-child(2)
+      .steps__item-image
+        margin-top: -5px
+      .steps__item-info
+        padding-top: 60px
+  &__title
+    font-size: 36px
+    font-family: $medium
+    color: $fontColor
+    margin-top: 32px
+  &__text
+    font-size: 16px
+    line-height: 1.7
+    color: $fontColor
+    font-family: $regular
+    margin-top: 40px
+    span
+      text-transform: uppercase
+      font-family: $extrabold
+      display: block
+      margin-bottom: 9px
+  &__item-info
+    width: 47%
+    max-width: 430px
+  &__item-image
+    width: 51%
+    img
+      width: 100%
+      height: auto
+
++r($desktop)
+  .steps
+    &__left
+      min-width: 0
+      p
+        font-size: 60px
+        &.middle
+          font-size: 80px
+    &__item-info
+      width: 54%
+      max-width: 430px
+    &__item-image
+      width: 44%
+    &__grid
+      &--reverse
+        .steps__item-image
+          width: 44%
+        .steps__item-info
+          width: 54%
+    &__slider-container
+      padding-right: 0
+    &__grid
+      align-items: center
+    &__item
+      margin-top: 40px
+      margin-bottom: 0
+      // padding-top: 15px
+      // align-items: center
+      &:first-child
+        margin-top: 40px
+        .steps__item-info
+          padding-top: 0
+      &:last-child
+        margin-top: 40px
+        .steps__item-image
+          width: 44%
+      &:nth-child(2)
+        .steps__item-image
+          margin-top: 0
+        .steps__item-info
+          padding-top: 0
+        
+
++r($tablet)
+  .steps
+    padding: 25px 0 28px
+    &__left
+      display: none
+    &__right
+      margin: 0 auto
+      width: 90%
+      max-width: 400px
+    &__item-image
+      display: none
+    &__item-info
+      width: 100%
+      max-width: 100%
+      padding-left: 0
+    &__grid
+      &--reverse
+        .steps__item-info
+          width: 100%
+          max-width: 100%
+    &__number
+      width: 40px
+      min-width: 40px
+      max-width: 40px
+      height: 40px
+      min-height: 40px
+      max-height: 40px
+      font-size: 20px
+      margin: 5px 20px 0 5px
+    &__title
+      font-size: 24px
+      margin-top: 0
+      padding-top: 12px
+    &__text
+      font-size: 14px
+      margin-top: 20px
+      line-height: 1.5
+      span
+        margin-bottom: 5px
+    &__number-head
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+    .slick-dots
+      position: absolute
+      margin: 0 auto
+      top: -4px
+      left: 50%
+      transform: translateX(-50%)
+      line-height: 0
+      height: auto
+      font-size: 0
+      padding: 0
+      li
+        margin: 0 8px
+        &.slick-active
+          button
+            background: $hoverRed
+      button
+        font-size: 0
+        padding: 0
+        margin: 0
+        line-height: 0
+        background: #fff
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        border: none
+        transition: all $transitionSpeed $ease
