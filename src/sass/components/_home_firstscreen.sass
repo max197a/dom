@@ -17,6 +17,8 @@
     max-width: 374px
     width: 100%
     margin-top: 43px
+    position: relative
+    z-index: 2
   &__content
     max-width: 576px
     display: flex
@@ -37,9 +39,10 @@
   
 +r($tablet)
   .firstscreen
-    min-height: 610px
+    // min-height: 610px
+    min-height: 0
     align-items: flex-start
-    padding: 85px 0
+    padding: 125px 0 85px
     &__content
       padding: 0 10px
       max-width: 400px

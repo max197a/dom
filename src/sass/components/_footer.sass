@@ -95,8 +95,13 @@
       font-family: $regular
       width: auto
       display: block
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: #fff
       &.open-drop
         display: none
+      
   &__drop
     display: flex
     flex-direction: column
@@ -160,6 +165,7 @@
       margin: 20px 0 0
       a
         font-size: 16px
+        border-bottom: none
         &.open-drop
           display: inline
           margin-left: 10px
@@ -167,6 +173,7 @@
           font-size: 22px
           transition: all $transitionSpeed $ease
           line-height: 0.6
+          border-bottom: none
           &.is-open
             transform: rotate(45deg)
             margin-left: 8px

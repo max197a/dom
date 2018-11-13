@@ -261,20 +261,37 @@ $(document).ready(function() {
     $(".usa-map").addClass("is-active");
   });
 
+  // HAMBURGER TOGGLER
+  _document.on("click", "[js-hamburger]", function() {
+    $(this).toggleClass("is-active");
+    $(".header__menu").toggleClass("is-open");
+    $(".header__calc").toggleClass("is-open");
+    $("body").toggleClass("is-fixed");
+    $("html").toggleClass("is-fixed");
+  });
+
+  // _document.on("click", ".hamburger.is-active", function() {
+  //   $(this).removeClass("is-active");
+  //   $(".header__menu").removeClass("is-open");
+  //   $("body").removeClass("is-fixed");
+  //   $("html").removeClass("is-fixed");
+  //   $(".enter").removeClass("is-active");
+  // });
+
   ////////////////////
   // SHOW PASSWORD TOGGLE
   ////////////////////
 
-  _document.on("click", "[js-show-pass]", function(e) {
-    e.preventDefault();
-    $(this).toggleClass("show-pass");
-    var x = document.getElementById("l2");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
-    }
-  });
+  // _document.on("click", "[js-show-pass]", function(e) {
+  //   e.preventDefault();
+  //   $(this).toggleClass("show-pass");
+  //   var x = document.getElementById("l2");
+  //   if (x.type === "password") {
+  //     x.type = "text";
+  //   } else {
+  //     x.type = "password";
+  //   }
+  // });
 
   ////////////////////
   // SHOW PASSWORD TOGGLE
