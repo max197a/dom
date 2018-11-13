@@ -1,0 +1,241 @@
+.reviews
+  background: #f4f4f4
+  padding: 76px 0 137px
+  .container
+    max-width: 1200px
+    padding: 0 100px
+  &__title
+    font-size: 60px
+    color: $fontColor
+    line-height: 1
+    font-family: $medium
+    width: 100%
+    text-align: left
+  &__item
+    padding: 40px 30px 0
+  .slick-arrow
+    position: absolute
+    width: 80px
+    height: 80px
+    border: 1px solid #777777
+    border-radius: 50%
+    left: -75px
+    font-size: 0
+    color: transparent
+    transition: all $transitionSpeed $ease
+    opacity: 0.23
+    cursor: pointer
+    &:hover
+      opacity: 0.5
+    &:active
+      opacity: 0.75
+    &.slick-disabled
+      opacity: 0.25
+      pointer-events: none
+    &.slick-prev
+      left: -85px
+      top: 50%
+      transform: translateY(-50%)
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 18px
+        height: 18px
+        border: 5px solid #777777
+        left: 58%
+        top: 50%
+        transform: translate(-50%, -50%) rotate(135deg)
+        border-left: none
+        border-top: none
+        transition: all $transitionSpeed $ease
+    &.slick-next
+      left: auto
+      right: -85px
+      top: 50%
+      transform: translateY(-50%)
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 18px
+        height: 18px
+        border: 5px solid #777777
+        left: 45%
+        top: 50%
+        transform: translate(-50%, -50%) rotate(-45deg)
+        border-left: none
+        border-top: none
+        transition: all $transitionSpeed $ease
+  &__slider
+    margin-top: 50px
+    margin: 50px -30px 0
+    width: calc(100% + 60px)
+    // padding-top: 40px
+  &__item-container
+    border: 1px solid #bcbcbc
+    background: #e9e9e9
+    padding: 36px 49px 40px
+    position: relative
+    border-bottom: none
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: 125px
+      height: 132px
+      background: url(../img/house.svg) center top no-repeat
+      background-size: cover
+      right: 33px
+      top: -39px
+      z-index: -1
+    &:after
+      display: block
+      width: calc(100% + 2px)
+      height: 5px
+      background: #c6142c
+      position: absolute
+      display: block
+      content: ''
+      left: -1px
+      bottom: 0
+      z-index: 2
+  &__review-container
+    overflow: hidden
+  &__review
+    font-size: 16px
+    font-family: $regular
+    line-height: 1.5
+    min-height: 216px
+    max-height: 216px
+    max-width: 370px
+    -webkit-line-clamp: 9
+    -webkit-box-orient: vertical
+    text-overflow: ellipsis
+    display: block
+    display: -webkit-box
+    letter-spacing: 0.6px
+  &__info
+    display: flex
+    margin-top: 20px
+    border-top: 1px solid #bcbcbc
+    padding-top: 20px
+    align-items: flex-start
+    justify-content: flex-start
+  &__image
+    max-width: 150px
+    max-width: 150px
+    border-radius: 50%
+    overflow: hidden
+    width: 41%
+    flex: 1 0 41%
+    margin-right: 30px
+    img
+      max-width: 150px
+      width: 100%
+      max-width: 150px
+      height: 100%
+  &__right
+    width: 60%
+  &__city
+    margin-top: 18px
+    color: #353535
+    font-family: $extrabold
+    font-size: 14px
+    text-transform: uppercase
+    letter-spacing: 0.6px
+  &__name
+    margin-top: 15px
+    font-size: 14px
+    font-family: $regular
+    letter-spacing: 0.6px
+    min-height: 32px
+  &__original
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-right: -20px
+    margin-top: 15px
+    padding-left: 1px
+    img
+      height: 25px
+      width: 21px
+      width: auto
+      opacity: 0.6
+      margin-right: 10px
+    span
+      font-size: 14px
+      font-family: $regular
+      letter-spacing: 0.6px
+
+
++r($desktop1068)
+  .reviews
+    &__title
+      margin-left: 0
+      font-size: 36px
+      max-width: 400px
+
++r($desktop)
+  .reviews
+    &__item
+      padding: 40px 30px 0
+    &__slider
+      margin: 50px 0 0
+      width: 100%
+
+
++r($tablet)
+  .reviews
+    padding: 30px 0
+    .container
+      padding: 0 10px
+    &__item
+      padding: 40px 10px 0
+    &__item-container
+      padding: 20px 30px
+    &__image
+      flex: 1 0 22%
+      margin-right: 20px
+    &__right
+      width: 78%
+    &__city
+      margin-top: 0
+    &__title
+      font-size: 26px
+      text-align: center
+      margin: 0 auto
+    &__review
+      font-size: 16px
+      font-family: $regular
+      line-height: 1.5
+      min-height: 142px
+      max-height: 142px
+      max-width: 100%
+      -webkit-line-clamp: 6
+    .slick-dots
+      position: absolute
+      margin: 0 auto
+      top: -20px
+      left: 50%
+      transform: translateX(-50%)
+      line-height: 0
+      height: auto
+      font-size: 0
+      padding: 0
+      li
+        margin: 0 8px
+        &.slick-active
+          button
+            background: $hoverRed
+      button
+        font-size: 0
+        padding: 0
+        margin: 0
+        line-height: 0
+        background: #e9e9e9
+        width: 7px
+        height: 7px
+        border-radius: 50%
+        border: none
+        transition: all $transitionSpeed $ease

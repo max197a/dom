@@ -7,17 +7,17 @@ block content
   // BEGIN SECTION :: firstscreen
   section
     .firstscreen
-      img.firstscreen__pattern(src="img/pattern.png", alt="")
+      img.firstscreen__pattern(src="img/pattern-1.svg", alt="")
       .container
         .firstscreen__content
-          img(src="img/image-1.png", alt="" data-aos="fade-up")
+          img(src="img/image-1.svg", alt="" data-aos="fade-up")
           a.btn(href="#" data-aos="fade-up") рассчитать стоимость
   
   // END SECTION :: firstscreen
 
   // BEGIN SECTION :: dom
   section.dom
-    img.dom__pattern(src="img/pattern-2.png", alt="")
+    img.dom__pattern(src="img/pattern-2.svg", alt="")
     .container
       .dom__grid
         .dom__left(data-aos="fade-up")
@@ -25,7 +25,7 @@ block content
           p.dom__info Сумма лучших  строительных материалов компании ТЕХНОНИКОЛЬ, самые эффективные среди канадских и скандинавских технологий, и знания ведущих российский инженеров. 
           p.dom__info Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
           .dom__formula(data-aos="fade-up")
-            img(src="img/formula.png", alt="")
+            img(src="img/formula.svg", alt="")
         .dom__right(data-aos="fade-up")
           .dom__image
             img(src="img/logo.svg", alt="")
@@ -100,23 +100,109 @@ block content
   // END SECTION :: energy
 
   // BEGIN SECTION :: price
-  section.price
-    .price__grid
-      .price__left(data-aos="fade-up")
-        .price__left-container
-          p.price__title Узнайте стоимость 
-            br
-            | строительства дома 
-          p.price__desc прямо сейчас на нашем калькуляторе
-          p.price__info Технология строительства ДОМ ТЕХНОНИКОЛЬ позволяет построить и затейливый разноуровневый коттедж, облицованный кирпичом, и «домик в деревне», отделанный блокхаусом, и ультрамодный дом в экостиле с панорамными окнами любой планировки.
-          a.btn(href="#")
-            img(src="img/calculator.svg", alt="")
-            span рассчитать стоимость
-      .price__right(data-aos="fade-up" data-aos-delay="150")
-        .price__image
-          img(src="img/price.jpg", alt="")
-    
+  section.price__container
+    .price
+      .price__grid
+        .price__left(data-aos="fade-up")
+          .price__left-container
+            p.price__title Узнайте стоимость 
+              br
+              | строительства дома 
+            p.price__desc прямо сейчас на нашем калькуляторе
+            p.price__info Технология строительства ДОМ ТЕХНОНИКОЛЬ позволяет построить и затейливый разноуровневый коттедж, облицованный кирпичом, и «домик в деревне», отделанный блокхаусом, и ультрамодный дом в экостиле с панорамными окнами любой планировки.
+            a.btn(href="#")
+              img(src="img/calculator.svg", alt="")
+              span рассчитать стоимость
+        .price__right(data-aos="fade-up" data-aos-delay="150")
+          .price__image
+            img(src="img/price.jpg", alt="")
+      
   // END SECTION :: price
+
+  // BEGIN SECTION :: projects
+  section.projects
+    .container
+      img.projects__pattern(src="img/pattern-3.svg", alt="")
+      p.projects__title Типовые проекты
+      .projects__grid
+        .projects__item
+          .projects__slider(js-projects-slider)
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-1.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-2.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-3.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-2.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-3.jpg", alt="")
+          .projects__info
+            .projects__row
+              p.projects__name ДОМ OPEN VILLAGE
+              p.projects__kv 186 м²
+            .projects__line
+            .projects__row
+              p.projects__time 5 месяцев
+              p.projects__price от 490 000 Р
+        .projects__item
+          .projects__slider(js-projects-slider)
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-2.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-1.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-3.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-2.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-3.jpg", alt="")
+          .projects__info
+            .projects__row
+              p.projects__name первый
+              p.projects__kv 44 м²
+            .projects__line
+            .projects__row
+              p.projects__time 2 месяца
+              p.projects__price от 1 250 000 Р
+        .projects__item
+          .projects__slider(js-projects-slider)
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-3.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-1.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-2.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-1.jpg", alt="")
+            .projects__slider-item
+              .projects__image
+                img(src="img/proj-3.jpg", alt="")
+          .projects__info
+            .projects__row
+              p.projects__name уютный
+              p.projects__kv 91 м²
+            .projects__line
+            .projects__row
+              p.projects__time 2 месяца 
+              p.projects__price от 1 820 000 Р
+      .projects__button
+        a.btn(href="#") смотреть все проекты
+  // END SECTION :: projects
 
   // BEGIN SECTION :: steps
   section.steps
@@ -151,7 +237,9 @@ block content
               .steps__item-info
                 .steps__number-head
                   p.steps__number 2
-                  p.steps__title Выбор подрядчика
+                  p.steps__title Выбор  
+                    br
+                    | подрядчика
                 p.steps__text Мы предоставляем контакты проверенных подрядных организаций и частных бригад прошедших обучение стандартам ДОМ ТЕХНОНИКОЛЬ.
               .steps__item-image
                 .steps__image
@@ -188,6 +276,116 @@ block content
                   img(src="img/step-5.png", alt="")
             
   // END SECTION :: steps
+
+  // BEGIN SECTION :: want-form
+  section.want-form
+    .want-form__container
+      .container
+        p.want-form__title Хотите узнать больше об энергоэфективном
+          br
+          | проекте 
+          span
+          | ДОМ ТЕХНОНИКОЛЬ?
+        form.js-form-want(action="#")
+          .want-form__grid
+            .input-container
+              input(type="text" name="name" placeholder="Имя*")
+            .input-container
+              input(type="text" name="phone" placeholder="Телефон*")
+            .input-container
+              input(type="text" name="mail" placeholder="Электронная почта")
+            .input-container
+              input.btn(type="submit" value="хочу все знать")
+          p.want-form__personal Отправляя данную форму, я даю  
+            a(href="#")  согласие на обработку персональных данных
+          
+
+  // END SECTION :: want-form
+
+  // BEGIN SECTION :: reviews
+  section.reviews
+    .container
+      p.reviews__title Отзывы клиентов
+      .reviews__slider(js-reviews-slider)
+        .reviews__item
+          .reviews__item-container
+            .reviews__review-container
+              p.reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
+            .reviews__info
+              .reviews__image
+                img(src="img/review-1.png", alt="")
+              .reviews__right
+                p.reviews__city Москва
+                p.reviews__name Сергей Петраковский
+                a.reviews__original 
+                  img(src="img/or.svg", alt="")
+                  span Посмотреть оригинал
+        .reviews__item
+          .reviews__item-container
+            .reviews__review-container
+              p.reviews__review Огромное спасибо ребятам из ДОМ ТЕХНОНИКОЛЬ за качественную работу, отличное отношение к своей работе. Они мне строили дом в Тульской области, все сделали быстро и качественно, нареканий нет. Вот у них руки действительно растут из плечей. Ребята, удачи вам в работе!!!
+            .reviews__info
+              .reviews__image
+                img(src="img/review-2.png", alt="")
+              .reviews__right
+                p.reviews__city Тульская область
+                p.reviews__name Константин Константинопольский
+                a.reviews__original 
+                  img(src="img/or.svg", alt="")
+                  span Посмотреть оригинал
+        .reviews__item
+          .reviews__item-container
+            .reviews__review-container
+              p.reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
+            .reviews__info
+              .reviews__image
+                img(src="img/review-1.png", alt="")
+              .reviews__right
+                p.reviews__city Москва
+                p.reviews__name Сергей Петраковский
+                a.reviews__original 
+                  img(src="img/or.svg", alt="")
+                  span Посмотреть оригинал
+
+
+  // END SECTION :: reviews
+
+  // BEGIN SECTION :: blog
+  section.blog
+    .container
+      .blog__title Блог
+      .blog__slider(js-blog-slider)
+        .blog__item
+          .blog__item-container
+            .blog__image
+              img(src="img/blog-1.jpg", alt="")
+            .blog__info
+              a.blog__i-title(href="#") ТЕХНОНИКОЛЬ формирует «стандарты красоты» в частном домостроении
+              .blog__about
+                p ТЕХНОНИКОЛЬ создает импульс для развития архитектурного разнообразия в России.
+              a.btn(href="#") Читать далее
+                span
+        .blog__item
+          .blog__item-container
+            .blog__image
+              img(src="img/blog-2.jpg", alt="")
+            .blog__info
+              a.blog__i-title(href="#")  ДОМ ТЕХНОНИКОЛЬ открыл свои двери для  журналистов ДОМ ТЕХНОНИКОЛЬ открыл свои двери для  журналистов
+              .blog__about
+                p Журналисты посетили коттедж, построенный по стандартам ДОМ ТЕХНОНИКОЛЬ в деревне. Журналисты посетили коттедж, построенный по стандартам ДОМ ТЕХНОНИКОЛЬ в деревне.
+              a.btn(href="#") Читать далее
+              span
+        .blog__item
+          .blog__item-container
+            .blog__image
+              img(src="img/blog-3.jpg", alt="")
+            .blog__info
+              p.blog__i-title Формирует «стандарты красоты» в частном домостроении
+              .blog__about
+                p Российский архитектурный салон». Журналисты посетили коттедж в деревне Ходаево.
+              a.btn(href="#") Читать далее
+                span
+  // END SECTION :: blog
 
   // BEGIN SECTION :: awards
   section.awards

@@ -143,14 +143,38 @@ $(document).ready(function() {
     stepSlideInit();
   });
 
+  function blogSlideInit() {
+    if ($(document).width() > 768) {
+      if ($("[js-blog-slider]").hasClass("slick-initialized"))
+        $("[js-blog-slider]").slick("unslick");
+    } else {
+      if (!$("[js-blog-slider]").hasClass("slick-initialized")) {
+        $("[js-blog-slider]").slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          dots: true,
+          loop: true,
+          infinite: true
+        });
+      }
+    }
+  }
+
+  blogSlideInit();
+
+  $(window).resize(function() {
+    blogSlideInit();
+  });
+
   function initSlider() {
     $("[js-awards-slider]").slick({
       slidesToShow: 4,
       slidesToScroll: 1,
       arrows: true,
       dots: false,
-      loop: false,
-      infinite: false,
+      loop: true,
+      infinite: true,
       responsive: [
         {
           breakpoint: 992,
@@ -160,7 +184,7 @@ $(document).ready(function() {
           }
         },
         {
-          breakpoint: 768,
+          breakpoint: 788,
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
@@ -179,7 +203,54 @@ $(document).ready(function() {
         }
       ]
     });
+
+    $("[js-projects-slider]").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+      loop: false
+    });
+
+    $("[js-reviews-slider]").slick({
+      slidesToShow: 2,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      loop: true,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 788,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
   }
+
+  ////////////////////
+  // OPEN DROPDOWN MENUS IN FOOTER
+  ////////////////////
+
+  _document.on("click", "[js-open-drop]", function() {
+    $(this).toggleClass("is-open");
+    $(this)
+      .parents(".footer__item")
+      .find(".footer__drop")
+      .slideToggle();
+  });
 
   ////////////////////
   // CHANGE MAPS
@@ -306,6 +377,23 @@ $(document).ready(function() {
           // minlength: 6
         }
         // phone: validatePhone
+      }
+    });
+
+    $(".js-form-want").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        name: "required",
+        phone: "required",
+        mail: "required"
+      },
+      messages: {
+        name: "Заполните это поле",
+        phone: "Заполните это поле",
+        mail: "Заполните это поле"
       }
     });
   }
