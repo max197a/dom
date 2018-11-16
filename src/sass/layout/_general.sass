@@ -191,8 +191,23 @@ input
   top: 0
   left: -100%
   bottom: 0
-  z-index: 7
-  background: #252525
+  z-index: 9999
+  background: #f0f0f0
   width: 100vw
   will-change: transform
   backface-visibility: hidden
+  display: flex
+  align-items: center
+  justify-content: center
+  &:after
+    display: block
+    position: absolute
+    content: ''
+    width: 220px
+    height: 130px
+    background: url(../img/logo-footer.svg)
+    background-size: contain
+    position: absolute
+    left: 50%
+    top: 50%
+    transform: translate(-50%, -50%)

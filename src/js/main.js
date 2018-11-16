@@ -256,11 +256,6 @@ $(document).ready(function() {
   // CHANGE MAPS
   ////////////////////
 
-  _document.on("click", "[js-open-usa]", function() {
-    $(".contacts__map").removeClass("is-active");
-    $(".usa-map").addClass("is-active");
-  });
-
   // HAMBURGER TOGGLER
   _document.on("click", "[js-hamburger]", function() {
     $(this).toggleClass("is-active");
