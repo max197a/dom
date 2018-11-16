@@ -47,7 +47,22 @@ body, html
     display: flex
     flex-direction: column
     // header offset ex
-    // padding-top: 100px
+    padding-top: 86px
+
++r($hd1600)
+  .page
+    &__content
+      padding-top: 80px
+
++r($desktop)
+  .page
+    &__content
+      padding-top: 70px
+
++r($tablet)
+  .page
+    &__content
+      padding-top: 57px
 
 .container
   max-width: 1200px
@@ -56,6 +71,9 @@ body, html
   margin-right: auto
   padding-left: 40px
   padding-right: 40px
+  &--typical
+    max-width: 1074px
+
 
 +r($mobile)
   .container
@@ -87,6 +105,74 @@ input
     background: #c7172f
   &:active
     box-shadow: inset 0 5px 10px 0 rgba(0,0,0,0.25)
+
+.input-container
+  position: relative
+  label
+    position: absolute
+    font-size: 11px
+    color: #000
+    padding: 5px
+    font-family: $regular
+    border: 1px solid #e4132f
+    background: #fff
+    top: -18px
+    left: 0
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      width: 6px
+      height: 6px
+      border: 1px solid #e4132f
+      background: #fff
+      border-left: none
+      border-bottom: none
+      transform: rotate(135deg)
+      bottom: -4px
+      left: 13px
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 100%
+      height: 2px
+      bottom: 0
+      left: 0
+      background: #fff
+
+  &.has-error
+    input
+      border-color: #e4132f
+  input
+    border: 1px solid #b4b2b2
+    font-size: 16px
+    font-family: $regular
+    padding: 10px 12px
+    border-radius: 6px
+    color: $fontColor
+    transition: all $transitionSpeed $ease
+    width: 100%
+    line-height: normal
+    &::-webkit-input-placeholder
+      color: $fontColor
+    &::-moz-placeholder
+      color: $fontColor
+    &:-ms-input-placeholder
+      color: $fontColor
+    &:-moz-placeholder
+      color: $fontColor
+
+    &.btn
+      border-color: #e4132f
+      cursor: pointer
+      font-family: $medium
+      color: #fff
+      font-size: 14px
+      &:hover
+        border-color: $hoverRed
+
+
 // REMOVE FOR PRODUCTION !
 .dev-bp-debug
   background: black

@@ -1,0 +1,65 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head
+    .container.container--typical
+      h2 Контакты
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: contacts
+  
+  section.contacts
+    .container
+      .contacts__grid
+        .contacts__left
+          .contacts__person
+            .contacts__image
+              img(src="img/contacts-1.png", alt="")
+            .contacts__info
+              p.contacts__name ДОМ ТЕХНОНИКОЛЬ
+              a.phone(href="tel:+79104414509") +7 910 441 45 09
+              a.mail(href="mailto:info@dom.tn.ru") info@dom.tn.ru
+          .contacts__person
+            .contacts__image
+              img(src="img/contacts-2.png", alt="")
+            .contacts__info
+              p.contacts__name Андрей Баннов
+              p.contacts__desc Руководитель проекта
+              a.phone(href="tel:+79150308032") +7 915 030 80 32
+          .contacts__person
+            .contacts__image
+              img(src="img/contacts-3.png", alt="")
+            .contacts__info
+              p.contacts__name Сергей Герасимов
+              p.contacts__desc Главный инженер проекта
+              a.phone(href="tel:+79776234229") +7 977 623 42 29
+              a.mail(href="mailto:info@dom.tn.ru") s.gerasimov@dom.tn.ru
+        .contacts__right
+          form(action="#")
+            p.contacts__right-title Остались вопросы?
+            .input-container
+              input(type="text" placeholder="Имя")
+            .input-container
+              input(type="text" placeholder="Эл. почта")
+            .input-container
+              input(type="text" placeholder="Телефон")
+            .input-container
+              input(type="text" placeholder="Ваш вопрос")
+            .contacts__right-grid
+              p Отправляя форму даю согласие на обработку  
+                a(href="#")  персональных данных
+              input.btn(type="submit" value="ОТПРАВИТЬ")
+
+  
+  // END SECTION :: contacts
+
+  // BEGIN SECTION :: map
+  section.map
+    script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Acb8ac2de351c476b2f9ee15636aee91feb695708c73f26e1d9b1f0823f16cb2c&amp;width=100%25&amp;height=410&amp;lang=uk_UA&amp;scroll=false")
+
+  // END SECTION :: map

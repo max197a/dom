@@ -1,0 +1,121 @@
+.contacts
+  background: #f0f0f0
+  padding-bottom: 105px
+  .container
+    max-width: 1000px
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__right
+    max-width: 374px
+    width: 45%
+    padding-top: 15px
+    .input-container
+      margin-top: 20px
+      input
+        border-radius: 0
+        border: 1px solid #efe9e6
+        font-size: 14px
+        padding: 16px 15px 14px
+        line-height: normal
+  &__left
+    width: 52%
+  &__right-title
+    font-size: 30px
+    font-family: $medium
+    letter-spacing: 0.3px
+    margin-bottom: 31px
+  &__right-grid
+    display: flex
+    align-items: center
+    margin-top: 25px
+    p
+      margin-right: 25px
+      font-size: 10px
+    a
+      color: #c6142d
+      border-bottom: 1px solid transparent
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: #c6142d
+    .btn
+      font-size: 14px
+      padding: 13px 20px
+      font-weight: 500
+      border-color: #e4132f
+      &:hover
+        border-color: #c7172f
+  &__person
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 27px
+  &__image
+    max-width: 137px
+    max-height: 137px
+    border-radius: 50%
+    overflow: hidden
+    margin-right: 20px
+  &__info
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    justify-content: flex-start
+  &__name
+    font-size: 16px
+    color: $fontColor
+    font-family: $medium
+    line-height: 1
+  &__desc
+    font-size: 14px
+    color: $fontColor
+    line-height: 1
+    font-family: $regular
+    margin-top: 16px
+  a
+    transition: all $transitionSpeed $ease
+    &.phone
+      font-size: 16px
+      font-family: $medium
+      display: inline-block
+      margin-top: 13px
+      border-bottom: 1px solid transparent
+      color: $fontColor
+      &:hover
+        border-color: $fontColor
+    &.mail
+      font-size: 14px
+      font-family: $medium
+      display: inline-block
+      margin-top: 13px
+      border-bottom: 1px solid transparent
+      color: #c6142d
+      &:hover
+        border-color: #c6142d
+
+.map
+  background: #f0f0f0
+  min-height: 410px
+  font-size: 0
+
++r($tablet)
+  .contacts
+    padding-bottom: 50px
+    &__grid
+      flex-wrap: wrap
+    &__left
+      width: 100%
+    &__right
+      width: 100%
+      max-width: 100%
+    &__right-title
+      text-align: center
+    &__right-grid
+      flex-direction: column-reverse
+      margin-top: 20px
+      .btn
+        width: 100%
+      p
+        margin-top: 10px
+        text-align: center

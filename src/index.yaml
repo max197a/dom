@@ -3,3 +3,7 @@ ProjectTitle: DOM technonicol
 PageList:
 - file: homepage.html
   ready: 20
+- file: contacts.html
+  ready: 20
+- file: blog.html
+  ready: 20

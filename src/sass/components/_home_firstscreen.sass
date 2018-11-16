@@ -3,13 +3,14 @@
   // padding: 186px 0 165px
   background: url(../img/bg-main.jpg) center bottom no-repeat
   background-size: cover
-  min-height: 100vh
+  min-height: calc(100vh - 86px)
   height: 100%
   display: flex
   align-items: center
   justify-content: flex-start
   position: relative
   overflow: hidden
+  padding: 40px 0
   .container
     max-width: 1532px
 
@@ -36,10 +37,19 @@
     opacity: 0.25
     bottom: -120px
     left: -250px
+
++r($hd1600)
+  .firstscreen
+    min-height: calc(100vh - 80px)
+
++r($desktop)
+  .firstscreen
+    min-height: calc(100vh - 70px)
   
 +r($tablet)
   .firstscreen
     // min-height: 610px
+    // min-height: calc(100vh - 70px)
     min-height: 0
     align-items: flex-start
     padding: 125px 0 85px

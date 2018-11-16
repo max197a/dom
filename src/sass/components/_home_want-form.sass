@@ -32,40 +32,6 @@
   .input-container
     width: 23%
     margin-right: 1.5%
-    position: relative
-    label
-      position: absolute
-      font-size: 11px
-      color: #000
-      padding: 5px
-      font-family: $regular
-      border: 1px solid #e4132f
-      background: #fff
-      top: -18px
-      left: 0
-      &:before
-        display: block
-        position: absolute
-        content: ''
-        width: 6px
-        height: 6px
-        border: 1px solid #e4132f
-        background: #fff
-        border-left: none
-        border-bottom: none
-        transform: rotate(135deg)
-        bottom: -4px
-        left: 13px
-      &:after
-        display: block
-        position: absolute
-        content: ''
-        width: 100%
-        height: 2px
-        bottom: 0
-        left: 0
-        background: #fff
-
 
     &:nth-child(3)
       width: 27%
@@ -73,36 +39,7 @@
       width: 23%
       margin-right: 0
       margin-left: 2%
-    &.has-error
-      input
-        border-color: #e4132f
-    input
-      border: 1px solid #b4b2b2
-      font-size: 16px
-      font-family: $regular
-      padding: 10px 12px
-      border-radius: 6px
-      color: $fontColor
-      transition: all $transitionSpeed $ease
-      width: 100%
-      line-height: normal
-      &::-webkit-input-placeholder
-        color: $fontColor
-      &::-moz-placeholder
-        color: $fontColor
-      &:-ms-input-placeholder
-        color: $fontColor
-      &:-moz-placeholder
-        color: $fontColor
 
-      &.btn
-        border-color: #e4132f
-        cursor: pointer
-        font-family: $medium
-        color: #fff
-        font-size: 14px
-        &:hover
-          border-color: $hoverRed
 
 +r($desktop)
   .want-form
