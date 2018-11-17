@@ -7,3 +7,5 @@ PageList:
   ready: 20
 - file: blog.html
   ready: 20
+- file: blog-item.html
+  ready: 20

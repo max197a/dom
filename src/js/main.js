@@ -28,6 +28,7 @@ $(document).ready(function() {
     initSelectric();
     initValidations();
     initSlider();
+    initPopup();
   }
 
   // this is a master function which should have all functionality
@@ -90,6 +91,35 @@ $(document).ready(function() {
     TweenLite.to(window, 1, {
       scrollTo: targetScroll,
       ease: easingSwing
+    });
+  }
+
+  ////////////////////
+  // MAGNIFIC POPUPS
+  ////////////////////
+
+  function initPopup() {
+    $(".photogallery__grid").magnificPopup({
+      delegate: "a",
+      type: "image",
+      tLoading: "Loading image #%curr%...",
+      mainClass: "mfp-img-mobile",
+      tCounter: false,
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+      },
+      callbacks: {
+        beforeOpen: function() {
+          // just a hack that adds mfp-anim class to markup
+          this.st.image.markup = this.st.image.markup.replace(
+            "mfp-figure",
+            "mfp-figure mfp-with-anim"
+          );
+          this.st.mainClass = this.st.el.attr("data-effect");
+        }
+      }
     });
   }
 

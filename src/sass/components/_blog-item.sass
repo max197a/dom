@@ -1,0 +1,136 @@
+.blog-item
+  font-size: 0
+  img
+    width: 100%
+    height: auto
+    max-height: 599px
+  &__info
+    max-width: 923px
+    padding: 43px 0 38px
+    margin: 0 auto
+    p
+      padding: 12px 0
+      text-align: justify
+      color: #363636
+      font-family: $regular
+      line-height: 1.5
+      font-size: 16px
+  
+.b-parts
+  padding: 66px 0 44px
+  background: #fff
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    max-width: 1040px
+    margin: 0 auto
+  &__image
+    width: 47%
+    img
+      width: 100%
+      height: auto
+  &__info
+    width: 47.5%
+    p
+      font-size: 16px
+      color: $fontColor
+      font-family: $regular
+      line-height: 1.25
+      margin-bottom: 42px
+      &:last-child
+        margin-bottom: 0
+  &__list
+    p
+      font-size: 14px
+      position: relative
+      padding-left: 50px
+      margin-bottom: 35px
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        left: 20px
+        top: 3px
+        width: 10px
+        height: 8px
+        background: url(../img/list-item.png) center center no-repeat
+
+.photogallery
+  padding: 97px 0 96px
+  background: #fff
+  &__title
+    font-size: 50px
+    color: $fontColor
+    font-family: $medium
+    letter-spacing: 0.6px
+  &__grid
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-start
+    justify-content: space-between
+    margin: 0 -10px
+    width: calc(100% + 20px)
+    padding-top: 48px
+  &__item
+    width: calc(33.3333% - 16px)
+    max-width: 328px
+    height: auto
+    margin: 8px
+    font-size: 0
+    cursor: zoom-in
+    img
+      width: 100%
+      height: auto
+
+
++r($desktop1068)
+  .photogallery
+    &__title
+      margin-left: 0
+      font-size: 36px
+      max-width: 400px
+
+
++r($tablet)
+  .blog-item
+    &__info
+      padding: 20px 0
+      p
+        padding: 10px 0
+        font-size: 14px
+  .b-parts
+    padding: 30px 0
+    &__grid
+      position: relative
+      flex-wrap: wrap
+    &__image
+      width: 100%
+      padding-top: 50px
+      font-size: 0
+      img
+        max-width: 450px
+    &__info
+      width: 100%
+      margin-top: 30px
+      p
+        &.b-parts__title
+          position: absolute
+          top: 0
+          left: 0
+    &__list
+      p
+        margin-bottom: 20px
+        padding-left: 30px
+        &:before
+          left: 0
+  .photogallery
+    padding: 40px 0
+    &__grid
+      padding-top: 20px
+    &__title
+      font-size: 26px
+      text-align: center
+      margin: 0 auto
+    &__item
+      width: calc(50% - 16px)
