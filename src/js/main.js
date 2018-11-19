@@ -277,6 +277,24 @@ $(document).ready(function() {
       ]
     });
 
+    $("[js-g-slider]").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      // fade: true,
+      asNavFor: "[js-g-preview-slider]"
+    });
+    $("[js-g-preview-slider]").slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      asNavFor: "[js-g-slider]",
+      dots: false,
+      arrows: false,
+      centerMode: true,
+      focusOnSelect: true
+    });
+
     $("[js-projects-slider]").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
