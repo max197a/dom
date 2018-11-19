@@ -9,3 +9,5 @@ PageList:
   ready: 20
 - file: blog-item.html
   ready: 20
+- file: project-house.html
+  ready: 20

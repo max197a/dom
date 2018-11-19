@@ -82,6 +82,26 @@ $(document).ready(function() {
       }
 
       return false;
+    })
+    .on("click", "[js-open-g-tab]", function(e) {
+      e.preventDefault();
+      var $self = $(this),
+        tabIndex = $self.index();
+      $self.siblings().removeClass("is-active");
+      $self.addClass("is-active");
+      $(".g-complectation__tab")
+        .removeClass("is-active")
+        .css("display", "none")
+        .eq(tabIndex)
+        .fadeIn();
+    })
+    .on("click", "[js-open-info]", function(e) {
+      e.preventDefault();
+      $(this).toggleClass("is-open");
+      $(this)
+        .parent()
+        .find(".g-complectation__toggle")
+        .slideToggle();
     });
 
   function scrollToSection(el) {
@@ -120,6 +140,24 @@ $(document).ready(function() {
           this.st.mainClass = this.st.el.attr("data-effect");
         }
       }
+    });
+
+    // Image popups
+    $("[js-popup-image]").magnificPopup({
+      type: "image",
+      removalDelay: 500, //delay removal by X to allow out-animation
+      callbacks: {
+        beforeOpen: function() {
+          // just a hack that adds mfp-anim class to markup
+          this.st.image.markup = this.st.image.markup.replace(
+            "mfp-figure",
+            "mfp-figure mfp-with-anim"
+          );
+          this.st.mainClass = this.st.el.attr("data-effect");
+        }
+      },
+      closeOnContentClick: true,
+      midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
   }
 
