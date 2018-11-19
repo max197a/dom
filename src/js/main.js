@@ -95,6 +95,11 @@ $(document).ready(function() {
         .eq(tabIndex)
         .fadeIn();
     })
+    .on("click", "[js-general-view-btn]", function(e) {
+      e.preventDefault();
+      $(".general__view-item").removeClass("is-active");
+      $(this).addClass("is-active");
+    })
     .on("click", "[js-open-info]", function(e) {
       e.preventDefault();
       $(this).toggleClass("is-open");
@@ -297,6 +302,50 @@ $(document).ready(function() {
         },
         {
           breakpoint: 788,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+
+    $("[js-offer-slider]").slick({
+      slidesToShow: 4,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      loop: false,
+      infinite: false,
+      responsive: [
+        {
+          breakpoint: 1168,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        ,
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 788,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        },
+        {
+          breakpoint: 560,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

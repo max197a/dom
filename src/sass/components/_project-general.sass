@@ -1,3 +1,132 @@
 .general
   min-height: 582px
-  outline: 1px solid red
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__right
+    max-width: 465px
+    width: 47%
+  &__title
+    font-size: 30px
+    color: $fontColor
+    line-height: 1
+    font-family: $medium
+    padding: 2px 5px 5px
+    border-bottom: 2px solid #c6142d
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 2px
+    padding: 14px 15px 9px 7px
+    line-height: 1
+    border-bottom: 1px solid rgba(#cacaca, 0.5)
+    flex-wrap: wrap
+    p
+      font-size: 16px
+      color: $fontColor
+      font-family: $light
+      margin-right: 15px
+      &.bold
+        font-family: $medium
+        margin-left: auto
+        margin-right: 0
+        max-width: 240px
+        text-align: right
+    &--price
+      padding: 20px 15px 20px 7px
+      p
+        font-size: 18px
+        font-family: $regular
+        max-width: 140px
+        &.price
+          font-size: 36px
+          font-family: $bold
+          color: #c6142d
+          margin-left: auto
+          margin-right: 0
+          min-width: 280px
+          max-width: 280px
+          width: 100%
+          text-align: right
+  &__view
+    width: 100%
+    margin-top: 10px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    text-align: center
+  &__view-image
+    font-size: 0
+    max-height: 55px
+    border-radius: 10px
+    overflow: hidden
+    max-width: 82px
+    position: relative
+    transition: all $transitionSpeed $ease
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      width: calc(100% - 2px)
+      height: calc(100% - 2px)
+      // border: 3px solid #c6142d
+      border: 1px solid #cacaca
+      top: 0
+      left: 0
+      z-index: 2
+      border-radius: 10px
+      transition: all $transitionSpeed $ease
+      opacity: 1
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: calc(100% - 6px)
+      height: calc(100% - 6px)
+      border: 3px solid #c6142d
+      top: 0
+      left: 0
+      z-index: 2
+      border-radius: 10px
+      transition: all $transitionSpeed $ease
+      opacity: 0
+    img
+      width: 100%
+  &__view-item
+    font-size: 0
+    width: 24%
+    max-width: 82px
+    &.is-active
+      .general__view-image
+        &:after
+          opacity: 0
+        &:before
+          opacity: 1
+          
+
+
+    p
+      margin-top: 4px
+      font-size: 12px
+      font-family: $light
+      margin-right: 0
+      display: inline-block
+      text-align: center
+      width: auto
+  .btn
+    margin-top: 30px
+    background: transparent
+    color: #c6142d
+    border: 2px solid #c6142d
+    max-width: 320px
+    width: 100%
+    text-align: center
+    font-size: 18px
+    border-radius: 3px
+    margin-left: auto
+    padding: 18px 15px
+    &:hover
+      background: #c6142d
+      color: #fff

@@ -18,6 +18,47 @@ block content
   // BEGIN SECTION :: general
   section.general
     .container.container--large
+      .general__grid
+        .general__left
+        .general__right
+          p.general__title Основные характеристики
+          .general__row
+            p Общая площадь, м2
+            p.bold 186
+          .general__row
+            p Срок строительства
+            p.bold от 2 месяцев
+          .general__row
+            p Фундамент
+            p.bold утеплённая шведская плита с контуром тёплого пола и колектором
+          .general__row
+            p Внешняя отделка
+            .general__view
+              a.general__view-item.is-active(href="#" js-general-view-btn)
+                .general__view-image
+                  img(src="img/g-view-1.jpg", alt="")
+                p hauberG
+              a.general__view-item(href="#" js-general-view-btn)
+                .general__view-image
+                  img(src="img/g-view-2.jpg", alt="")
+                p Имитация бруса
+              a.general__view-item(href="#" js-general-view-btn)
+                .general__view-image
+                  img(src="img/g-view-3.jpg", alt="")
+                p Сайдинг
+              a.general__view-item(href="#" js-general-view-btn)
+                .general__view-image
+                  img(src="img/g-view-4.jpg", alt="")
+                p Штукатурка
+              a.general__view-item(href="#" js-general-view-btn)
+                .general__view-image
+                  img(src="img/g-view-5.jpg", alt="")
+                p Кирпичная кладка
+          .general__row.general__row--price
+            p Стоимость строительства:
+            p.price от 1 500 000 р
+          a.btn(href="#") заказать консультацию
+
   // END SECTION :: general
 
   // BEGIN SECTION :: g-plans
@@ -195,6 +236,65 @@ block content
 
   // END SECTION :: g-complectation
 
+  // BEGIN SECTION :: g-offer
+  section.g-offer
+    .container.container--large
+      h2.g-plans__title Предложения подрядчиков
+      .g-offer__slider(js-offer-slider)
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 8,5
+            .g-offer__image
+              img(src="img/g-offer-1.jpg", alt="")
+            p.g-offer__price от 2 464 000 Р
+            a.g-offer__detail подробнее о подрядчике
+            a.g-offer__button отправить запрос
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 9,5
+            .g-offer__image
+              img(src="img/g-offer-2.jpg", alt="")
+            p.g-offer__price от 2 580 000 Р
+            a.g-offer__detail подробнее о подрядчике
+            a.g-offer__button отправить запрос
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 4,5
+            .g-offer__image
+              img(src="img/g-offer-3.jpg", alt="")
+            p.g-offer__price от 2 620 000 Р
+            a.g-offer__detail подробнее о подрядчике
+            a.g-offer__button отправить запрос
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 8,5
+            .g-offer__image
+              img(src="img/g-offer-4.jpg", alt="")
+            p.g-offer__price от 2 580 000 Р
+            a.g-offer__detail подробнее о подрядчике
+            a.g-offer__button отправить запрос
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 10
+            .g-offer__image
+              img(src="img/g-offer-2.jpg", alt="")
+            p.g-offer__price от 2 580 000 Р
+            a.g-offer__detail подробнее о подрядчике
+            a.g-offer__button отправить запрос
+
+
+  // END SECTION :: g-offer
+
   // BEGIN SECTION :: g-calc
   section.g-calc
     .container.container--typical
@@ -202,3 +302,23 @@ block content
         p Вы всегда можете рассчитать дом  по своим личным параметрам на нашем калькуляторе
         a.btn(href="#") рассчитать стоимость
   // END SECTION :: g-calc
+
+  // BEGIN SECTION :: g-individual
+  section.g-individual
+    .container.container--typical
+      img(src="img/individual.png", alt="")
+      p.g-individual__title Индивидуальный проект
+      form(action="#")
+        p.g-individual__desc Также мы можем выполнить индивидуальный проект с учетом ваших пожеланий. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        .input-container
+          input(type="text" placeholder="Имя")
+        .input-container
+          input(type="text" placeholder="Эл. почта")
+        .input-container
+          input(type="text" placeholder="Телефон")
+        p.g-individual__personal Отправляя форму даю согласие на обработку 
+          a(href="#") персональных данных
+        .input-container
+          input.btn(type="submit", value="ОТПРАВИТЬ")
+
+  // END SECTION :: g-individual

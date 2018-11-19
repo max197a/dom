@@ -1,0 +1,75 @@
+.g-individual
+  padding: 100px 0 90px
+  &__title
+    font-size: 50px
+    color: $fontColor
+    font-family: $medium
+  &__desc
+    margin-top: 35px
+    line-height: 1.25
+    font-size: 16px
+    font-family: $regular
+    padding-bottom: 4px
+    text-align: left
+  .container
+    position: relative
+  img
+    position: absolute
+    width: 44%
+    max-width: 530px
+    right: 20px
+    top: 50%
+    transform: translateY(-50%)
+  .input-container
+    margin-top: 21px
+    input
+      border-radius: 0
+      font-size: 14px
+      padding: 16px 14px 13px
+      &.btn
+        border-radius: 5px
+        max-width: 150px
+        margin-left: auto
+        padding: 15px 14px 14px
+  form
+    width: 50%
+    text-align: center
+  &__personal
+    font-size: 10px
+    font-family: $light
+    margin-top: 13px
+    a
+      font-size: 10px
+      font-family: $light
+      display: inline
+      border-bottom: 1px solid transparent
+      color: #ff1007
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: #ff1007
+
++r($desktop)
+  .reviews
+    &__title
+      margin-left: 0
+      font-size: 36px
+      max-width: 400px
+
++r($tablet)
+  .g-individual
+    padding: 40px 0
+    &__title
+      font-size: 24px
+    &__desc
+      margin-top: 20px
+    img
+      display: none
+    form
+      width: 100%
+    &__personal
+      margin-top: 10px
+    .input-container
+      margin-top: 15px
+      input
+        &.btn
+          max-width: 100%
