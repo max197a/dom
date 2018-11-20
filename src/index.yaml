@@ -11,3 +11,5 @@ PageList:
   ready: 20
 - file: project-house.html
   ready: 20
+- file: master-card.html
+  ready: 20

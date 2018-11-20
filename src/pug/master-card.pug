@@ -1,0 +1,247 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head
+    .container.container--large
+      h2 Мастер правильных домов
+      .head__buttons
+        a.prev(href="#") 
+          span.arrow
+          span.info Все подрядчики
+        a.pin(href="#")
+          img(src="img/pin.svg", alt="")
+          span.hidden Посмотреть  
+          span На карте
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: general
+  section.m-general
+    .container.container--large
+      .m-general__grid
+        .m-general__left
+          .m-general__slider(js-g-slider)
+            .m-general__item
+              .m-general__item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .m-general__item
+              .m-general__item-container
+                img(src="img/gal-1.jpg", alt="")
+            .m-general__item
+              .m-general__item-container
+                img(src="img/gal-2.jpg", alt="")
+            .m-general__item
+              .m-general__item-container
+                img(src="img/gal-3.jpg", alt="")
+            .m-general__item
+              .m-general__item-container
+                img(src="img/gal-4.jpg", alt="")
+            .m-general__item
+              .m-general__item-container
+                img(src="img/gal-5.jpg", alt="")
+          .m-general__preview-slider(js-g-preview-slider)
+            .m-general__preview-item
+              .m-general__preview-item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .m-general__preview-item
+              .m-general__preview-item-container
+                img(src="img/gal-1.jpg", alt="")
+            .m-general__preview-item
+              .m-general__preview-item-container
+                img(src="img/gal-2.jpg", alt="")
+            .m-general__preview-item
+              .m-general__preview-item-container
+                img(src="img/gal-3.jpg", alt="")
+            .m-general__preview-item
+              .m-general__preview-item-container
+                img(src="img/gal-4.jpg", alt="")
+            .m-general__preview-item
+              .m-general__preview-item-container
+                img(src="img/gal-5.jpg", alt="")
+
+        .m-general__right
+          .m-general__rate
+            img(src="img/star.svg", alt="")
+            p 8,5
+          .m-general__image
+            img(src="img/m-logo.jpg", alt="")
+          .m-general__row.m-general__row--head
+            a.phone(href="#") + 7 (495) 24-99-079
+            a.web(href="#") mpd-rf.ru
+          .m-general__row
+            p Стаж в строительстве
+            p.bold 11 лет
+          .m-general__row
+            p Стаж в ДОМ ТН
+            p.bold 2 года
+          .m-general__row
+            p Количество бригад
+            p.bold 5
+          .m-general__row
+            p Регион строительства
+            p.bold Московская область
+          .m-general__row
+            p.full Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.
+
+  // END SECTION :: general
+
+  // BEGIN SECTION :: master-price
+  section.m-price
+    .container.container--large
+      h2.g-plans__title Стоимость строительства
+      .container.container--typical
+        .m-price__grid
+          .m-price__item
+            .m-price__image
+              img(src="img/m-price-1.png", alt="")
+            .m-price__info
+              p.m-price__name Базовая комплектация
+              p.m-price__price от 20 115 Р/м²
+          .m-price__item
+            .m-price__image
+              img(src="img/m-price-2.png", alt="")
+            .m-price__info
+              p.m-price__name С черновой отделкой
+              p.m-price__price от 22 994 Р/м²
+          .m-price__item
+            .m-price__image
+              img(src="img/m-price-3.png", alt="")
+            .m-price__info
+              p.m-price__name Дом «под ключ»
+              p.m-price__price от 26 993 Р/м²
+
+  // END SECTION :: master-price
+
+  // BEGIN SECTION :: master-outside
+  section.m-outside
+    .container.container--large
+      h2.g-plans__title Внешняя отделка
+      .container.container--typical
+        .m-outside__grid
+          .m-outside__item
+            .m-outside__image
+              img(src="img/m-out-1.jpg", alt="")
+            p Обрезная доска, обожженная доска
+          .m-outside__item
+            .m-outside__image
+              img(src="img/m-out-2.jpg", alt="")
+            p Имитация бруса, планкен, пр.
+          .m-outside__item
+            .m-outside__image
+              img(src="img/m-out-3.jpg", alt="")
+            p Фиброцементный сайдинг
+          .m-outside__item
+            .m-outside__image
+              img(src="img/m-out-4.jpg", alt="")
+            p Фиброцементный сайдинг
+          .m-outside__item
+            .m-outside__image
+              img(src="img/m-out-5.jpg", alt="")
+            p Кирпичная  кладка
+          .m-outside__item
+            .m-outside__image
+              img(src="img/m-out-6.jpg", alt="")
+            p Имитация штукатурки под фахверк
+  // END SECTION :: master-outside
+
+  // BEGIN SECTION :: master-services
+  section.m-services
+    .container.container--large
+      h2.g-plans__title Дополнительные услуги
+      .container.container--typical
+        .m-services__grid
+          .m-services__item
+            p Разработка архитектурного проекта
+            p Оформление строения в собственость
+            p Благоустройство территории
+            p Подключение к внешним электросетям
+            p Подключение к внешним газовым сетям
+          .m-services__item
+            p Устройство скважины
+            p Устройство септика
+            p Устройство забора
+            p Подключение к городской канализации
+            p Подключение к городскому водоснабжению
+  // END SECTION :: master-services
+
+  // BEGIN SECTION :: master-share
+  section.m-share
+    .container.container--large
+      h2.g-plans__title Акции от подрядчика
+      .container.container--typical
+        .m-share__grid
+          a.m-share__item(href="#")
+          a.m-share__item(href="#")
+          a.m-share__item(href="#")
+  // END SECTION :: master-share
+
+  // BEGIN SECTION :: master-consult
+  .m-consult
+    .container.container--large
+      h2.g-plans__title Получить консультацию и смету на строительство дома
+      .container.container--typical
+        .m-consult__head
+          p(data-number="1") Согласовываем 
+            br
+            | проект
+          .arrow
+          p(data-number="2") Утверждаем 
+            br
+            | комплектацию
+          .arrow
+          p(data-number="3") Подбираем 
+            br
+            | подрядчика
+          .arrow
+          p(data-number="4") Начинаем 
+            br
+            | строительство
+          .arrow
+          p(data-number="5") Осуществляем 
+            br
+            | технадзор
+        form(action="#")
+          .m-consult__grid
+            .m-consult__part
+              .m-consult__item
+                .input-container
+                  input(type="text" placeholder="Имя")
+                .input-container
+                  input(type="text" placeholder="Эл. почта")
+                .input-container
+                  input(type="text" placeholder="Телефон")
+                .input-container
+                  select
+                    option(value="val1") Регион строительства #1
+                    option(value="val2") Регион строительства #2
+                    option(value="val3") Регион строительства #3
+                .input-container
+                  select
+                    option(value="val1") Проект #1
+                    option(value="val2") Проект #2
+                    option(value="val3") Проект #3
+              .m-consult__item
+                .input-container
+                  select
+                    option(value="val1") Вариант комплектации #1
+                    option(value="val2") Вариант комплектации #2
+                    option(value="val3") Вариант комплектации #3
+                .input-container
+                  textarea(placeholder="Комментарий")
+              p.m-consult__personal Отправляя форму даю согласие на обработку  
+                a(href="#") персональных данных
+            .m-consult__item.m-consult__item--info
+              .m-consult__image
+                img(src="img/contacts-2.png", alt="")
+              p.m-consult__name Андрей Баннов
+              p.m-consult__desc Руководитель проекта
+              a.m-consult__phone(href="#") 8 915 030 80 32
+              p.m-consult__work сейчас работает
+          .m-consult__button
+            input.btn(type="submit", value="отправить")
+
+  // END SECTION :: master-consult

@@ -69,6 +69,27 @@
             opacity: 1
           &.info
             opacity: 1
+      &.pin
+        display: flex
+        align-items: center
+        opacity: 0.5
+        img
+          height: 20px
+          width: auto
+          margin-right: 5px
+        span 
+          font-size: 14px
+          color: #000
+          font-family: $montserrat
+          border-bottom: 1px solid #000
+          text-transform: lowercase
+          &.hidden
+            padding-right: 5px
+            text-transform: capitalize
+        &:hover
+          opacity: 1
+          span
+            border-color: transparent
 
 +r($desktop1068)
   .head
@@ -93,8 +114,13 @@
               padding-top: 2px
             &.arrow
               margin-top: -2px
-
-          
+    &__buttons
+      a
+        &.pin
+          span
+            text-transform: none
+            &.hidden
+              display: none
     h2
       font-size: 26px
       text-align: center
