@@ -5,7 +5,15 @@ PageList:
   ready: 20
 - file: contacts.html
   ready: 20
-- file: blog.html
+- file: blog-all.html
+  ready: 20
+- file: blog-smi.html
+  ready: 20
+- file: blog-help.html
+  ready: 20
+- file: blog-faq.html
+  ready: 20
+- file: blog-video.html
   ready: 20
 - file: blog-item.html
   ready: 20

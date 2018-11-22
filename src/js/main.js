@@ -164,6 +164,16 @@ $(document).ready(function() {
       closeOnContentClick: true,
       midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
+
+    // Video popups
+    $("[js-popup-video]").magnificPopup({
+      disableOn: 700,
+      type: "iframe",
+      mainClass: "mfp-fade",
+      removalDelay: 160,
+      preloader: false,
+      fixedContentPos: false
+    });
   }
 
   ////////////////////

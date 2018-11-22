@@ -1,0 +1,152 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head
+    .container.container--typical
+      h2 Блог
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: blog
+  section.blog--page
+    .container
+      .blog--page__buttons
+        a(href="/blog-all.html").blog--page__tab все статьи
+        a(href="/blog-smi.html").blog--page__tab.is-active сми о нас
+        a(href="/blog-help.html").blog--page__tab полезные статьи
+        a(href="/blog-faq.html").blog--page__tab FAQ
+        a(href="/blog-video.html").blog--page__tab видео
+      .blog--page__slider
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-1.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 10.11.2018
+              a.blog--page__i-title(href="/blog-item.html") 
+                span ТЕХНОНИКОЛЬ  
+                |  формирует «стандарты красоты» в частном домостроении домостроении домостроении домостроении домостроении домостроении 
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-2.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 30.10.2018
+              a.blog--page__i-title(href="/blog-item.html") 
+                span ДОМ ТЕХНОНИКОЛЬ 
+                |  открыл свои двери для журналистов
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-3.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 05.10.2018
+              a.blog--page__i-title(href="/blog-item.html")  Мифы каркасного домостроения.  Чему верить?
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-1.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 10.11.2018
+              a.blog--page__i-title(href="/blog-item.html") 
+                span ТЕХНОНИКОЛЬ  
+                |  формирует «стандарты красоты» в частном домостроении домостроении домостроении домостроении домостроении домостроении 
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image.blog--page__image--link
+              img(src="img/blog-2.jpg", alt="")
+              a.no-barba(href="https://www.youtube.com/watch?v=uuuzZ2Ae31k" js-popup-video)
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 30.10.2018
+              a.blog--page__i-title(href="/blog-item.html") 
+                span ДОМ ТЕХНОНИКОЛЬ 
+                |  открыл свои двери для журналистов
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-3.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 05.10.2018
+              a.blog--page__i-title(href="/blog-item.html")  Мифы каркасного домостроения.  Чему верить?
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-1.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 10.11.2018
+              a.blog--page__i-title(href="/blog-item.html") 
+                span ТЕХНОНИКОЛЬ  
+                |  формирует «стандарты красоты» в частном домостроении домостроении домостроении домостроении домостроении домостроении 
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-2.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 30.10.2018
+              a.blog--page__i-title(href="/blog-item.html") 
+                span ДОМ ТЕХНОНИКОЛЬ 
+                |  открыл свои двери для журналистов
+              a.btn(href="/blog-item.html") Читать далее
+                span
+        .blog--page__item
+          .blog--page__item-container
+            .blog--page__image
+              img(src="img/blog-3.jpg", alt="")
+            .blog--page__info
+              .blog--page__head
+                a.blog--page__head-tab(href="/blog-smi.html") сми о нас
+                p.blog--page__head-date 05.10.2018
+              a.blog--page__i-title(href="/blog-item.html")  Мифы каркасного домостроения.  Чему верить?
+              a.btn(href="/blog-item.html") Читать далее
+                span
+      .pagination
+        a.prev(href="#")
+          span.arrow
+          span.info предыдущая
+        .pagination__list
+          a.pagination__item.is-active(href="#") 1
+          a.pagination__item(href="#") 2
+          a.pagination__item(href="#") 3
+          a.pagination__item(href="#") 4
+          a.pagination__item(href="#") 5
+          a.pagination__item(href="#") ...
+          a.pagination__item(href="#") 10
+        a.next(href="#")
+          span.info следующая
+          span.arrow
+                  
+  // END SECTION :: blog
