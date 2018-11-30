@@ -3,7 +3,7 @@
   background: #f4f4f4
   position: relative
   .container
-    max-width: 1080px
+    max-width: 1200px
   &__pattern
     max-width: 900px
     position: absolute
@@ -13,32 +13,43 @@
     height: auto
     z-index: 1
   &__title
-    font-size: 60px
+    font-size: 48px
     color: $fontColor
     line-height: 1
     font-family: $medium
+    letter-spacing: 0.2px
     width: 100%
     text-align: left
   &__grid
     display: flex
-    margin: 0 -10px
-    width: calc(100% + 20px)
-    padding-top: 57px
     justify-content: center
     flex-wrap: wrap
     position: relative
     z-index: 3
+    padding: 0 40px
+    margin-top: 71px
   &__item
-    min-width: 320px
-    width: 320px
-    margin: 10px
+    // min-width: 320px
+    width: 100%
+    max-width: 320px
+    margin: 0 auto
+  &__item-slider
+    padding: 0 5px
+    text-align: center
   &__image
     max-width: 320px
-    max-height: 320px
+    max-height: 250px
     overflow: hidden
-    min-height: 320px
+    min-height: 250px
     overflow: hidden
+    position: relative
     img
+      position: absolute
+      left: 0
+      top: 0
+      right: 0
+      bottom: 0
+      margin: auto
       min-height: 320px
       height: 320px
       width: auto
@@ -71,6 +82,7 @@
       border-radius: 50%
       border: none
       transition: all $transitionSpeed $ease
+      cursor: pointer
   &__slider
     position: relative
     z-index: 2
@@ -95,9 +107,15 @@
     font-family: $medium
     width: auto
     text-align: right
+    display: flex
+    align-items: flex-start
+    img
+      height: 16px
+      width: auto
+      margin-right: 5px
   &__line
-    margin: 13px auto 16px
-    width: 100%
+    margin: 13px -30px 16px
+    width: calc(100% + 60px)
     height: 1px
     display: block
     background: #bbbbbb
@@ -120,21 +138,77 @@
       max-width: 300px
       width: 100%
       text-align: center
+  .slick-arrow
+    position: absolute
+    width: 50px
+    height: 50px
+    background: rgba($fontColor, 0.3)
+    transition: all $transitionSpeed $ease
+    top: 50%
+    transform: translateY(-50%)
+    border: none
+    font-size: 0
+    color: transparent
+    cursor: pointer
+    &:hover
+      background: rgba($fontColor, 0.7)
+    &.slick-prev
+      left: -30px
+      &:before
+        border-top: none
+        border-right: none
+        left: 57%
+    &.slick-next
+      right: -30px
+      &:before
+        border-bottom: none
+        border-left: none
+        left: 43%
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      width: 15px
+      height: 15px
+      border: 2px solid #fff
+      transform: translate(-50%, -50%) rotate(45deg)
+      top: 50%
+      left: 50%
+
 
 +r($desktop1068)
   .projects
     &__title
       margin-left: 0
       font-size: 36px
-      max-width: 400px
+      // max-width: 400px
 
 +r($tablet)
   .projects
     padding: 30px 0
     &__grid
-      padding-top: 15px
+      padding-top: 0
+      max-width: 320px
+      margin: 70px auto 0
+      padding: 0
+      & > .slick-dots
+        top: -37px
+        bottom: auto
     &__button
       .btn
-        margin-top: 20px
+        margin-top: 30px
     &__title
       font-size: 26px
+      text-align: center
+    .slick-arrow
+      top: -50px
+      transform: translateY(0)
+      width: 35px
+      height: 35px
+      &:before
+        width: 10px
+        height: 10px
+      &.slick-prev
+        left: 5px
+      &.slick-next
+        right: 5px

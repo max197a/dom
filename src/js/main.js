@@ -124,8 +124,8 @@ $(document).ready(function() {
   ////////////////////
 
   function initPopup() {
-    $(".photogallery__grid").magnificPopup({
-      delegate: "a",
+    $("[js-open-gallery]").magnificPopup({
+      // delegate: "a",
       type: "image",
       tLoading: "Loading image #%curr%...",
       mainClass: "mfp-img-mobile",
@@ -254,7 +254,7 @@ $(document).ready(function() {
     $("[js-awards-slider]").slick({
       slidesToShow: 4,
       slidesToScroll: 1,
-      arrows: true,
+      arrows: false,
       dots: false,
       loop: true,
       infinite: true,
@@ -287,6 +287,33 @@ $(document).ready(function() {
       ]
     });
 
+    $("[js-pr-slider]").slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      loop: true,
+      draggable: false,
+      infinite: true,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        }
+      ]
+    });
+
     $("[js-g-slider]").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -295,6 +322,7 @@ $(document).ready(function() {
       // fade: true,
       asNavFor: "[js-g-preview-slider]"
     });
+
     $("[js-g-preview-slider]").slick({
       slidesToShow: 6,
       slidesToScroll: 1,

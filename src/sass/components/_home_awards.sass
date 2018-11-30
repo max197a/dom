@@ -1,8 +1,8 @@
 .awards
-  padding: 92px 0 165px
+  padding: 56px 0 79px
   background: #fff
   &__h-title
-    font-size: 70px
+    font-size: 48px
     font-family: $medium
     color: $fontColor
   .container
@@ -19,7 +19,7 @@
       height: auto
       margin-top: auto
   &__slider-container
-    padding-top: 85px
+    padding-top: 33px
   &__title
     font-size: 14px
     text-transform: uppercase
@@ -35,61 +35,7 @@
     max-width: 200px
     padding: 0 2px
     margin: 0 auto 0 0
-  .slick-arrow
-    position: absolute
-    width: 80px
-    height: 80px
-    border: 1px solid #777777
-    border-radius: 50%
-    left: -75px
-    font-size: 0
-    color: transparent
-    transition: all $transitionSpeed $ease
-    opacity: 0.23
-    cursor: pointer
-    &:hover
-      opacity: 0.5
-    &:active
-      opacity: 0.75
-    &.slick-disabled
-      opacity: 0.25
-      pointer-events: none
-    &.slick-prev
-      left: -85px
-      top: 50%
-      transform: translateY(-50%)
-      &:before
-        position: absolute
-        display: block
-        content: ''
-        width: 18px
-        height: 18px
-        border: 5px solid #777777
-        left: 58%
-        top: 50%
-        transform: translate(-50%, -50%) rotate(135deg)
-        border-left: none
-        border-top: none
-        transition: all $transitionSpeed $ease
-    &.slick-next
-      left: auto
-      right: -85px
-      top: 50%
-      transform: translateY(-50%)
-      &:before
-        position: absolute
-        display: block
-        content: ''
-        width: 18px
-        height: 18px
-        border: 5px solid #777777
-        left: 45%
-        top: 50%
-        transform: translate(-50%, -50%) rotate(-45deg)
-        border-left: none
-        border-top: none
-        transition: all $transitionSpeed $ease
-
+  
 +r($tablet)
   .awards
     padding: 60px 0

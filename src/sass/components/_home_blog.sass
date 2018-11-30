@@ -1,5 +1,5 @@
 .blog
-  padding: 98px 0 142px
+  padding: 57px 0 60px
   border: 1px solid #bcbcbc
   border-left: none
   border-right: none
@@ -8,7 +8,7 @@
     max-width: 1200px
     padding: 0 100px
   &__title
-    font-size: 60px
+    font-size: 48px
     color: $fontColor
     line-height: 1
     font-family: $medium
@@ -18,7 +18,7 @@
     display: flex
     align-items: flex-start
     justify-content: space-between
-    margin-top: 63px
+    margin-top: 42px
   &__item
     width: 32%
     max-width: 320px
@@ -71,21 +71,20 @@
     max-height: 54px
     margin-top: 25px
   .btn
-    margin-top: 29px
-    font-size: 14px
+    margin-top: 20px
+    font-size: 13px
     font-family: $montserrat
     font-weight: 500
     color: #999999
     text-transform: none
-    border: 1px solid #bcbcbc
     width: auto
     margin-left: auto
     background: #fff
-    padding: 12px
+    padding: 0
     display: flex
     align-items: center
     justify-content: center
-    max-width: 170px
+    max-width: 125px
     cursor: pointer
     span
       width: 10px
@@ -97,10 +96,28 @@
       margin-left: 10px
       transition: all $transitionSpeed $ease
     &:hover
-      background: $btnRed
-      color: #fff
+      background: 
+      color: $fontColor
       span
-        border-color: #fff
+        border-color: $fontColor
+  &__button
+    display: flex
+    margin: 43px auto 0
+    padding: 18px 25px 15px
+    font-size: 16px
+    text-transform: uppercase
+    font-family: $medium
+    color: $fontColor
+    border: 1px solid $fontColor
+    transition: all $transitionSpeed $ease
+    max-width: 270px
+    align-items: center
+    justify-content: center
+    line-height: 1
+    &:hover
+      background: $fontColor
+      color: #fff
+
 
 +r($desktop1068)
   .blog

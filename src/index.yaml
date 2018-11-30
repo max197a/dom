@@ -2,22 +2,22 @@ ProjectTitle: DOM technonicol
 
 PageList:
 - file: homepage.html
-  ready: 20
+  ready: 80
 - file: contacts.html
-  ready: 20
+  ready: 80
 - file: blog-all.html
-  ready: 20
+  ready: 80
 - file: blog-smi.html
-  ready: 20
+  ready: 80
 - file: blog-help.html
-  ready: 20
+  ready: 80
 - file: blog-faq.html
-  ready: 20
+  ready: 80
 - file: blog-video.html
-  ready: 20
+  ready: 80
 - file: blog-item.html
-  ready: 20
+  ready: 80
 - file: project-house.html
-  ready: 20
+  ready: 80
 - file: master-card.html
-  ready: 20
+  ready: 80
