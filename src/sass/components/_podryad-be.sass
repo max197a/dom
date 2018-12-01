@@ -1,0 +1,107 @@
+.be
+  padding: 75px 0 89px
+  &__title
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-family: $medium
+    letter-spacing: 0.2px
+    width: 100%
+    text-align: left
+    padding-bottom: 22px
+  &__info
+    margin-top: 26px
+    font-size: 18px
+    color: $fontColor
+    font-family: $regular
+    line-height: 1.3
+    span
+      font-family: $bold
+  &__sub-title
+    font-size: 24px
+    font-family: $medium
+    color: $fontColor
+    margin-top: 49px
+  &__list
+    padding-top: 15px
+    p
+      margin-top: 24px
+      padding-left: 50px
+      font-size: 16px
+      color: $fontColor
+      line-height: 1.5
+      font-family: $regular
+      position: relative
+      &:before
+        position: absolute
+        display: block
+        content: ''
+        width: 9px
+        height: 7px
+        background: url(../img/list-item.png) center center no-repeat
+        background-size: contain
+        left: 17px
+        top: 7px
+      span
+        font-family: $bold
+  &__buttons
+    display: flex
+    margin-top: 65px
+    align-items: center
+    justify-content: center
+    .btn
+      max-width: 200px
+      width: 100%
+      margin: 0 16px
+      text-align: center
+      font-size: 14px
+      padding: 14px 12px
+      &--transparent
+        background: transparent
+        padding: 13px 12px
+        color: #e4132f
+        border: 1px solid #e4132f
+        &:hover
+          background: #e4132f
+          color: #fff
+    
+
++r($desktop1068)
+  .be
+    &__title
+      margin-left: 0
+      font-size: 36px
+
+
++r($tablet)
+  .be
+    padding: 35px 0
+    &__title
+      font-size: 26px
+      text-align: center
+      padding-bottom: 10px
+    &__sub-title
+      margin-top: 20px
+      font-size: 20px
+    &__info
+      margin-top: 15px
+      font-size: 16px
+    &__buttons
+      margin-top: 30px
+    &__list
+      padding-top: 10px
+      p
+        padding-left: 25px
+        margin-top: 15px
+        &:before
+          left: 6px
+
++r($mobile)
+  .be
+    padding-bottom: 25px
+    &__buttons
+      flex-direction: column
+      margin-top: 20px
+      .btn
+        max-width: 100%
+        margin: 10px auto

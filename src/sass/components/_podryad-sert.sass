@@ -1,0 +1,70 @@
+.p-sert
+  padding: 100px 0 90px
+  background: url(../img/bg-sert.jpg) center center no-repeat
+  background-size: cover
+  &__title
+    font-size: 48px
+    color: $fontColor
+    line-height: 1
+    font-family: $medium
+    letter-spacing: 0.2px
+    width: 100%
+    text-align: left
+  &__grid
+    background: rgba(#a0a0a0, 0.7)
+    padding: 0 45px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-top: 92px
+  &__image
+    flex: 1 0 242px
+    img
+      width: 100%
+      height: auto
+      box-shadow: 2px 4px 26px rgba(#482a2a, 0.26)
+      margin: -36px 0
+  &__info
+    width: 65%
+    margin-left: 40px
+    p
+      font-size: 16px
+      color: #fff
+      margin: 17px 0
+      line-height: 1.4
+
++r($desktop1068)
+  .p-sert
+    &__title
+      margin-left: 0
+      font-size: 36px
+      // max-width: 400px
+
++r($desktop)
+  .p-sert
+    padding: 75px 0
+    &__grid
+      margin-top: 50px
+
+
++r($tablet)
+  .p-sert
+    padding: 40px 0
+    &__grid
+      margin-top: 55px
+      flex-wrap: wrap
+      padding: 20px
+    &__image
+      width: 100%
+      text-align: center
+
+      img
+        width: 242px
+        height: auto
+        margin: -50px 0 0 0
+    &__title
+      font-size: 26px
+      text-align: center
+    &__info
+      width: 100%
+      margin-left: 0

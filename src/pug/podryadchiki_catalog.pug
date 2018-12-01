@@ -1,0 +1,316 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head
+    .container.container--typical
+      h2 Подрядчики
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: filter
+  section
+    form(action="#")
+      .filter
+        .container.container--typical
+          .filter__grid
+            .filter__item
+              p Регион строительства
+              select(name="")
+                option(value="Московская область") Московская область
+                option(value="Омская область") Омская область
+                option(value="Калининградская область") Калининградская область
+            .filter__item
+              p Сортировка
+              select(name="")
+                option(value="По рейтингу и стоимости") По рейтингу и стоимости
+                option(value="Рейтинг вниз") Рейтинг вниз
+                option(value="Стоимость вверх") Стоимость вверх
+                option(value="Стоимость вниз") Стоимость вниз
+      .container.container--typical
+        .filter__items
+          .filter__p-item
+            .filter__image
+              img(src="img/logo-1.png", alt="")
+            .filter__info
+              .filter__head
+                a.filter__name(href="#") терем
+                a.filter__rate(href="#")
+                  img(src="img/star.svg", alt="")
+                  span 9,5
+              .filter__info-body
+                .filter__info-grid
+                  .filter__row
+                    p.filter__regular Регион строительства: 
+                    p.filter__bold Московская Область
+                  .filter__row
+                    p.filter__regular Количество бригад:
+                    p.filter__bold 5 бригад
+                  .filter__row
+                    p.filter__regular Готовых объектов:
+                    p.filter__bold 21
+                  .filter__row
+                    p.filter__regular Стаж в строительстве:
+                    p.filter__bold 10 лет
+                  .filter__row
+                    p.filter__regular Стадия  
+                      span BASIS: 
+                    p.filter__bold
+                      span  от 24 586 Р/м2
+                .filter__line
+                .filter__bottom
+                  .filter__bottom-links
+                    a.filter__link(href="#")
+                      img(src="img/video.svg", alt="")
+                      span Видеотрансляция
+                    a.filter__link(href="#")
+                      img(src="img/gift.svg", alt="")
+                      span Акции
+                  a.filter__more Подробнее
+                    span 
+          .filter__p-item
+            .filter__image
+              img(src="img/logo-2.png", alt="")
+            .filter__info
+              .filter__head
+                a.filter__name(href="#") ИМПЕРИЯ
+                a.filter__rate(href="#")
+                  img(src="img/star.svg", alt="")
+                  span 9,5
+              .filter__info-body
+                .filter__info-grid
+                  .filter__row
+                    p.filter__regular Регион строительства: 
+                    p.filter__bold Московская Область
+                  .filter__row
+                    p.filter__regular Количество бригад:
+                    p.filter__bold 5 бригад
+                  .filter__row
+                    p.filter__regular Готовых объектов:
+                    p.filter__bold 21
+                  .filter__row
+                    p.filter__regular Стаж в строительстве:
+                    p.filter__bold 10 лет
+                  .filter__row
+                    p.filter__regular Стадия  
+                      span BASIS: 
+                    p.filter__bold
+                      span  от 24 586 Р/м2
+                .filter__line
+                .filter__bottom
+                  .filter__bottom-links
+                    a.filter__link(href="#")
+                      img(src="img/gift.svg", alt="")
+                      span Акции
+                  a.filter__more Подробнее
+                    span 
+          .filter__p-item
+            .filter__image
+              img(src="img/logo-3.png", alt="")
+            .filter__info
+              .filter__head
+                a.filter__name(href="#") Мастер
+                a.filter__rate(href="#")
+                  img(src="img/star.svg", alt="")
+                  span 9,5
+              .filter__info-body
+                .filter__info-grid
+                  .filter__row
+                    p.filter__regular Регион строительства: 
+                    p.filter__bold Московская Область
+                  .filter__row
+                    p.filter__regular Количество бригад:
+                    p.filter__bold 5 бригад
+                  .filter__row
+                    p.filter__regular Готовых объектов:
+                    p.filter__bold 21
+                  .filter__row
+                    p.filter__regular Стаж в строительстве:
+                    p.filter__bold 10 лет
+                  .filter__row
+                    p.filter__regular Стадия  
+                      span BASIS: 
+                    p.filter__bold
+                      span  от 24 586 Р/м2
+                .filter__line
+                .filter__bottom
+                  a.filter__more Подробнее
+                    span 
+          .filter__p-item
+            .filter__image
+              img(src="img/logo-1.png", alt="")
+            .filter__info
+              .filter__head
+                a.filter__name(href="#") терем
+                a.filter__rate(href="#")
+                  img(src="img/star.svg", alt="")
+                  span 9,5
+              .filter__info-body
+                .filter__info-grid
+                  .filter__row
+                    p.filter__regular Регион строительства: 
+                    p.filter__bold Московская Область
+                  .filter__row
+                    p.filter__regular Количество бригад:
+                    p.filter__bold 5 бригад
+                  .filter__row
+                    p.filter__regular Готовых объектов:
+                    p.filter__bold 21
+                  .filter__row
+                    p.filter__regular Стаж в строительстве:
+                    p.filter__bold 10 лет
+                  .filter__row
+                    p.filter__regular Стадия  
+                      span BASIS: 
+                    p.filter__bold
+                      span  от 24 586 Р/м2
+                .filter__line
+                .filter__bottom
+                  .filter__bottom-links
+                    a.filter__link(href="#")
+                      img(src="img/video.svg", alt="")
+                      span Видеотрансляция
+                    a.filter__link(href="#")
+                      img(src="img/gift.svg", alt="")
+                      span Акции
+                  a.filter__more Подробнее
+                    span 
+          .filter__p-item
+            .filter__image
+              img(src="img/logo-2.png", alt="")
+            .filter__info
+              .filter__head
+                a.filter__name(href="#") ИМПЕРИЯ
+                a.filter__rate(href="#")
+                  img(src="img/star.svg", alt="")
+                  span 9,5
+              .filter__info-body
+                .filter__info-grid
+                  .filter__row
+                    p.filter__regular Регион строительства: 
+                    p.filter__bold Московская Область
+                  .filter__row
+                    p.filter__regular Количество бригад:
+                    p.filter__bold 5 бригад
+                  .filter__row
+                    p.filter__regular Готовых объектов:
+                    p.filter__bold 21
+                  .filter__row
+                    p.filter__regular Стаж в строительстве:
+                    p.filter__bold 10 лет
+                  .filter__row
+                    p.filter__regular Стадия  
+                      span BASIS: 
+                    p.filter__bold
+                      span  от 24 586 Р/м2
+                .filter__line
+                .filter__bottom
+                  .filter__bottom-links
+                    a.filter__link(href="#")
+                      img(src="img/gift.svg", alt="")
+                      span Акции
+                  a.filter__more Подробнее
+                    span 
+          .filter__p-item
+            .filter__image
+              img(src="img/logo-3.png", alt="")
+            .filter__info
+              .filter__head
+                a.filter__name(href="#") Мастер
+                a.filter__rate(href="#")
+                  img(src="img/star.svg", alt="")
+                  span 9,5
+              .filter__info-body
+                .filter__info-grid
+                  .filter__row
+                    p.filter__regular Регион строительства: 
+                    p.filter__bold Московская Область
+                  .filter__row
+                    p.filter__regular Количество бригад:
+                    p.filter__bold 5 бригад
+                  .filter__row
+                    p.filter__regular Готовых объектов:
+                    p.filter__bold 21
+                  .filter__row
+                    p.filter__regular Стаж в строительстве:
+                    p.filter__bold 10 лет
+                  .filter__row
+                    p.filter__regular Стадия  
+                      span BASIS: 
+                    p.filter__bold
+                      span  от 24 586 Р/м2
+                .filter__line
+                .filter__bottom
+                  a.filter__more Подробнее
+                    span 
+          .pagination
+            a.prev(href="#")
+              span.arrow
+              span.info предыдущая
+            .pagination__list
+              a.pagination__item.is-active(href="#") 1
+              a.pagination__item(href="#") 2
+              a.pagination__item(href="#") 3
+              a.pagination__item(href="#") 4
+              a.pagination__item(href="#") 5
+              a.pagination__item(href="#") ...
+              a.pagination__item(href="#") 10
+            a.next(href="#")
+              span.info следующая
+              span.arrow
+
+  // END SECTION :: filter
+
+  // BEGIN SECTION :: p-sert
+  section.p-sert
+    .container.container--typical
+      p.p-sert__title Сертификация
+      .p-sert__grid
+        .p-sert__image
+          img(src="img/sert.jpg", alt="")
+        .p-sert__info
+          p Все наши подрядчики проходят обучение в корпорации ТехноНИКОЛЬ и сертифицируются согласно стандартам технологии ДОМ ТЕХНОНИКОЛЬ.
+          p Стандартизация технологии строительства снижает человеческий фактор и возможность ошибки и обеспечивает заранее прогнозируемый результат построенного дома высокого качества.
+  // END SECTION :: p-sert
+
+  // BEGIN SECTION :: p-system
+  section.p-system
+    .container.container--typical
+      p.p-sert__title Рейтинговая система
+      .p-system__grid
+        .p-system__image
+          img(src="img/star2.svg", alt="")
+        .p-system__info
+          p Рейтинговая система — удобный и прозрачный инструмент выбора исполнителя из перечня обученных  подрядчиков на основе их работы в системе. У каждого подрядчика есть возможность иметь рейтинг в  виде 0-10,0 звёзд.
+          p Рейтинг зависит от :
+  // END SECTION :: p-system
+
+  // BEGIN SECTION :: podryadchikom
+  section.be
+    .container.container--typical
+      p.be__title Стать подрядчиком
+      p.be__info Если вы строительная компания или частная бригада и хотите строить комфортные современные дома — приглашаем вас стать нашим партнёром!
+      p.be__info 
+        span ДОМ ТЕХНОНИКОЛЬ  
+        |  — это каркасные дома для всесезонного проживания. Технология их возведения основывается на передовом мировом опыте.
+      p.be__sub-title Преимущества для наших партнёров
+      .be__list
+        p
+          span Кобрендинг с ТЕХНОНИКОЛЬ.  
+          | ТЕХНОНИКОЛЬ — один из крупнейших международных производителей надежных и эффективных строительных материалов. Корпорация предоставляет информационную, логистическую и маркетинговую поддержку, а также специальные цены на материалы для возводимых объектов.
+        p
+          span Простая и понятная система строительства современных домов. 
+          |  Система строительных стандартов ДОМ ТЕХНОНИКОЛЬ основывается на передовом мировом опыте каркасного домостроения. Строить по нашим стандартам быстро и просто. Наши дома могут иметь почти любую архитектуру и решения для фасадов, отличаются высокой энергоэффективностью и показателями комфорта.
+        p
+          span Подробная программа обучения. 
+          |  Все строительные партнеры ТЕХНОНИКОЛЬ проходят обязательную программу обучения, в ходе которой изучают конструктивные решения в рамках Стандартов.
+        p
+          span Техническая поддержка 
+          |  при строительстве. Если у вас возникнут сложности или вопросы по возведению дома — мы проконсультируем вас по телефону или видеосвязи. Также возможен выезд инженера на площадку.
+      .be__buttons
+        a.btn.btn--red(href="#") регистрация
+        a.btn.btn--transparent(href="#") личный кабинет
+  // END SECTION :: podryadchikom
