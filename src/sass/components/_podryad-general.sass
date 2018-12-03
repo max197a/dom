@@ -1,0 +1,412 @@
+.podr
+  &__title
+    font-size: 40px
+    font-family: $medium
+    color: $fontColor
+
++r($desktop1068)
+  .podr
+    &__title
+      margin-left: 0
+      font-size: 32px
+
++r($tablet)
+  .podr
+    &__title
+      margin-left: 0
+      font-size: 24px
+  
+.podr-general
+  // min-height: 582px
+  overflow: hidden
+  .container
+    max-width: 1720px
+    padding-right: 0
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-direction: row-reverse
+  &__right
+    max-width: 540px
+    width: 33%
+    padding: 70px 20px 20px 0
+    position: relative
+    align-self: flex-start
+  &__all-p
+    position: relative
+    transition: all $transitionSpeed $ease
+    display: flex
+    align-items: center
+    span
+      transition: all $transitionSpeed $ease
+      &.info
+        font-size: 16px
+        font-family: $regular
+        color: $fontColor
+        opacity: 0.4
+      &.arrow
+        display: block
+        width: 10px
+        height: 10px
+        border: 3px solid #c6142d
+        transform: rotate(45deg)
+        border-top: none
+        border-right: none
+        transform-origin: center center
+        margin-right: 7px
+        opacity: 0.4
+    &:hover
+      span
+        &.arrow
+          opacity: 1
+        &.info
+          opacity: 1
+  &__rate
+    position: absolute
+    top: 122px
+    right: 20px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-end
+    img
+      height: 22px
+      width: auto
+      margin-right: 7px
+      opacity: 0.7
+    p
+      font-size: 24px
+      color: rgba(#363636, 0.7)
+      font-family: $regular
+  &__image
+    // min-height: 115px
+    width: 80%
+    max-height: 115px
+    margin-bottom: 8px
+    margin-top: 35px
+    img
+      height: 100%
+      width: auto
+  &__title
+    font-size: 30px
+    font-family: $bold
+    color: $fontColor
+    text-transform: uppercase
+    margin-top: 30px
+    margin-bottom: 15px
+  &__row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 2px
+    padding: 9px 15px 7px 7px
+    line-height: 1
+    border-top: 1px solid rgba(#cacaca, 0.5)
+    &:last-child
+      border-bottom: none
+      padding-bottom: 0
+      p
+        font-size: 14px
+    p
+      font-size: 16px
+      color: $fontColor
+      font-family: $medium
+      margin-right: 15px
+      max-width: 180px
+      line-height: 1.2
+      &.regular
+        font-family: $regular
+        margin-left: auto
+        margin-right: 0
+        max-width: 240px
+        text-align: right
+      &.full
+        max-width: 100%
+        margin-right: 0
+  &__links
+    display: flex
+    flex-direction: column
+    padding-top: 25px
+    a
+      display: inline-block
+      width: auto
+      font-size: 16px
+      font-family: $medium
+      transition: all $transitionSpeed $ease
+      color: #c6142d
+      margin-top: 5px
+      &.site
+        span 
+          border-bottom: 1px solid #c6142d
+        &:hover
+          span
+            border-color: transparent
+  &__link
+    margin-top: auto
+    min-width: 115px
+    padding-left: 10px
+
+  &__all-of
+    position: relative
+    transition: all $transitionSpeed $ease
+    display: flex
+    align-items: center
+    min-width: 100px
+    span
+      transition: all $transitionSpeed $ease
+      &.info
+        font-size: 16px
+        font-family: $regular
+        color: $fontColor
+        opacity: 0.4
+      &.arrow
+        display: block
+        width: 10px
+        height: 10px
+        // border: 3px solid #c6142d
+        border: 3px solid $fontColor
+        transform: rotate(45deg)
+        border-bottom: none
+        border-left: none
+        transform-origin: center center
+        margin-left: 7px
+        opacity: 0.4
+    &:hover
+      span
+        &.arrow
+          opacity: 1
+        &.info
+          opacity: 1
+  &__left
+    // max-width: 700px
+    width: 66%
+    position: relative
+    background: #fff
+    display: flex
+    align-items: center
+    &:before
+      position: absolute
+      width: 100%
+      height: 2000px
+      background: #fff
+      display: block
+      content: ''
+      left: 0
+      top: 50%
+      transform: translateY(-50%)
+  &__slider
+    // max-width: 700px
+    width: 100%
+    position: relative
+    .slick-slide
+      font-size: 0
+  &__item-container
+    display: flex
+    align-items: center
+    font-size: 0
+  &__item
+    width: 100%
+    max-height: 759px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 0
+    img
+      width: 100%
+  .slick-arrow
+    position: absolute
+    width: 50px
+    height: 50px
+    background: $fontColor
+    transition: all $transitionSpeed $ease
+    top: 50%
+    transform: translateY(-50%)
+    border: none
+    font-size: 0
+    color: transparent
+    cursor: pointer
+    z-index: 5
+    &:hover
+      background: darken($fontColor, 0.3)
+    &.slick-prev
+      left: 0px
+      &:before
+        border-top: none
+        border-right: none
+        left: 57%
+    &.slick-next
+      right: 0px
+      &:before
+        border-bottom: none
+        border-left: none
+        left: 43%
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      width: 15px
+      height: 15px
+      border: 2px solid #fff
+      transform: translate(-50%, -50%) rotate(45deg)
+      top: 50%
+      left: 50%
+  &__preview-item
+    width: 100%
+    max-height: 80px
+    overflow: hidden
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 10px 15px
+    cursor: pointer
+    font-size: 0
+    img
+      width: 100%
+      height: auto
+  &__preview-item-container
+    position: relative
+    overflow: hidden
+    display: flex
+    align-items: center
+    max-height: 70px
+    min-height: 70px
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      width: calc(100% - 4px)
+      height: calc(100% - 4px)
+      border: 2px solid #c6142d
+      left: 0
+      top: 0
+      opacity: 0
+      transition: all $transitionSpeed $ease
+  .slick-current
+    .podr-general__preview-item-container
+      &:before
+        opacity: 1
+
+  &__preview-slider
+    padding: 15px 20px
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translateX(-50%)
+    width: 100%
+    max-width: 85%
+    background: #fff
+    .slick-slide
+      font-size: 0
+    .slick-current
+      .general__preview-item-container
+        &:before
+          opacity: 1
+
++r($wide)
+  .podr-general
+    &__left
+      width: 60%
+    &__right
+      width: 39%
+      padding-top: 27px
+    &__image
+      margin-top: 15px
+    &__rate
+      top: 60px
+    
+
++r($desktop)
+  .podr-general
+    &__right
+      width: 45%
+      padding-top: 35px
+    &__left
+      width: 55%
+    &__row
+      flex-wrap: wrap
+      padding: 7px 7px 7px 7px
+      p
+        width: 100%
+        max-width: 100%
+        line-height: 1.4
+        &.bold
+          text-align: left
+          margin-left: 0
+          max-width: 100%
+          margin-top: 5px
+    &__rate
+      top: 68px
+    &__image
+      width: 50%
+      img
+        width: 100%
+        height: auto
+    &__title
+      font-size: 24px
+    &__links
+      padding-top: 0
+      width: calc(100% - 120px)
+
++r($tablet)
+  .podr-general
+    padding-bottom: 40px
+    .container
+      padding: 0 40px
+    .slick-arrow
+      width: 35px
+      height: 35px
+      &:before
+        border-width: 3px
+        width: 7px
+        height: 7px
+    &__grid
+      flex-wrap: wrap
+      flex-direction: column-reverse
+    &__right
+      width: 100%
+      max-width: 100%
+      padding-top: 20px
+      padding-right: 0
+    &__left
+      width: 100%
+      max-width: 100%
+      box-shadow: 6.356px 12.474px 47.94px 3.06px rgba(0, 0, 0, 0.24)
+      border: 1px solid #c4c4c4
+      &:before
+        display: none
+    &__preview-slider
+      display: none
+    &__rate
+      top: 55px
+      right: 0
+    &__image
+      max-height: 80px
+      img
+        height: 80px
+        width: auto
+    &__title
+      font-size: 18px
+    &__links
+      width: 100%
+      margin-bottom: 15px
+    &__link
+      padding-left: 0
+      margin-left: auto
+      min-width: 1px
+      padding-right: 2px
+    &__image
+      width: calc(100% - 75px)
+      max-width: 280px
+      font-size: 0
+      img
+        height: auto
+        max-height: 70px
+    &__row
+      padding: 7px 0
+
++r($mobile)
+  .podr-general
+    padding-bottom: 20px
+    .container
+      padding: 0 20px

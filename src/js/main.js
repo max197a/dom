@@ -95,11 +95,32 @@ $(document).ready(function() {
         .eq(tabIndex)
         .fadeIn();
     })
+
+    .on("click", "[js-p-map-btn]", function(e) {
+      e.preventDefault();
+      var $self = $(this),
+        tabIndex = $self.index();
+      $self.siblings().removeClass("is-active");
+      $self.addClass("is-active");
+      $(".podr-map__tab")
+        .removeClass("is-active")
+        .css("display", "none")
+        .eq(tabIndex)
+        .fadeIn();
+    })
+
     .on("click", "[js-general-view-btn]", function(e) {
       e.preventDefault();
       $(".general__view-item").removeClass("is-active");
       $(this).addClass("is-active");
     })
+
+    .on("click", "[js-services-btn]", function(e) {
+      e.preventDefault();
+      $(".podr-services__grid").toggleClass("is-active");
+      $(this).toggleClass("is-active");
+    })
+
     .on("click", "[js-open-info]", function(e) {
       e.preventDefault();
       $(this).toggleClass("is-open");
@@ -329,8 +350,23 @@ $(document).ready(function() {
       asNavFor: "[js-g-slider]",
       dots: false,
       arrows: false,
-      centerMode: true,
-      focusOnSelect: true
+      // centerMode: true,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1336,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3
+          }
+        }
+      ]
     });
 
     $("[js-projects-slider]").slick({
@@ -402,6 +438,24 @@ $(document).ready(function() {
         },
         {
           breakpoint: 560,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+          }
+        }
+      ]
+    });
+
+    $("[js-share-slider]").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      dots: false,
+      responsive: [
+        {
+          breakpoint: 788,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

@@ -1,0 +1,76 @@
+.podr-form
+  padding: 80px 0 111px
+  background: #e7e7e7
+  &__grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding-top: 32px
+  &__form
+    max-width: 400px
+    width: 42%
+    .input-container
+      margin-top: 11px
+      text-align: center
+      input
+        padding: 14px 15px
+    form
+      text-align: center
+    p
+      font-size: 10px
+      font-family: $light
+      color: rgba(#363636,0.8)
+      display: inline-block
+      margin-top: 15px
+      a
+        display: inline
+        border-bottom: 1px solid transparent
+        transition: all $transitionSpeed $ease
+        color: rgba(#ff1007, 0.8)
+        &:hover
+          color: #ff1007
+          border-color: rgba(#ff1007, 0.8)
+    .btn
+      cursor: pointer
+      border: none
+      font-size: 14px
+      padding: 14px 20px
+      margin-left: auto
+      margin-top: 17px
+
+  &__info
+    max-width: 500px
+    width: 54%
+  &__info-title
+    font-size: 24px
+    color: $fontColor
+    line-height: 1.15
+    font-family: $regular
+  &__info-text
+    font-size: 18px
+    font-family: $light
+    line-height: 1.35
+    margin-top: 24px
+
++r($desktop)
+  .podr-form
+    padding: 70px 0
+
++r($tablet)
+  .podr-form
+    padding: 40px 0
+    &__grid
+      flex-direction: column
+    &__form
+      width: 100%
+      max-width: 100%
+      margin-top: 25px
+    &__info
+      order: -1
+      max-width: 100%
+      width: 100%
+    &__info-title
+      font-size: 20px
+    &_info-text
+      margin-top: 15px
+      font-size: 16px

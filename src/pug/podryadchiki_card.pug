@@ -1,0 +1,335 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: general
+  section.podr-general
+    .container
+      .podr-general__grid
+        .podr-general__left
+          .podr-general__slider(js-g-slider)
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-1.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-2.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-3.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-4.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-5.jpg", alt="")
+          .podr-general__preview-slider(js-g-preview-slider)
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-1.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-2.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-3.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-4.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-5.jpg", alt="")
+
+        .podr-general__right
+          a.podr-general__all-p(href="#") 
+            span.arrow 
+            span.info Все подрядчики
+          .podr-general__rate
+            img(src="img/star.svg", alt="")
+            p 8,5
+          .podr-general__image
+            img(src="img/m-logo.jpg", alt="")
+          p.podr-general__title Мастер правильных домов
+          .podr-general__row
+            p Стаж в строительстве
+            p.regular 11 лет
+          .podr-general__row
+            p Стаж в ДОМ ТН
+            p.regular 2 года
+          .podr-general__row
+            p Количество бригад
+            p.regular 5
+          .podr-general__row
+            p Регион строительства
+            p.regular Московская область
+          .podr-general__row
+            .podr-general__links
+              a(href="#") + 7 (495) 24-99-079
+              a(href="#") г. Москва, ул. Летчиков , д.20
+              a.site(href="#") 
+                span mpd-rf.ru
+            .podr-general__link
+              a.podr-general__all-of(href="#")
+                span.info Все офисы
+                span.arrow
+
+  // END SECTION :: general
+
+  // BEGIN SECTION :: info
+  section.podr-info
+    .container.container--typical
+      p С 2007 года мы строим дома, которые помогают экономить Ваши деньги. За время работы мы выбрали для себя две технологии, в которых стали настоящими профи: строительство из газобетона и возведение каркасных домов по технологии Дом Технониколь. Ежедневно совершенствуя свои навыки, мы знаем, как сделать эти дома по-настоящему энергоэффективными, и избавить их владельцев от дополнительных денежных вложений. Реализуя полный цикл строительства: от разработки или усовершенствования проекта до внутренней отделки, мы строим дома, в которых хочется жить!
+  // END SECTION :: info
+
+  // BEGIN SECTION :: podryad-price
+  section.podr-price
+    .container.container--typical
+      h2.podr__title Стоимость строительства
+      .podr-price__grid
+        .podr-price__item
+          .podr-price__image
+            img(src="img/m-price-1.png", alt="")
+          .podr-price__info
+            p.podr-price__name Базовая комплектация
+            p.podr-price__price от 20 115 Р/м²
+        .podr-price__item
+          .podr-price__image
+            img(src="img/m-price-2.png", alt="")
+          .podr-price__info
+            p.podr-price__name С черновой отделкой
+            p.podr-price__price от 22 994 Р/м²
+        .podr-price__item
+          .podr-price__image
+            img(src="img/m-price-3.png", alt="")
+          .podr-price__info
+            p.podr-price__name Дом «под ключ»
+            p.podr-price__price от 26 993 Р/м²
+      a.podr-price__button.btn(href="#") подробнее о стадиях
+
+  // END SECTION :: podryad-price
+
+  // BEGIN SECTION :: podryad-outside
+  section.podr-outside
+    .container.container--typical
+      h2.podr__title Варианты внешней отделки
+      .podr-outside__grid
+        .podr-outside__item.disable
+          .podr-outside__image
+            img(src="img/m-out-1.jpg", alt="")
+          p Обрезная доска, обожженная доска
+        .podr-outside__item
+          .podr-outside__image
+            img(src="img/m-out-2.jpg", alt="")
+          p Имитация бруса, планкен, пр.
+        .podr-outside__item
+          .podr-outside__image
+            img(src="img/m-out-7.jpg", alt="")
+          p HAUBERK
+        .podr-outside__item
+          .podr-outside__image
+            img(src="img/m-out-4.jpg", alt="")
+          p Штукатурный фасад
+        .podr-outside__item
+          .podr-outside__image
+            img(src="img/m-out-5.jpg", alt="")
+          p Кирпичная  кладка
+        .podr-outside__item.disable
+          .podr-outside__image
+            img(src="img/m-out-6.jpg", alt="")
+          p Имитация штукатурки под фахверк
+        .podr-outside__item.disable
+          .podr-outside__image
+            img(src="img/m-out-3.jpg", alt="")
+          p Фиброцементный сайдинг
+        .podr-outside__item
+          .podr-outside__image
+            img(src="img/m-out-8.jpg", alt="")
+          p Виниловый  сайдинг
+  // END SECTION :: podryad-outside
+
+  // BEGIN SECTION :: master-services
+  section.podr-services
+    .container.container--typical
+      h2.podr__title Дополнительные услуги
+      .podr-services__grid
+        .podr-services__item
+          p Разработка архитектурного проекта
+          p Оформление строения в собственость
+          p Благоустройство территории
+          p Подключение к внешним электросетям
+          p Подключение к внешним газовым сетям
+          p Благоустройство территории
+          p Подключение к внешним электросетям
+          p Подключение к внешним газовым сетям
+        .podr-services__item
+          p Устройство скважины
+          p Устройство септика
+          p Устройство забора
+          p Подключение к городской канализации
+          p Подключение к городскому водоснабжению
+          p Устройство забора
+          p Подключение к городской канализации
+          p Подключение к городскому водоснабжению
+      a.podr-services__button.btn(href="#" js-services-btn) Посмотреть все услуги 
+  // END SECTION :: master-services
+
+  // BEGIN SECTION :: podr-map
+  section.podr-map
+    .podr-map__map
+      //- карту яндекса вставлять сюда
+    .container.container--large
+      .podr-map__offices
+        .podr-map__head
+          .podr-map__buttons
+            a.podr-map__btn.is-active(href="#" js-p-map-btn) готовые
+            a.podr-map__btn(href="#" js-p-map-btn) строящиеся  дома
+            a.podr-map__btn(href="#" js-p-map-btn) офисы
+        .podr-map__body
+          .podr-map__scroll
+            .podr-map__tab.is-active
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                span.phone +7 (495) 69 49 596
+            .podr-map__tab
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                span.phone +7 (495) 69 49 596
+            .podr-map__tab
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+              a.podr-map__item(href="#")
+                span.city г. Москва, ул. Васильевская, д. 10 
+                span.phone +7 (495) 69 49 596
+  // END SECTION :: podr-map
+
+  // BEGIN SECTION :: aktsii
+  section.podr-share
+    .container.container--typical
+      h2.podr__title Акции от подрядчика
+      .podr-share__slider(js-share-slider)
+        .podr-share__item
+          .podr-share__grid
+            .podr-share__image
+              img(src="img/gal-1.jpg", alt="")
+            .podr-share__info
+              p.podr-share__title скидка 30% на внешнюю  отдеЛку виниловым  сайдингом #1
+              p.podr-share__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        .podr-share__item
+          .podr-share__grid
+            .podr-share__image
+              img(src="img/gal-2.jpg", alt="")
+            .podr-share__info
+              p.podr-share__title скидка 30% на внешнюю  отдеЛку виниловым  сайдингом #2
+              p.podr-share__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        .podr-share__item
+          .podr-share__grid
+            .podr-share__image
+              img(src="img/gal-3.jpg", alt="")
+            .podr-share__info
+              p.podr-share__title скидка 30% на внешнюю  отдеЛку виниловым  сайдингом #3
+              p.podr-share__desc Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+  // END SECTION :: aktsii
+
+  // BEGIN SECTION :: reviews
+  section.podr-reviews
+    .container.container--typical
+      h2.podr__title Отзывы клиентов
+      .podr-reviews__slider(js-reviews-slider)
+        .podr-reviews__item
+          .podr-reviews__item-container
+            .podr-reviews__review-container
+              p.podr-reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
+            .podr-reviews__info
+              .podr-reviews__top
+                p.podr-reviews__name Петр Иванович Кондратенко
+                p.podr-reviews__city Московская область
+              .podr-reviews__photo
+                a.no-barba(href="img/proj-1.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-1.jpg")
+                a.no-barba(href="img/proj-2.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-2.jpg")
+                a.no-barba(href="img/proj-3.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-3.jpg")
+
+        .podr-reviews__item
+          .podr-reviews__item-container
+            .podr-reviews__review-container
+              p.podr-reviews__review Огромное спасибо ребятам из ДОМ ТЕХНОНИКОЛЬ за качественную работу, отличное отношение к своей работе. Они мне строили дом в Тульской области, все сделали быстро и качественно, нареканий нет. Вот у них руки действительно растут из плечей. Ребята, удачи вам в работе!!!
+            .podr-reviews__info
+              .podr-reviews__top
+                p.podr-reviews__name Константин Константинопольский
+                p.podr-reviews__city Тульская область
+              .podr-reviews__photo
+                a.no-barba.video-link(href="https://www.youtube.com/watch?v=LTvFsTbyILg&t=6s" js-popup-video data-effect="mfp-zoom-in")
+                  img(src="img/proj-1.jpg")
+
+        .podr-reviews__item
+          .podr-reviews__item-container
+            .podr-reviews__review-container
+              p.podr-reviews__review Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. Спасибо большое компании ТЕХНОНИКОЛЬ. Очень быстро и качественно построили дом с беседкой. Ребята молодцы, работают слаженно, у каждого своя задача. Перекуров частых не было, работали даже в дождь. Сделали все в срок. 
+            .podr-reviews__info
+              .podr-reviews__top
+                p.podr-reviews__name Петр Иванович Кондратенко
+                p.podr-reviews__city Московская область
+              .podr-reviews__photo
+                a.no-barba(href="img/proj-1.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-1.jpg")
+                a.no-barba(href="img/proj-2.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-2.jpg")
+                a.no-barba(href="img/proj-3.jpg" js-open-gallery data-effect="mfp-zoom-in")
+                  img(src="img/proj-3.jpg")
+
+  // END SECTION :: reviews
+
+  // BEGIN SECTION :: podr-form
+  section.podr-form
+    .container.container--typical
+      h2.podr__title Оставьте заявку
+      .podr-form__grid
+        .podr-form__form
+          form(action="#")
+            .input-container
+              input(type="text" placeholder="Имя")
+            .input-container
+              input(type="text" placeholder="Телефон")
+            p Отправляя форму даю согласие на обработку 
+              a(href="#") персональных данных
+            input.btn(type="submit" value="ОТПРАВИТЬ")
+        .podr-form__info
+          p.podr-form__info-title Заполните форму и наш специалист свяжется с вами в ближайшее время.
+          p.podr-form__info-text 1. Расскажем о всех наших инновационных решениях, материалах и технологии Дом Технониколь
+          p.podr-form__info-text 2. Ответим на все интересующие вас вопросы
+          p.podr-form__info-text 3. Подберем для вас оптимальный проект
+
+
+  // END SECTION :: podr-form

@@ -22,6 +22,6 @@ PageList:
 - file: master-card.html
   ready: 0
 - file: podryadchiki_catalog.html
-  ready: 20
-- file: master-card.html
-  ready: 0
+  ready: 40
+- file: podryadchiki_card.html
+  ready: 40

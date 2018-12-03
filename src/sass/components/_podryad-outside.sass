@@ -1,0 +1,60 @@
+.podr-outside
+  padding-top: 72px
+  background: #e7e7e7
+  padding-bottom: 81px
+  &__grid
+    padding-top: 25px
+    display: flex
+    align-items: flex-start
+    justify-content: space-around
+    flex-wrap: wrap
+    margin: 0 -10px
+  &__item
+    width: 25%
+    padding: 0 10px
+    // max-width: 215px
+    margin: 25px 0
+    text-align: center
+    p
+      font-size: 20px
+      font-family: $light
+      margin-top: 22px
+      line-height: 1.1
+      text-align: center
+    &.disable
+      opacity: 0.3
+  &__image
+    max-width: 100%
+    height: auto
+    overflow: hidden
+    border-radius: 3px
+    border: 1px solid #d7d7d7
+    font-size: 0
+    margin: 0 auto
+    max-height: 145px
+    img
+      width: 100%
+      height: auto
+
++r($desktop)
+  .podr-outside
+    padding: 30px 0 15px
+    .container--typical
+      padding: 0 40px
+    &__grid
+      flex-wrap: wrap
+      padding-top: 15px
+    &__item
+      width: 30%
+      margin: 15px 0.5%
+
++r($mobile)
+  .podr-outside
+    .container
+      padding: 0 20px
+    &__item
+      width: 50%
+      padding: 0 10px
+      margin: 15px 0
+      p
+        font-size: 14px

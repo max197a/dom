@@ -1,0 +1,89 @@
+.podr-price
+  margin-top: 55px
+  padding-bottom: 85px
+  &__grid
+    display: flex
+    align-items: center
+    justify-content: space-around
+    padding-top: 80px
+  &__item
+    width: 30%
+    margin: 0 15px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    min-width: 280px
+  &__image
+    min-width: 142px
+    text-align: center
+    font-size: 0
+    margin-right: 15px
+    img
+      width: 100%
+      height: auto
+  &__name
+    font-size: 16px
+    color: $fontColor
+    line-height: 1.2
+    font-family: $regular
+    text-transform: uppercase
+  &__price
+    font-size: 18px
+    color: #c6142d
+    font-family: $bold
+    display: inline-block
+    margin-top: 13px
+  &__button
+    font-size: 16px
+    cursor: pointer
+    max-width: 300px
+    width: 100%
+    padding: 16px
+    margin: 81px auto 0
+
++r($desktop)
+  .podr-price
+    padding-bottom: 35px
+    &__grid
+      flex-wrap: wrap
+      padding-top: 15px
+    &__item
+      width: 45%
+      margin: 15px
+
++r($tablet)
+  .podr-price
+    margin-top: 25px
+    padding-bottom: 25px
+    .container--typical
+      padding-top: 15px
+      padding: 0 40px
+    &__item
+      margin-top: 15px
+    &__grid
+      justify-content: flex-start
+    &__image
+      width: 100%
+      min-width: 100px
+      max-width: 100px
+      img
+        width: 100%
+    &__button
+      margin-top: 40px
+
++r($mobile)
+  .podr-price
+    .container--typical
+      padding: 0 20px
+    &__item
+      width: 100%
+      justify-content: flex-start
+      margin: 15px 0 0 0
+    &__grid
+      justify-content: flex-start
+    &__image
+      width: 100%
+      img
+        width: 100%
+        height: auto
+    
