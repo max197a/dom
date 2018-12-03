@@ -1,0 +1,26 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head
+    .container.container--typical
+      h2 Вход в личный кабинет
+      p.head__p-enter Если вы еще не зарегистированы как подрядчик, то можете это сделать 
+        a(href="#") здесь
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: podryad-enter
+  section.p-enter
+    .container.container--typical
+      form.js-form-enter(action="#")
+        .input-container
+          input(type="text" name="login" placeholder="Логин")
+        .input-container
+          input(type="text" name="pass" placeholder="Пароль")
+        a(href="#")  Забыли пароль?
+        input.btn(type="submit" value="войти")
+  // END SECTION :: podryad-enter

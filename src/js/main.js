@@ -635,6 +635,21 @@ $(document).ready(function() {
         mail: "Заполните это поле"
       }
     });
+
+    $(".js-form-enter").validate({
+      errorPlacement: validateErrorPlacement,
+      highlight: validateHighlight,
+      unhighlight: validateUnhighlight,
+      submitHandler: validateSubmitHandler,
+      rules: {
+        login: "required",
+        pass: "required"
+      },
+      messages: {
+        login: "Заполните это поле",
+        pass: "Заполните это поле"
+      }
+    });
   }
 
   // //////////

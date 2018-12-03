@@ -1,0 +1,58 @@
+.head
+  &__p-enter
+    margin-top: 27px
+    a
+      color: #e4132f
+      border-bottom: 1px solid #e4132f
+      transition: all $transitionSpeed $ease
+      &:hover
+        border-color: transparent
+
+.p-enter
+  padding-bottom: 97px
+  form
+    max-width: 440px
+    padding-left: 40px
+    text-align: right
+    .input-container
+      margin-top: 10px
+      text-align: center
+      input
+        padding: 14px 15px
+  a
+    font-size: 10px
+    font-family: $light
+    color: #c6142d
+    display: inline-block
+    margin-top: 12px
+    margin-left: auto
+    border-bottom: 1px solid transparent
+    transition: all $transitionSpeed $ease
+    &:hover
+      border-color: #c6142d
+  .btn
+    cursor: pointer
+    border: none
+    font-size: 14px
+    padding: 14px 20px
+    margin-left: auto
+    margin-top: 20px
+    max-width: 203px
+    width: 100%
+
+
++r($tablet)
+  .head
+    &__p-enter
+      margin-top: 15px
+      text-align: center
+  .p-enter
+    padding-bottom: 60px
+    form
+      margin: 0 auto
+      padding-left: 0
+    a
+      margin-top: 20px
+    .btn
+      max-width: 100%
+      margin-top: 15px

@@ -25,3 +25,5 @@ PageList:
   ready: 40
 - file: podryadchiki_card.html
   ready: 40
+- file: podryadchiki_enter.html
+  ready: 40
