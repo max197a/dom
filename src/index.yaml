@@ -27,3 +27,9 @@ PageList:
   ready: 40
 - file: podryadchiki_enter.html
   ready: 40
+- file: nashy-doma-tipovye.html
+  ready: 40
+- file: nashy-doma-gotovye.html
+  ready: 40
+- file: nashy-doma-stroy.html
+  ready: 40

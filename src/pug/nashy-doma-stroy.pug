@@ -1,0 +1,426 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head.head--houses
+    .container.container--typical
+      h2 Наши дома
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: typical
+  section.typical
+    .container.container--typical
+      .typical__buttons
+        a(href="/nashy-doma-tipovye.html").typical__btn типовые проекты
+        a(href="/nashy-doma-gotovye.html").typical__btn.is-active готовые
+        a(href="/blog-help.html").typical__btn строящиеся
+        a(href="/blog-faq.html").typical__btn на карте
+
+  section.typical.typical--filter
+    .container.container--typical
+      form(action="#")
+        .typical__filter
+          .typical__item
+            p Регион строительства
+            select(name="")
+              option(value="Московская область") Московская область
+              option(value="Омская область") Омская область
+              option(value="Калининградская область") Калининградская область
+          .typical__item
+            p Этажность
+            .typical__input
+              .checkbox-container
+                input#c1(type='checkbox' name='checkbox')
+                label.label-container(for="c1")
+                  span 1
+                  
+              .checkbox-container
+                input#c2(type='checkbox' name='checkbox')
+                label.label-container(for="c2")
+                  span 2
+          .typical__item
+            p Площадь жилой части, м
+              sup 2
+            .typical__input
+              .checkbox-container
+                input#c11(type='checkbox' name='checkbox')
+                label.label-container(for="c11")
+                  span до 100
+              .checkbox-container
+                input#c12(type='checkbox' name='checkbox')
+                label.label-container(for="c12")
+                  span от 100 до 150
+              .checkbox-container
+                input#c13(type='checkbox' name='checkbox')
+                label.label-container(for="c13")
+                  span от 150
+          .typical__item.typical__item--bottom
+            .typical__input
+              .checkbox-container.checkbox-container--try
+                input#c21(type="checkbox")
+                label(for="c21")
+                  .label-image
+                    img(src="img/p-system-5.svg", alt="")
+                  span Можно посетить
+   
+  // END SECTION :: typical
+
+  // BEGIN SECTION :: typical-items
+  section.projects.projects--typical
+    .container.container--typical
+      .projects__grid.projects__grid--typical
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                .projects__house
+                  .projects__house-see
+                    img(src="img/p-system-5.svg", alt="")
+                  .projects__house-video
+                    img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+      
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                .projects__house
+                  .projects__house-see
+                    img(src="img/p-system-5.svg", alt="")
+                  .projects__house-video
+                    img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+      
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                //- .projects__house
+                //-   .projects__house-see
+                //-     img(src="img/p-system-5.svg", alt="")
+                //-   .projects__house-video
+                //-     img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                .projects__house
+                  .projects__house-see
+                    img(src="img/p-system-5.svg", alt="")
+                  //- .projects__house-video
+                  //-   img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 2010 м²
+
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                .projects__house
+                  //- .projects__house-see
+                  //-   img(src="img/p-system-5.svg", alt="")
+                  .projects__house-video
+                    img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                //- .projects__house
+                //-   .projects__house-see
+                //-     img(src="img/p-system-5.svg", alt="")
+                //-   .projects__house-video
+                //-     img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+      
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                .projects__house
+                  .projects__house-see
+                    img(src="img/p-system-5.svg", alt="")
+                  .projects__house-video
+                    img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                .projects__house
+                  .projects__house-see
+                    img(src="img/p-system-5.svg", alt="")
+                  .projects__house-video
+                    img(src="img/video-str.svg", alt="")
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+
+        .projects__item-slider
+          .projects__item
+            .projects__slider(js-projects-slider)
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-2.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-1.jpg", alt="")
+              .projects__slider-item
+                .projects__image
+                  img(src="img/proj-3.jpg", alt="")
+            .projects__info
+              .projects__row
+                a.projects__city(href="#") 
+                  img(src="img/pin-grey.svg", alt="")
+                  span Московская область, д. Иваново
+              .projects__line
+              .projects__row.projects__row--typical
+                p.projects__kv 
+                  img(src="img/typical.svg", alt="")
+                  | 186 м²
+
+      a.projects__more(href="#") посмотреть еще проекты
+
+      .pagination
+        a.prev(href="#")
+          span.arrow
+          span.info предыдущая
+        .pagination__list
+          a.pagination__item.is-active(href="#") 1
+          a.pagination__item(href="#") 2
+          a.pagination__item(href="#") 3
+          a.pagination__item(href="#") 4
+          a.pagination__item(href="#") 5
+          a.pagination__item(href="#") ...
+          a.pagination__item(href="#") 10
+        a.next(href="#")
+          span.info следующая
+          span.arrow
+          
+  
+  // END SECTION :: typical-items
+
+  // BEGIN SECTION :: g-calc
+  section.g-calc
+    .container.container--typical
+      .g-calc__grid
+        p Вы всегда можете рассчитать дом  по своим личным параметрам на нашем калькуляторе
+        a.btn(href="#") рассчитать стоимость
+  // END SECTION :: g-calc
+
+  // BEGIN SECTION :: podr-form
+  section.podr-form
+    .container.container--typical
+      h2.podr__title Оставьте заявку
+      .podr-form__grid
+        .podr-form__form
+          form(action="#")
+            .input-container
+              input(type="text" placeholder="Имя")
+            .input-container
+              input(type="text" placeholder="Телефон")
+            p Отправляя форму даю согласие на обработку 
+              a(href="#") персональных данных
+            input.btn(type="submit" value="ОТПРАВИТЬ")
+        .podr-form__info
+          p.podr-form__info-title Заполните форму и наш специалист свяжется с вами в ближайшее время.
+          p.podr-form__info-text 1. Расскажем о всех наших инновационных решениях, материалах и технологии Дом Технониколь
+          p.podr-form__info-text 2. Ответим на все интересующие вас вопросы
+          p.podr-form__info-text 3. Подберем для вас оптимальный проект
+
+  // END SECTION :: podr-form

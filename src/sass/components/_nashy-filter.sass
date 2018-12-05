@@ -1,0 +1,170 @@
+.typical
+  &__item
+    margin-top: 20px
+    margin-right: 40px
+    &--bottom
+      margin-top: auto
+      p
+        margin-top: 20px
+    &:last-child
+      margin-right: 0
+    p
+      font-size: 18px
+      font-family: $regular
+      color: $fontColor
+      margin-bottom: 17px
+  &--filter
+    background: #e9e9e9
+    padding: 0 0 25px
+  &__filter
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+  &__input
+    display: flex
+    align-items: center
+    justify-content: flex-start
+  .label-container
+    height: 35px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 13px
+    color: #343634
+    background: #fff
+    border: 1px solid #b4b2b2
+    font-family: $medium
+    text-align: center
+    min-width: 50px
+    width: auto
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    cursor: pointer
+    span
+      display: block
+      white-space: nowrap
+      width: 100%
+      padding: 0 15px
+    &:before
+      height: 100%
+      width: 1px
+      background: #eaeaea
+      position: absolute
+      display: block
+      content: ''
+      left: 0
+      top: 0
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    input
+      position: absolute
+      left: 0
+      top: 0
+      width: 0
+      height: 0
+  .checkbox-container
+    position: relative
+    min-width: 50px
+    width: auto
+    // width: 100%
+    height: 35px
+    margin-right: -1px
+    font-size: 0
+    &:hover input + label
+      background-color: #dcdbdb
+    input:checked + label
+      background-color: #c92031
+      border-color: #c92031
+      color: #fff
+      &:before
+        opacity: 1
+    &--try
+      height: auto
+      &:hover input + label
+        background: transparent
+      input:checked + label
+        background: none
+        &:after
+          opacity: 1
+      label
+        display: flex
+        align-items: center
+        position: relative
+        padding: 0 0 0 40px
+        min-height: 28px
+        cursor: pointer
+        &:before
+          left: 0
+          top: 0
+          width: 26px
+          height: 26px
+          border: 1px solid #b4b2b2
+          position: absolute
+          display: block
+          content: ''
+          background: #fff
+        &:after
+          left: 9px
+          top: 4px
+          width: 6px
+          height: 13px
+          border: 3px solid #c6142d
+          transform: rotate(45deg)
+          border-left: none
+          border-top: none
+          position: absolute
+          display: block
+          content: ''
+          transition: all $transitionSpeed $ease
+          opacity: 0
+      img
+        height: 22px
+        width: auto
+        margin-top: -2px
+      span
+        font-size: 16px
+        color: $fontColor
+        margin-left: 10px
+        margin-top: 3px
+    &:nth-child(1)
+      .label-container
+        &:before
+          display: none
+  .input-container
+    input
+      line-height: normal
+      font-size: 13px
+      max-height: 35px
+      font-family: $medium
+      width: auto
+      display: inline-block
+      margin-right: -1px
+      padding-left: 32px
+      max-width: 130px
+    &:after
+      position: absolute
+      display: block
+      content: attr(data-from) ''
+      left: 13px
+      top: 11px
+      font-size: 13px
+      font-family: $medium
+      color: $fontColor
+  .label
+    width: 165px
+
+
++r($tablet)
+  .typical
+    &--filter
+      padding-bottom: 20px
+    &__item
+      margin-top: 15px
+      margin-right: 20px
+      p
+        font-size: 14px
+        margin-bottom: 10px
+    .label-container
+      span
+        padding: 0 10px

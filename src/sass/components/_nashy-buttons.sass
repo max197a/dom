@@ -1,0 +1,75 @@
+.typical
+  &__buttons
+    display: flex
+    font-size: 0
+    align-items: center
+    margin-top: 7px
+    margin-bottom: 43px
+    position: relative
+    max-width: 100%
+    border-bottom: 3px solid #dfdfdf
+    margin-bottom: 50px
+  &__btn
+    font-size: 25px
+    text-transform: uppercase
+    color: $fontColor
+    font-family: $bold
+    letter-spacing: 0
+    margin-right: 38px
+    padding-bottom: 10px
+    border-bottom: 3px solid transparent
+    opacity: 0.7
+    transition: all $transitionSpeed $ease
+    position: relative
+    z-index: 2
+    margin-bottom: -3px
+    &:last-child
+      margin-right: 0
+      margin-left: auto
+    &:after
+      display: block
+      position: absolute
+      content: ''
+      width: 100%
+      height: 3px
+      background: #c6142d
+      left: 0
+      bottom: -3px
+      z-index: 2
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    &:hover
+      opacity: 1
+      border-color: #c6142d
+      &:after
+        opacity: 1
+    &.is-active
+      opacity: 1
+      border-color: #c6142d
+      &:after
+        opacity: 1
+  
++r($desktop)
+  .typical
+    &__buttons
+      margin-top: 10px
+      margin-bottom: 25px
+    &__btn
+      font-size: 20px
+      margin-right: 25px
+
++r($tablet)
+  .typical
+    &__buttons
+      margin-top: 10px
+      margin-bottom: 25px
+      padding: 0 10px
+      flex-direction: column
+
+    &__btn
+      width: 100%
+      font-size: 18px
+      margin-right: 0
+      padding: 12px 0 7px 
+      text-align: center
+      border-bottom: 2px solid #dfdfdf

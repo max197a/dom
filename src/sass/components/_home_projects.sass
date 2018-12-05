@@ -2,8 +2,13 @@
   padding: 103px 0 105px
   background: #f4f4f4
   position: relative
+  &--typical
+    padding: 30px 0 78px
+    text-align: center
   .container
     max-width: 1200px
+    &--typical
+      max-width: 1074px
   &__pattern
     max-width: 900px
     position: absolute
@@ -28,6 +33,18 @@
     z-index: 3
     padding: 0 40px
     margin-top: 71px
+    &--typical
+      margin-top: 0
+      padding: 0
+      margin: 0 -10px
+      width: calc(100% + 20px)
+      .projects__item
+        margin: 15px 3px
+      .projects__line
+        margin-top: 10px
+        margin-bottom: 11px
+      .projects__kv
+        margin-left: 15px
   &__item
     // min-width: 320px
     width: 100%
@@ -96,6 +113,9 @@
   &__row
     display: flex
     justify-content: space-between
+    &--typical
+      justify-content: flex-end
+
   &__name
     padding-right: 15px
     font-size: 18px
@@ -113,8 +133,34 @@
       height: 16px
       width: auto
       margin-right: 5px
+  &__city
+    font-size: 14px
+    color: $fontColor
+    line-height: 1.2
+    display: flex
+    align-items: flex-start
+    img
+      height: 18px
+      width: auto
+      margin-right: 8px
+      margin-top: -3px
+    span
+      font-size: 14px
+      color: $fontColor
+      line-height: 1.2
+  &__house
+    margin-right: auto
+    font-size: 0
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    img
+      height: 20px
+      width: auto
+      margin-right: 8px
+      margin-bottom: -2px
   &__line
-    margin: 13px -30px 16px
+    margin: 13px -30px 17px
     width: calc(100% + 60px)
     height: 1px
     display: block
@@ -174,6 +220,45 @@
       transform: translate(-50%, -50%) rotate(45deg)
       top: 50%
       left: 50%
+  &__more
+    font-size: 14px
+    max-width: 300px
+    width: 100%
+    margin: 30px auto 0
+    padding: 15px 45px 15px 25px
+    background: transparent
+    color: #343634
+    border: 1px solid #343634
+    position: relative
+    min-height: 50px
+    overflow: hidden
+    text-transform: uppercase
+    transition: all $transitionSpeed $ease
+    display: inline-block
+    line-height: normal
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      width: 8px
+      height: 8px
+      border: 2px solid #343634
+      transform: translateY(-65%) rotate(45deg)
+      top: 45%
+      right: 25px
+      border-left: none
+      border-top: none
+      transition: all $transitionSpeed $ease
+    &:hover
+      background: #343634
+      color: #fff
+      &:after
+        border-color: #fff
+    &.is-active
+      &:after
+        transform: translateY(-35%) rotate(-135deg)
+  .pagination
+    margin-top: 33px
 
 
 +r($desktop1068)
@@ -186,11 +271,15 @@
 +r($tablet)
   .projects
     padding: 30px 0
+    &--typical
+    padding: 30px 0
     &__grid
       padding-top: 0
       max-width: 320px
       margin: 70px auto 0
       padding: 0
+      &--typical
+        margin-top: 0
       & > .slick-dots
         top: -37px
         bottom: auto
