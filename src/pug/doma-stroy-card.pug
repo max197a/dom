@@ -1,0 +1,157 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: general
+  section.podr-general
+    .container
+      .podr-general__grid
+        .podr-general__left
+          .podr-general__slider(js-g-slider)
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-1.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-2.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-3.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-4.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-5.jpg", alt="")
+          .podr-general__preview-slider(js-g-preview-slider)
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-1.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-2.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-3.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-4.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-5.jpg", alt="")
+
+        .podr-general__right
+          a.podr-general__all-p(href="#") 
+            span.arrow 
+            span.info Все строящиеся дома
+          p.podr-general__title.podr-general__title--editable МО, д. Иваново
+          .podr-general__top
+            .podr-general__top-item
+              .podr-general__top-image
+                img(src="img/typical.svg", alt="")
+              .podr-general__top-info
+                p Общая площадь
+                p 
+                  span 186 м
+                    sup 2
+            .podr-general__top-item.podr-general__top-item--editable
+              .podr-general__top-info
+                p Этажность
+                p 
+                  span 2
+          .podr-general__row
+            p Подрядчик:
+            p.regular.full 
+              a.up(href="#") МАСТЕР ПРАВИЛЬНЫХ ДОМОВ
+          .podr-general__row
+            p Стадия строительства:
+            p.regular.full возведение фундамента
+          .podr-general__row
+            p Фундамент:
+            p.regular.full 
+              a(href="#") УШП с контуром тёплого пола и колектором
+          .podr-general__row
+            p Тип кровли:
+            p.regular.full двускатная
+          .podr-general__row
+            p Материал кровли
+            p.regular.full
+              a.up(href="#") SHINGLAS
+          .podr-general__row
+            p Внешняя отделка
+            p.regular.full штукатурка
+          .podr-general__row
+            .podr-general__buttons
+              .podr-general__see
+                .podr-general__see-image
+                  img(src="img/p-system-5.svg", alt="")
+                p Дом можно посетить
+              a.podr-general__video(href="#")
+                .podr-general__video-image
+                  img(src="img/video-str.svg", alt="")
+                span Видеотрансляция
+              
+
+  // END SECTION :: general
+
+  // BEGIN SECTION :: g-plans
+  section.g-plans
+    .container.container--typical
+      h2.podr__title Планировки
+    .container.container--large
+      .g-plans__grid
+        .g-plans__item
+          p.g-plans__info
+            span 1 этаж
+            span.line |
+            | 110 м²
+          .g-plans__image
+            a.no-barba(href="img/plan-1.jpg" js-popup-image data-effect="mfp-zoom-in")
+              img(src="img/plan-1.jpg", alt="")
+        .g-plans__item
+          p.g-plans__info
+            span 2 этаж
+            span.line |
+            | 102 м²
+          .g-plans__image
+            a.no-barba(href="img/plan-2.jpg" js-popup-image data-effect="mfp-zoom-in")
+              img(src="img/plan-2.jpg", alt="")
+  // END SECTION :: g-plans
+
+  // BEGIN SECTION :: g-calc
+  section.g-calc
+    .container.container--typical
+      .g-calc__grid
+        p Вы всегда можете рассчитать дом  по своим личным параметрам на нашем калькуляторе
+        a.btn(href="#") рассчитать стоимость
+  // END SECTION :: g-calc
+
+  // BEGIN SECTION :: podr-form
+  section.podr-form
+    .container.container--typical
+      h2.podr__title Оставьте заявку
+      .podr-form__grid
+        .podr-form__form
+          form(action="#")
+            .input-container
+              input(type="text" placeholder="Имя")
+            .input-container
+              input(type="text" placeholder="Телефон")
+            p Отправляя форму даю согласие на обработку 
+              a(href="#") персональных данных
+            input.btn(type="submit" value="ОТПРАВИТЬ")
+        .podr-form__info
+          p.podr-form__info-title Заполните форму и наш специалист свяжется с вами в ближайшее время.
+          p.podr-form__info-text 1. Расскажем о всех наших инновационных решениях, материалах и технологии Дом Технониколь
+          p.podr-form__info-text 2. Ответим на все интересующие вас вопросы
+          p.podr-form__info-text 3. Подберем для вас оптимальный проект
+
+  // END SECTION :: podr-form

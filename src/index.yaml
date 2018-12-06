@@ -29,7 +29,13 @@ PageList:
   ready: 40
 - file: nashy-doma-tipovye.html
   ready: 40
+- file: doma-tipovye-card.html
+  ready: 40
 - file: nashy-doma-gotovye.html
   ready: 40
+- file: doma-gotovye-card.html
+  ready: 40
 - file: nashy-doma-stroy.html
+  ready: 40
+- file: doma-stroy-card.html
   ready: 40

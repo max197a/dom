@@ -1,0 +1,428 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: general
+  section.podr-general
+    .container
+      .podr-general__grid
+        .podr-general__left
+          .podr-general__slider(js-g-slider)
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-1.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-2.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-3.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-4.jpg", alt="")
+            .podr-general__item
+              .podr-general__item-container
+                img(src="img/gal-5.jpg", alt="")
+          .podr-general__preview-slider(js-g-preview-slider)
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/of-slide-1.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-1.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-2.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-3.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-4.jpg", alt="")
+            .podr-general__preview-item
+              .podr-general__preview-item-container
+                img(src="img/gal-5.jpg", alt="")
+
+        .podr-general__right
+          a.podr-general__all-p(href="#") 
+            span.arrow 
+            span.info Все типовые проекты
+          p.podr-general__title.podr-general__title--editable axiom 1
+          .podr-general__top
+            .podr-general__top-item
+              .podr-general__top-image
+                img(src="img/typical.svg", alt="")
+              .podr-general__top-info
+                p Общая площадь
+                p 
+                  span 186 м
+                    sup 2
+            .podr-general__top-item
+              .podr-general__top-info
+                p Этажность
+                p 
+                  span 2
+            .podr-general__top-item
+              .podr-general__top-image
+                img(src="img/time-grey.svg", alt="")
+              .podr-general__top-info
+                p Срок строительства
+                p
+                  span от 2 месяцев
+          .podr-general__row.podr-general__row--editable
+            p Фундамент:
+            p
+              a(href="#") утеплённая шведская плита с контуром тёплого пола и колектором
+          .podr-general__row.podr-general__row--editable
+            p Варианты  внешней отделки:
+            .podr-general__view
+              a.podr-general__view-item.is-active(href="#" js-general-view-btn)
+                .podr-general__view-image
+                  img(src="img/g-view-1.jpg", alt="")
+                p hauberK
+              a.podr-general__view-item(href="#" js-general-view-btn)
+                .podr-general__view-image
+                  img(src="img/g-view-2.jpg", alt="")
+                p Имитация бруса
+              a.podr-general__view-item(href="#" js-general-view-btn)
+                .podr-general__view-image
+                  img(src="img/g-view-3.jpg", alt="")
+                p Сайдинг
+              a.podr-general__view-item(href="#" js-general-view-btn)
+                .podr-general__view-image
+                  img(src="img/g-view-4.jpg", alt="")
+                p Штукатурка
+              a.podr-general__view-item(href="#" js-general-view-btn)
+                .podr-general__view-image
+                  img(src="img/g-view-5.jpg", alt="")
+                p Кирпичная кладка
+          .podr-general__row.podr-general__row--price
+            p Стоимость:
+            p.price от 1 500 000 р
+          .podr-general__row
+            a.podr-general__btn-want.btn(href="#") хочу такой дом
+
+  // END SECTION :: general
+
+  // BEGIN SECTION :: info
+  section.podr-info.podr-info--card
+    .container.container--typical
+      p.title Теплый и современный 
+        span  ДОМ ТЕХНОНИКОЛЬ
+      p Вы будете жить в новом доме уже через 3 месяца! Тёплый, энергоэффективный дом AXIOM 1 отлично подойдёт для проживания большой семьи. На двух просторных этажах места хватит для всех!
+      p Мы продумали все детали дома — вентиляция, санузел с бойлером и спрятанными трубами, электричество, водоснабжение и отопление. Приобретите недостающую мебель и начните наслаждаться новым домом!
+  // END SECTION :: info
+
+  // BEGIN SECTION :: g-plans
+  section.g-plans
+    .container.container--typical
+      h2.podr__title Планировки
+    .container.container--large
+      .g-plans__grid
+        .g-plans__item
+          p.g-plans__info
+            span 1 этаж
+            span.line |
+            | 110 м²
+          .g-plans__image
+            a.no-barba(href="img/plan-1.jpg" js-popup-image data-effect="mfp-zoom-in")
+              img(src="img/plan-1.jpg", alt="")
+        .g-plans__item
+          p.g-plans__info
+            span 2 этаж
+            span.line |
+            | 102 м²
+          .g-plans__image
+            a.no-barba(href="img/plan-2.jpg" js-popup-image data-effect="mfp-zoom-in")
+              img(src="img/plan-2.jpg", alt="")
+  // END SECTION :: g-plans
+
+  // BEGIN SECTION :: g-complectation
+  section.g-complectation
+    .container.container--typical
+      h2.podr__title Комплектация
+    .container.container--large
+      .g-complectation__info
+        a.g-complectation__head.is-open(href="#" js-complectation-button)
+          h2 Стадия BASIS
+          .g-complectation__price
+            .g-complectation__info-p
+              p Стоимость
+              p
+                span от 2 400 000 Р
+          .g-complectation__price
+            .g-complectation__image-p
+              img(src="img/time.svg", alt="")
+            .g-complectation__info-p
+              p Срок строительства
+              p
+                span от 2 месяцев
+        .g-complectation__tab.is-active
+          .g-complectation__tab-container
+            .g-complectation__column.is-open
+              a.g-title(href="#" js-open-info) Фундамент #1
+              .g-complectation__toggle
+                p Утеплённая шведская плита с контуром тёплого пола и коллекторам;
+                p Закладные под ввод водоснабжения и электроснабжения дома под фундаментом;
+                p Канализационные отводы от стояков под плитой фундамента;
+                p Дренажная система по периметру дома и отводом в коллектор;
+                p Ливневая система канализации дождевой воды вокруг дома с отводом в коллектор;
+                p Утепленная отмостка с водоотводящим слоем из мембраны Planter;
+                p Утепленный цоколь с отделкой фасадными панелями.
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Стены
+              .g-complectation__toggle
+                p Перекрестный каркас внешних стен с толщиной утепления 250мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА
+                p Внешняя защита каркаса диффузионной пленкой Tyvek ТЕХНОНИКОЛЬ
+                p Внутренняя защита каркаса усиленной пароизоляцией ТЕХНОНИКОЛЬ
+                p Внешняя отделка фасада виниловым сайдингом/ штукатурка/декоративный кирпич
+                p Энергоэффективные окна Deceuninck с толщиной профиля 76мм
+                p Перекрестное утепление крыша толщиной 300мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА
+                p.g-light Шпаклевка гипсокартон
+                p.g-light Поклейка обоев на стены
+                p.g-light Покраска потолков
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Кровля, полы, перекрытия
+              .g-complectation__toggle
+                p Перекрытие из досок 200х50 с шагом 40см, с шумоизоляцией ТЕХНО АКУСТИК 100мм
+                p Черновой настил перекрытия ОСП 18мм по и акустическому герметику
+                p Кровельное покрытие из многослойной черепицы SHINGLAS
+                p Подшивка кровельных свесов виниловыми софитами
+                p.g-light Водосточная система ТЕХНОНИКОЛЬ
+                p.g-light Укладка напольных покрытий (плитка /ламинат)
+                p.g-light Монтаж плинтуса
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Прочее
+              .g-complectation__toggle
+                p Деревянная лестница в доме из клееных щитов лиственницы покрытая лаком
+                p Крыльцо и веранда у дома
+                p Входная дверь из профиля Deceuninck
+                p Скрытая разводка труб водоснабжения из сшитого полиэтилена по потребителям.
+                p.g-light Черновая обшивка стен гипсокартоном по стальному каркасу
+                p.g-light Монтаж межкомнатных дверей
+      .g-complectation__info
+        a.g-complectation__head(href="#" js-complectation-button)
+          h2 Стадия PROGRESS
+          .g-complectation__price
+            .g-complectation__info-p
+              p Стоимость
+              p
+                span от 2 400 000 Р
+          .g-complectation__price
+            .g-complectation__image-p
+              img(src="img/time.svg", alt="")
+            .g-complectation__info-p
+              p Срок строительства
+              p
+                span от 3,5 месяцев
+        .g-complectation__tab
+          .g-complectation__tab-container
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Фундамент #1
+              .g-complectation__toggle
+                p Утеплённая шведская плита с контуром тёплого пола и коллекторам;
+                p Закладные под ввод водоснабжения и электроснабжения дома под фундаментом;
+                p Канализационные отводы от стояков под плитой фундамента;
+                p Дренажная система по периметру дома и отводом в коллектор;
+                p Ливневая система канализации дождевой воды вокруг дома с отводом в коллектор;
+                p Утепленная отмостка с водоотводящим слоем из мембраны Planter;
+                p Утепленный цоколь с отделкой фасадными панелями.
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Стены
+              .g-complectation__toggle
+                p Перекрестный каркас внешних стен с толщиной утепления 250мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА
+                p Внешняя защита каркаса диффузионной пленкой Tyvek ТЕХНОНИКОЛЬ
+                p Внутренняя защита каркаса усиленной пароизоляцией ТЕХНОНИКОЛЬ
+                p Внешняя отделка фасада виниловым сайдингом/ штукатурка/декоративный кирпич
+                p Энергоэффективные окна Deceuninck с толщиной профиля 76мм
+                p Перекрестное утепление крыша толщиной 300мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА
+                p.g-light Шпаклевка гипсокартон
+                p.g-light Поклейка обоев на стены
+                p.g-light Покраска потолков
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Кровля, полы, перекрытия
+              .g-complectation__toggle
+                p Перекрытие из досок 200х50 с шагом 40см, с шумоизоляцией ТЕХНО АКУСТИК 100мм
+                p Черновой настил перекрытия ОСП 18мм по и акустическому герметику
+                p Кровельное покрытие из многослойной черепицы SHINGLAS
+                p Подшивка кровельных свесов виниловыми софитами
+                p.g-light Водосточная система ТЕХНОНИКОЛЬ
+                p.g-light Укладка напольных покрытий (плитка /ламинат)
+                p.g-light Монтаж плинтуса
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Прочее
+              .g-complectation__toggle
+                p Деревянная лестница в доме из клееных щитов лиственницы покрытая лаком
+                p Крыльцо и веранда у дома
+                p Входная дверь из профиля Deceuninck
+                p Скрытая разводка труб водоснабжения из сшитого полиэтилена по потребителям.
+                p.g-light Черновая обшивка стен гипсокартоном по стальному каркасу
+                p.g-light Монтаж межкомнатных дверей
+      .g-complectation__info
+        a.g-complectation__head(href="#" js-complectation-button)
+          h2 Стадия COMPLETE
+          .g-complectation__price
+            .g-complectation__info-p
+              p Стоимость
+              p
+                span от 3 500 000 Р
+          .g-complectation__price
+            .g-complectation__image-p
+              img(src="img/time.svg", alt="")
+            .g-complectation__info-p
+              p Срок строительства
+              p
+                span от 4 месяцев
+        .g-complectation__tab
+          .g-complectation__tab-container
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Фундамент #1
+              .g-complectation__toggle
+                p Утеплённая шведская плита с контуром тёплого пола и коллекторам;
+                p Закладные под ввод водоснабжения и электроснабжения дома под фундаментом;
+                p Канализационные отводы от стояков под плитой фундамента;
+                p Дренажная система по периметру дома и отводом в коллектор;
+                p Ливневая система канализации дождевой воды вокруг дома с отводом в коллектор;
+                p Утепленная отмостка с водоотводящим слоем из мембраны Planter;
+                p Утепленный цоколь с отделкой фасадными панелями.
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Стены
+              .g-complectation__toggle
+                p Перекрестный каркас внешних стен с толщиной утепления 250мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА
+                p Внешняя защита каркаса диффузионной пленкой Tyvek ТЕХНОНИКОЛЬ
+                p Внутренняя защита каркаса усиленной пароизоляцией ТЕХНОНИКОЛЬ
+                p Внешняя отделка фасада виниловым сайдингом/ штукатурка/декоративный кирпич
+                p Энергоэффективные окна Deceuninck с толщиной профиля 76мм
+                p Перекрестное утепление крыша толщиной 300мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА
+                p.g-light Шпаклевка гипсокартон
+                p.g-light Поклейка обоев на стены
+                p.g-light Покраска потолков
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Кровля, полы, перекрытия
+              .g-complectation__toggle
+                p Перекрытие из досок 200х50 с шагом 40см, с шумоизоляцией ТЕХНО АКУСТИК 100мм
+                p Черновой настил перекрытия ОСП 18мм по и акустическому герметику
+                p Кровельное покрытие из многослойной черепицы SHINGLAS
+                p Подшивка кровельных свесов виниловыми софитами
+                p.g-light Водосточная система ТЕХНОНИКОЛЬ
+                p.g-light Укладка напольных покрытий (плитка /ламинат)
+                p.g-light Монтаж плинтуса
+            .g-complectation__column
+              a.g-title(href="#" js-open-info) Прочее
+              .g-complectation__toggle
+                p Деревянная лестница в доме из клееных щитов лиственницы покрытая лаком
+                p Крыльцо и веранда у дома
+                p Входная дверь из профиля Deceuninck
+                p Скрытая разводка труб водоснабжения из сшитого полиэтилена по потребителям.
+                p.g-light Черновая обшивка стен гипсокартоном по стальному каркасу
+                p.g-light Монтаж межкомнатных дверей
+
+
+
+  // END SECTION :: g-complectation
+
+  // BEGIN SECTION :: podr-form
+  section.podr-form
+    .container.container--typical
+      h2.podr__title Оставьте заявку
+      .podr-form__grid
+        .podr-form__form
+          form(action="#")
+            .input-container
+              input(type="text" placeholder="Имя")
+            .input-container
+              input(type="text" placeholder="Телефон")
+            p Отправляя форму даю согласие на обработку 
+              a(href="#") персональных данных
+            input.btn(type="submit" value="ОТПРАВИТЬ")
+        .podr-form__info
+          p.podr-form__info-title Заполните форму и наш специалист свяжется с вами в ближайшее время.
+          p.podr-form__info-text 1. Расскажем о всех наших инновационных решениях, материалах и технологии Дом Технониколь
+          p.podr-form__info-text 2. Ответим на все интересующие вас вопросы
+          p.podr-form__info-text 3. Подберем для вас оптимальный проект
+
+  // END SECTION :: podr-form
+
+  // BEGIN SECTION :: g-calc
+  section.g-calc
+    .container.container--typical
+      .g-calc__grid
+        p Вы всегда можете рассчитать дом  по своим личным параметрам на нашем калькуляторе
+        a.btn(href="#") рассчитать стоимость
+  // END SECTION :: g-calc
+
+  // BEGIN SECTION :: g-offer
+  section.g-offer
+    .container.container--typical
+      h2.g-plans__title Предложения подрядчиков
+      p.g-offer__desc Вы можете сами выбрать подрядчика для строительства вашего дома. Все компании прошли сертификацию , а мы позаботимся о соблюдени  необходимых требований.
+    .container.container--large
+      .g-offer__slider(js-offer-slider)
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 8,5
+            .g-offer__image
+              img(src="img/g-offer-1.jpg", alt="")
+            p.g-offer__price от 2 464 000 Р 
+              span Cтадия BASIS
+            a.g-offer__button(href="#") Узнать подробнее
+              span 
+              
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 9,5
+            .g-offer__image
+              img(src="img/g-offer-2.jpg", alt="")
+            p.g-offer__price от 2 580 000 Р 
+              span Cтадия BASIS
+            a.g-offer__button(href="#") Узнать подробнее
+              span 
+              
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 4,5
+            .g-offer__image
+              img(src="img/g-offer-3.jpg", alt="")
+            p.g-offer__price от 2 620 000 Р 
+              span Cтадия BASIS
+            a.g-offer__button(href="#") Узнать подробнее
+              span 
+              
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 8,5
+            .g-offer__image
+              img(src="img/g-offer-4.jpg", alt="")
+            p.g-offer__price от 2 580 000 Р 
+              span Cтадия BASIS
+            a.g-offer__button(href="#") Узнать подробнее
+              span 
+              
+        .g-offer__item
+          .g-offer__item-container
+            a.g-offer__star(href="#") 
+              img(src="img/star.svg", alt="")
+              span 10
+            .g-offer__image
+              img(src="img/g-offer-2.jpg", alt="")
+            p.g-offer__price от 2 580 000 Р 
+              span Cтадия BASIS
+            a.g-offer__button(href="#") Узнать подробнее
+              span 
+      .g-offer__btn-container
+        a.g-offer__btn(href="#") Посмотреть всех подрядчиков
+
+  // END SECTION :: g-offer

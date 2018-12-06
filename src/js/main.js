@@ -83,17 +83,26 @@ $(document).ready(function() {
 
       return false;
     })
-    .on("click", "[js-open-g-tab]", function(e) {
+    // .on("click", "[js-open-g-tab]", function(e) {
+    //   e.preventDefault();
+    //   var $self = $(this),
+    //     tabIndex = $self.index();
+    //   $self.siblings().removeClass("is-active");
+    //   $self.addClass("is-active");
+    //   $(".g-complectation__tab")
+    //     .removeClass("is-active")
+    //     .css("display", "none")
+    //     .eq(tabIndex)
+    //     .fadeIn();
+    // })
+
+    .on("click", "[js-complectation-button]", function(e) {
       e.preventDefault();
-      var $self = $(this),
-        tabIndex = $self.index();
-      $self.siblings().removeClass("is-active");
-      $self.addClass("is-active");
-      $(".g-complectation__tab")
-        .removeClass("is-active")
-        .css("display", "none")
-        .eq(tabIndex)
-        .fadeIn();
+      $(this).toggleClass("is-open");
+      $(this)
+        .parent()
+        .find(".g-complectation__tab")
+        .slideToggle();
     })
 
     .on("click", "[js-p-map-btn]", function(e) {

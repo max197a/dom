@@ -1,7 +1,16 @@
 .g-offer
   padding: 40px 0 73px
+  &__desc
+    font-family: $light
+    color: $fontColor
+    margin-top: 30px
+    font-size: 22px
   &__slider
-    padding: 32px 100px 0
+    padding: 32px 30px 0
+    max-width: 1074px
+    margin: 0 auto
+    // margin: 0 -100px
+    // width: calc(100% + 200px)
     font-size: 0
   &__item
     padding: 0 8px
@@ -13,12 +22,13 @@
     border: 1px solid #cacaca
     border-bottom: 3px solid #cacaca
     width: 100%
-    min-height: 300px
+    min-height: 260px
     position: relative
     padding: 20px 10px
     text-align: center
     max-width: 350px
     margin: 0 auto
+    overflow: hidden
   &__star
     position: absolute
     top: 15px
@@ -40,7 +50,7 @@
     &:hover
       opacity: 1
   &__image
-    min-height: 120px
+    min-height: 130px
     display: flex
     align-items: center
     justify-content: center
@@ -55,98 +65,129 @@
     font-size: 24px
     font-family: $medium
     color: #c6142d
-  &__detail
-    font-size: 13px
-    color: #999999
-    opacity: 0.9
-    transition: all $transitionSpeed $ease
-    font-family: $medium
-    border-bottom: 1px solid #999999
-    cursor: pointer
-    display: inline-block
-    margin-top: 18px
+    margin-top: 20px
+    margin-bottom: 20px
     line-height: 1
-    &:hover
-      opacity: 1
-      border-color: transparent
+    span
+      font-size: 14px
+      display: block
+  // &__detail
+  //   font-size: 13px
+  //   color: #999999
+  //   opacity: 0.9
+  //   transition: all $transitionSpeed $ease
+  //   font-family: $medium
+  //   border-bottom: 1px solid #999999
+  //   cursor: pointer
+  //   display: inline-block
+  //   margin-top: 18px
+  //   line-height: 1
+  //   &:hover
+  //     opacity: 1
+  //     border-color: transparent
   &__button
-    display: inline-block
-    margin-top: 19px
-    padding: 14px 15px
-    border: 2px solid #c8c8c8
-    border-radius: 5px
-    color: $fontColor
+    font-size: 14px
     font-family: $montserrat
-    font-size: 12px
-    text-transform: uppercase
-    max-width: 182px
+    font-weight: 500
+    color: #999999
+    text-transform: none
     width: 100%
-    text-align: center
+    margin: 20px auto 0
+    background: #fff
+    padding: 0
+    display: flex
+    align-items: center
+    justify-content: center
+    max-width: 200px
     cursor: pointer
     transition: all $transitionSpeed $ease
+    position: relative
+    padding-top: 15px
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      left: 50%
+      margin-left: -500px
+      top: 0
+      width: 1000px
+      height: 1px 
+      background: #cacaca
+    span
+      width: 10px
+      height: 10px
+      border: 2px solid #bcbcbc
+      transform: rotate(45deg)
+      border-bottom: none
+      border-left: none
+      margin-left: 10px
+      transition: all $transitionSpeed $ease
     &:hover
-      background: #dbd9d9
-      color: #777777
+      background: 
+      color: $fontColor
+      span
+        border-color: $fontColor
 
 
   .slick-arrow
     position: absolute
-    width: 80px
-    height: 80px
-    border: 1px solid #777777
-    border-radius: 50%
-    left: 0
+    width: 50px
+    height: 50px
+    background: rgba($fontColor, 0.3)
+    transition: all $transitionSpeed $ease
+    top: 50%
+    transform: translateY(-50%)
+    border: none
     font-size: 0
     color: transparent
-    transition: all $transitionSpeed $ease
-    opacity: 0.5
     cursor: pointer
+    z-index: 3
     &:hover
-      opacity: 0.5
-    &:active
-      opacity: 0.75
-    &.slick-disabled
-      opacity: 0.25
-      pointer-events: none
+      background: rgba($fontColor, 0.7)
     &.slick-prev
-      left: -10px
-      top: 50%
-      transform: translateY(-50%)
+      left: -30px
       &:before
-        position: absolute
-        display: block
-        content: ''
-        width: 18px
-        height: 18px
-        border: 5px solid #777777
-        left: 58%
-        top: 50%
-        transform: translate(-50%, -50%) rotate(135deg)
-        border-left: none
         border-top: none
-        transition: all $transitionSpeed $ease
+        border-right: none
+        left: 57%
     &.slick-next
-      left: auto
-      right: -10px
-      top: 50%
-      transform: translateY(-50%)
+      right: -30px
       &:before
-        position: absolute
-        display: block
-        content: ''
-        width: 18px
-        height: 18px
-        border: 5px solid #777777
-        left: 45%
-        top: 50%
-        transform: translate(-50%, -50%) rotate(-45deg)
+        border-bottom: none
         border-left: none
-        border-top: none
-        transition: all $transitionSpeed $ease
+        left: 43%
+    &:before
+      display: block
+      position: absolute
+      content: ''
+      width: 15px
+      height: 15px
+      border: 2px solid #fff
+      transform: translate(-50%, -50%) rotate(45deg)
+      top: 50%
+      left: 50%
+
+  &__btn-container
+    text-align: center
+    width: 100%
+    padding-top: 60px
+  &__btn
+    font-size: 14px
+    text-transform: uppercase
+    color: $fontColor
+    padding: 15px 25px
+    border: 1px solid $fontColor
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: $fontColor
+      color: #fff
+
 
 +r($tablet)
   .g-offer
     padding: 30px 0 40px
+    &__desc
+      font-size: 16px
     &__slider
       padding: 80px 0 0
     .slick-dots
@@ -175,3 +216,8 @@
         border-radius: 50%
         border: none
         transition: all $transitionSpeed $ease
+    &__btn-container
+      padding-top: 40px
+    &__btn
+      font-size: 12px
+      padding: 12px 17px

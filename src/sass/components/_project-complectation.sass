@@ -1,21 +1,77 @@
 .g-complectation
-  padding: 40px 0 60px
+  padding: 59px 0 60px
   background: #fff
+  // &__head
+  //   padding-top: 32px
+  //   display: flex
+  //   align-items: center
+  //   justify-content: space-between
+  //   position: relative
+  //   &:before
+  //     display: block
+  //     position: absolute
+  //     content: ''
+  //     width: 100%
+  //     height: 5px
+  //     background: #c6142d
+  //     left: 0
+  //     bottom: 0
   &__head
-    padding-top: 42px
+    background: #615d5b
     display: flex
     align-items: center
     justify-content: space-between
-    position: relative
-    &:before
-      display: block
-      position: absolute
-      content: ''
-      width: 100%
-      height: 5px
+    width: 100%
+    padding: 24px 50px 24px 107px
+    transition: all $transitionSpeed $ease
+    margin-bottom: 18px
+    &.is-open
       background: #c6142d
-      left: 0
-      bottom: 0
+      h2
+        &:after
+          right: 10px
+          transform: translateY(-60%) rotate(45deg)
+    h2
+      color: #fff
+      font-family: $bold
+      position: relative
+      font-size: 42px
+      display: inline-block
+      padding-right: 35px
+      transition: all $transitionSpeed $ease
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        width: 14px
+        height: 14px
+        border: 5px solid #fff
+        top: 50%
+        right: 5px
+        transition: all $transitionSpeed $ease
+        transform-origin: center center
+        transform: translateY(-80%) rotate(135deg)
+        border-left: none
+        border-bottom: none
+  &__price
+    padding: 0 15px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    p
+      font-size: 14px
+      font-family: $light
+      color: #fff
+      span
+        font-family: $medium
+        font-size: 20px
+  &__image-p
+    padding-right: 15px
+    img
+      height: 30px
+      width: auto
+      opacity: 0.5
+
   &__item
     display: flex
     align-items: center
@@ -47,13 +103,17 @@
         color: #c6142d
         font-family: $medium
   &__info
-    max-width: 920px
+    // max-width: 920px
     margin: 0 auto
-    padding-top: 24px
+    padding-top: 32px
   &__tab-container
     display: flex
     align-items: flex-start
     justify-content: space-between
+    max-width: 920px
+    margin: 0 auto
+    border-top: 5px solid #c6142d
+    padding-top: 23px
   &__column
     width: 24%
     a.g-title
@@ -83,18 +143,64 @@
       display: block
       transition: all 0.25s ease
 
++r($wide)
+  .g-complectation
+    &__head
+      padding-left: 40px
+
++r($desktop1068)
+  .g-complectation
+    &__head
+      padding: 22px 35px
+      h2
+        font-size: 35px
+    &__price
+      padding: 0 8px
+      p
+        span
+          font-size: 18px
+
 +r($desktop)
   .g-complectation
     .container
       &--typical
-        padding: 0
+        padding: 0 40px
+    &__info
+      padding-top: 20px
+    &__head
+      padding: 20px
+      h2
+        font-size: 26px
+        &:after
+          width: 12px
+          height: 12px
+          border-width: 4px
+    &__image-p
+      padding-right: 10px
+      img
+        height: 25px
+        width: auto
+    &__price
+      margin-left: auto
+      &:last-child
+        margin-left: 0
 
 +r($tablet)
   .g-complectation
     padding: 30px 0 20px
+    .container--large
+      padding-top: 25px
+    // &__head
+    //   padding-top: 20px
+    //   flex-wrap: wrap
     &__head
-      padding-top: 20px
-      flex-wrap: wrap
+      flex-direction: column
+      align-items: flex-start
+      justify-content: flex-start
+      padding-bottom: 10px
+    &__price
+      margin-left: 0
+      padding: 10px 0
     &__item
       width: 100%
       min-height: 0
@@ -107,8 +213,10 @@
           font-size: 20px
     &__info
       padding-top: 0
+      padding-bottom: 20px
     &__tab-container
       flex-wrap: wrap
+      padding-top: 5px
 
     &__column
       width: 100%
@@ -145,3 +253,8 @@
           transition: all $transitionSpeed $ease
     &__toggle
       display: none
+
++r($mobile)
+  .g-complectation
+    .container--typical
+      padding: 0 20px

@@ -27,6 +27,35 @@
     align-items: center
     justify-content: space-between
     flex-direction: row-reverse
+  &__top
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin: 13px 0 13px
+  &__top-item
+    padding: 7px
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    width: auto
+    &--editable
+      margin-right: auto
+  &__top-image
+    padding-right: 10px
+    img
+      height: 30px
+      width: auto
+  &__top-info
+    display: flex
+    flex-direction: column
+    p
+      font-family: $light
+      font-size: 14px
+      display: inline-block
+      color: $fontColor
+      span
+        font-size: 20px
+        font-family: $medium
   &__right
     max-width: 540px
     width: 33%
@@ -94,12 +123,14 @@
     text-transform: uppercase
     margin-top: 30px
     margin-bottom: 15px
+    &--editable
+      font-size: 45px
   &__row
     display: flex
     align-items: flex-start
     justify-content: space-between
     margin-top: 2px
-    padding: 9px 15px 7px 7px
+    padding: 11px 15px 9px 7px
     line-height: 1
     border-top: 1px solid rgba(#cacaca, 0.5)
     &:last-child
@@ -120,9 +151,104 @@
         margin-right: 0
         max-width: 240px
         text-align: right
+        a
+          font-family: $regular
+          display: inline
+          border-bottom: 1px solid $fontColor
+          &.up
+            text-transform: uppercase
       &.full
         max-width: 100%
         margin-right: 0
+    &--price
+      padding: 20px 15px 20px 7px
+      p
+        font-size: 18px
+        font-family: $regular
+        max-width: 140px
+        &.price
+          font-size: 28px
+          font-family: $bold
+          margin-left: auto
+          margin-right: 0
+          // min-width: 280px
+          max-width: 280px
+          width: 100%
+          text-align: right
+    &--editable
+      flex-direction: column
+      p
+        width: 100%
+        max-width: 100%
+        a
+          font-family: $light
+          border-bottom: 1px solid $fontColor
+  &__view
+    width: 100%
+    margin-top: 10px
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    text-align: center
+  &__view-image
+    font-size: 0
+    max-height: 55px
+    border-radius: 0px
+    overflow: hidden
+    max-width: 82px
+    position: relative
+    transition: all $transitionSpeed $ease
+    &:after
+      position: absolute
+      display: block
+      content: ''
+      width: calc(100% - 2px)
+      height: calc(100% - 2px)
+      // border: 3px solid #c6142d
+      border: 1px solid #cacaca
+      top: 0
+      left: 0
+      z-index: 2
+      transition: all $transitionSpeed $ease
+      opacity: 1
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: calc(100% - 6px)
+      height: calc(100% - 6px)
+      border: 3px solid #c6142d
+      top: 0
+      left: 0
+      z-index: 2
+      border-radius: 10px
+      transition: all $transitionSpeed $ease
+      opacity: 0
+    img
+      width: 100%
+  &__btn-want
+    font-size: 16px
+    padding: 10px 15px
+    margin-top: 30px
+    margin-left: auto
+  &__view-item
+    font-size: 0
+    width: 19%
+    max-width: 82px
+    &.is-active
+      .general__view-image
+        &:after
+          opacity: 0
+        &:before
+          opacity: 1
+    p
+      margin-top: 4px
+      font-size: 12px
+      font-family: $light
+      margin-right: 0
+      display: inline-block
+      text-align: center
+      width: auto
   &__links
     display: flex
     flex-direction: column
@@ -302,6 +428,46 @@
       .general__preview-item-container
         &:before
           opacity: 1
+  &__buttons
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-wrap: wrap
+    width: 100%
+    &--editable
+      padding-top: 50px
+      .podr-general__see
+        margin-top: 0
+      .podr-general__btn-want
+        margin-top: 0
+  &__see
+    margin-top: 10px
+    padding: 7px 20px 7px 10px
+    display: flex
+    align-items: center
+    margin-right: auto
+    img
+      height: 30px
+      width: auto
+      margin-right: 15px
+  &__video
+    margin-top: 10px
+    padding: 7px 15px
+    display: flex
+    align-items: center
+    border: 1px solid #7F7F7F
+    transition: all $transitionSpeed $ease
+    img
+      height: 30px
+      width: auto
+      margin-right: 15px
+    &:hover
+      background: #7F7F7F
+      color: #fff
+  &__video-image
+    font-size: 0
+
+
 
 +r($wide)
   .podr-general
@@ -314,6 +480,8 @@
       margin-top: 15px
     &__rate
       top: 60px
+    &__top
+      flex-wrap: wrap
     
 
 +r($desktop)
@@ -347,6 +515,18 @@
     &__links
       padding-top: 0
       width: calc(100% - 120px)
+    &__view-item
+      p
+        font-size: 8px
+    &__view-image
+      max-height: 35px
+    &__row--price
+      p
+        &.price
+          text-align: left
+          max-width: 100%
+          margin-left: 0
+          margin-top: 5px
 
 +r($tablet)
   .podr-general
@@ -387,6 +567,10 @@
         width: auto
     &__title
       font-size: 18px
+      &--editable
+        font-size: 24px
+    &__view-image
+      max-height: 40px
     &__links
       width: 100%
       margin-bottom: 15px
@@ -395,6 +579,15 @@
       margin-left: auto
       min-width: 1px
       padding-right: 2px
+    &__top-info
+      padding: 5px 7px
+      p
+        font-size: 12px
+        line-height: 1.4
+        span 
+          font-size: 18px
+    &__btn-want
+      margin-top: 15px
     &__image
       width: calc(100% - 75px)
       max-width: 280px
@@ -402,8 +595,15 @@
       img
         height: auto
         max-height: 70px
+    &__buttons
+      &--editable
+        padding-top: 15px
     &__row
       padding: 7px 0
+      &--price
+        p
+          &.price
+            font-size: 32px
 
 +r($mobile)
   .podr-general

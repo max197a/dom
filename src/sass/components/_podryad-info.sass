@@ -6,6 +6,18 @@
     color: $fontColor
     line-height: 1.20
     font-family: $light
+  &--card
+    padding: 85px 0 79px
+    p
+      font-size: 19px
+      line-height: 1.25
+      margin-top: 30px
+      &.title
+        margin-top: 0
+        font-size: 43px
+        font-family: $medium
+        span
+          font-family: $extrabold
 
 +r($desktop)
   .podr-info
@@ -16,3 +28,9 @@
     padding: 40px 0
     p
       font-size: 16px
+    &--card
+      padding: 40px 0
+      p
+        margin-top: 20px
+        &.title
+          font-size: 24px
