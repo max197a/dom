@@ -1,0 +1,232 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head.head--houses
+    .container.container--typical
+      h2 Наши дома
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: typical
+  section.typical
+    .container.container--typical
+      .typical__buttons
+        a(href="/nashy-doma-tipovye.html").typical__btn типовые проекты
+        a(href="/nashy-doma-gotovye.html").typical__btn готовые
+        a(href="/blog-help.html").typical__btn строящиеся
+        a(href="/blog-faq.html").typical__btn.is-active на карте
+
+  // BEGIN SECTION :: podr-map
+  section.podr-map
+    .podr-map__map
+      //- карту яндекса вставлять сюда
+    .container.container--large
+      .podr-map__offices
+        .podr-map__head
+          .podr-map__buttons.podr-map__buttons--editable
+            a.podr-map__btn.is-active(href="#" js-p-map-btn) готовые
+            a.podr-map__btn(href="#" js-p-map-btn) строящиеся  дома
+        .podr-map__body
+          .podr-map__detail-ready
+            a.podr-map__close(href="#" js-detail-close)
+            .podr-map__slider(js-karta-slider)
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-2.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-1.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-3.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-2.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-3.jpg", alt="")
+            .podr-map__detail-info
+              .podr-map__detail-head
+                p.podr-map__detail-title М0, Солнечногорский р-н, г.о. Апрелевка, ул. Васильевская
+                .podr-map__detail-images
+                  .podr-map__detail-image-item
+                    .podr-map__detail-img
+                      img(src="img/calendar.svg", alt="")
+                    p 2017
+                  .podr-map__detail-image-item
+                    .podr-map__detail-img
+                      img(src="img/typical.svg", alt="")
+                    p 186 м²
+              .podr-map__detail-row
+                p Подрядчик:
+                a.podr-map__detail-master(href="#") 
+                  span мастер правильных домов
+              .podr-map__detail-row
+                .podr-map__detail-img
+                  img(src="img/p-system-5.svg", alt="")
+                a.podr-map__link-page(href="#") Перейти на страницу проекта
+                  span
+          .podr-map__detail-proccess
+            a.podr-map__close(href="#" js-detail-close)
+            .podr-map__slider(js-karta-slider)
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-1.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-2.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-3.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-2.jpg", alt="")
+              .podr-map__slider-item
+                .podr-map__image
+                  img(src="img/proj-3.jpg", alt="")
+            .podr-map__detail-info
+              .podr-map__detail-head
+                p.podr-map__detail-title М0, Солнечногорский р-н, г.о. Апрелевка, ул. Васильевская
+                .podr-map__detail-images
+                  .podr-map__detail-image-item
+                    .podr-map__detail-img
+                      img(src="img/typical.svg", alt="")
+                    p 186 м²
+                  .podr-map__detail-image-item
+                    p Стадия: 
+                      span  Фундамент
+              .podr-map__detail-row
+                p Подрядчик:
+                a.podr-map__detail-master(href="#") 
+                  span мастер правильных домов
+              .podr-map__detail-row
+                .podr-map__detail-img
+                  img(src="img/p-system-5.svg", alt="")
+                .podr-map__detail-img
+                  img(src="img/video-str.svg", alt="")
+                a.podr-map__link-page(href="#") Перейти на страницу проекта
+                  span
+          .podr-map__head-tab.is-active
+            .podr-map__head-grid
+              .podr-map__see
+                .podr-map__img
+                  img(src="img/p-system-5.svg", alt="")
+                p Можно посетить
+          .podr-map__head-tab
+            .podr-map__head-grid
+              .podr-map__see
+                .podr-map__img
+                  img(src="img/p-system-5.svg", alt="")
+                p Можно посетить
+              .podr-map__see
+                .podr-map__img
+                  img(src="img/video-str.svg", alt="")
+                p Видеотрансляция
+          .podr-map__scroll
+            .podr-map__tab.is-active
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-ready-house)
+                span.city г. Москва, ул. Васильевская, д. 10 
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-ready-house)
+                span.city г. Москва, ул. Васильевская, д. 10 
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-ready-house)
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+            .podr-map__tab
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Москва, ул. Васильевская, д. 10 
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Москва, ул. Васильевская, д. 10 
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Москва, ул. Васильевская, д. 10 
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Москва, ул. Васильевская, д. 10 
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+              a.podr-map__item.podr-map__item--editable(href="#" js-open-proccess-house)
+                span.city г. Владимир, пр-т Утомленных летчиков, д 35
+                .podr-map__images
+                  .podr-map__img
+                    img(src="img/p-system-5.svg", alt="")
+                  .podr-map__img
+                    img(src="img/video-str.svg", alt="")
+  // END SECTION :: podr-map
+  
+  // BEGIN SECTION :: podr-form
+  section.podr-form
+    .container.container--typical
+      h2.podr__title Оставьте заявку
+      .podr-form__grid
+        .podr-form__form
+          form(action="#")
+            .input-container
+              input(type="text" placeholder="Имя")
+            .input-container
+              input(type="text" placeholder="Телефон")
+            p Отправляя форму даю согласие на обработку 
+              a(href="#") персональных данных
+            input.btn(type="submit" value="ОТПРАВИТЬ")
+        .podr-form__info
+          p.podr-form__info-title Заполните форму и наш специалист свяжется с вами в ближайшее время.
+          p.podr-form__info-text 1. Расскажем о всех наших инновационных решениях, материалах и технологии Дом Технониколь
+          p.podr-form__info-text 2. Ответим на все интересующие вас вопросы
+          p.podr-form__info-text 3. Подберем для вас оптимальный проект
+
+  // END SECTION :: podr-form

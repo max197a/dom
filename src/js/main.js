@@ -110,8 +110,15 @@ $(document).ready(function() {
       var $self = $(this),
         tabIndex = $self.index();
       $self.siblings().removeClass("is-active");
+      $(".podr-map__detail-proccess").removeClass("is-active");
+      $(".podr-map__detail-ready").removeClass("is-active");
       $self.addClass("is-active");
       $(".podr-map__tab")
+        .removeClass("is-active")
+        .css("display", "none")
+        .eq(tabIndex)
+        .fadeIn();
+      $(".podr-map__head-tab")
         .removeClass("is-active")
         .css("display", "none")
         .eq(tabIndex)
@@ -128,6 +135,23 @@ $(document).ready(function() {
       e.preventDefault();
       $(".podr-services__grid").toggleClass("is-active");
       $(this).toggleClass("is-active");
+    })
+
+    .on("click", "[js-open-ready-house]", function(e) {
+      e.preventDefault();
+      $(".podr-map__detail-ready").addClass("is-active");
+    })
+
+    .on("click", "[js-open-proccess-house]", function(e) {
+      e.preventDefault();
+      $(".podr-map__detail-proccess").addClass("is-active");
+    })
+
+    .on("click", "[js-detail-close]", function(e) {
+      e.preventDefault();
+      $(this)
+        .parent()
+        .removeClass("is-active");
     })
 
     .on("click", "[js-open-info]", function(e) {
@@ -382,6 +406,14 @@ $(document).ready(function() {
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: false,
+      dots: true,
+      loop: false
+    });
+
+    $("[js-karta-slider]").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
       dots: true,
       loop: false
     });

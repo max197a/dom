@@ -39,3 +39,5 @@ PageList:
   ready: 40
 - file: doma-stroy-card.html
   ready: 40
+- file: nashy-doma-karta.html
+  ready: 40
