@@ -96,10 +96,9 @@
       margin-left: 10px
       transition: all $transitionSpeed $ease
     &:hover
-      background: 
-      color: $fontColor
+      color: $hoverRed
       span
-        border-color: $fontColor
+        border-color: $hoverRed
   &__button
     display: flex
     margin: 43px auto 0
@@ -115,7 +114,8 @@
     justify-content: center
     line-height: 1
     &:hover
-      background: $fontColor
+      background: $hoverRed
+      border-color: $hoverRed
       color: #fff
 
 
@@ -136,12 +136,18 @@
     .container
       padding: 0
     &__title
-      font-size: 26px
-      text-align: center
+      font-size: 24px
+      text-align: left
       margin: 0 auto
+      font-weight: 600
+      max-width: 100%
+      padding-left: 20px
     &__slider
       margin-top: 60px
       text-align: center
+      max-width: 320px
+      margin: 20px auto 60px
+      position: relative
     &__i-title
       text-align: left
     &__about
@@ -153,7 +159,7 @@
     .slick-dots
       position: absolute
       margin: 0 auto
-      top: -30px
+      bottom: -30px
       left: 50%
       transform: translateX(-50%)
       line-height: 0
@@ -179,3 +185,43 @@
     &__button
       margin-top: 20px
       font-size: 14px
+      padding: 21px 25px 19px
+      max-width: 320px
+    .slick-arrow
+      position: absolute
+      background: rgba($fontColor, 0.3)
+      transition: all $transitionSpeed $ease
+      border: none
+      font-size: 0
+      color: transparent
+      cursor: pointer
+
+      top: auto
+      bottom: -43px
+      transform: translateY(0)
+      width: 35px
+      height: 35px
+      &:hover
+        background: rgba($fontColor, 0.7)
+      &.slick-prev
+        left: 0px
+        &:before
+          border-top: none
+          border-right: none
+          left: 57%
+      &.slick-next
+        right: 0px
+        &:before
+          border-bottom: none
+          border-left: none
+          left: 43%
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 10px
+        height: 10px
+        border: 2px solid #fff
+        transform: translate(-50%, -50%) rotate(45deg)
+        top: 50%
+        left: 50%

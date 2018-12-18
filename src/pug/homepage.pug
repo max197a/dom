@@ -7,6 +7,9 @@ block content
   // BEGIN SECTION :: firstscreen
   section
     .firstscreen
+      .firstscreen__carousel(js-firstscreen-slider)
+        .firstscreen__carousel-item(style="background-image: url(img/bg-main.jpg)")
+        .firstscreen__carousel-item(style="background-image: url(img/price.jpg)")
       img.firstscreen__pattern(src="img/pattern-1.svg", alt="")
       .container
         .firstscreen__content
@@ -342,6 +345,9 @@ block content
   section.want-form
     .want-form__container
       .container
+        .want-form__lines
+          .want-form__top
+          .want-form__bottom
         p.want-form__title Хотите узнать больше об энергоэфективном
           br
           | проекте 

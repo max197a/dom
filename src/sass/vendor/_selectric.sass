@@ -30,7 +30,7 @@
     -moz-user-select: none
     -ms-user-select: none
     user-select: none
-    max-width: 165px
+    // max-width: 165px
     overflow: hidden
     text-overflow: ellipsis
     width: 100%
@@ -153,15 +153,38 @@
     color: $fontColor
     padding: 10px 10px 10px 24px
     background: #fff
-    &.selected
-      background: #E0E0E0
-      color: #444
-    // &.highlighted
-    //   background: #D0D0D0
-    //   color: #444
+    &:after
+      display: inline-block
+      // margin-top: 5px
+      content: ''
+      min-width: 10px
+      height: 10px
+      position: static
+      margin-left: 8px
+      margin-top: -2px
+    &.down-arrow
+      &:after
+        background: url(../img/arrow-down.png) center center no-repeat
+        background-size: contain
+        filter: invert(97%)
+        -webkit-filter: invert(97%)
+    &.top-arrow
+      &:after
+        background: url(../img/arrow-down.png) center center no-repeat
+        background-size: contain
+        transform: rotate(180deg)
+        filter: invert(97%)
+        -webkit-filter: invert(97%)
+    &.selected,
     &:hover
       background: $hoverRed
       color: #fff
+      &.down-arrow
+        &:after
+          filter: none
+      &.top-arrow
+        &:after
+          filter: none
   .disabled
     filter: alpha(opacity = 50)
     opacity: 0.5
@@ -185,4 +208,4 @@
 
 +r($tablet)
   .selectric-items
-    position: static
+    // position: static

@@ -289,7 +289,7 @@ $(document).ready(function() {
         $("[js-blog-slider]").slick({
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false,
+          arrows: true,
           dots: true,
           loop: true,
           infinite: true
@@ -305,6 +305,19 @@ $(document).ready(function() {
   });
 
   function initSlider() {
+    $("[js-firstscreen-slider]").slick({
+      dots: false,
+      arrows: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 2000,
+      pauseOnHover: false,
+      pauseOnFocus: false,
+      speed: 500,
+      fade: true,
+      cssEase: "linear"
+    });
+
     $("[js-awards-slider]").slick({
       slidesToShow: 4,
       slidesToScroll: 1,
@@ -362,6 +375,12 @@ $(document).ready(function() {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
+            draggable: false,
+            swipe: false,
+            autoplay: true,
+            autoplaySpeed: 3000,
+            pauseOnHover: true,
+            pauseOnFocus: true,
             dots: true
           }
         }
@@ -438,7 +457,7 @@ $(document).ready(function() {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
             dots: true
           }
         }
@@ -473,7 +492,7 @@ $(document).ready(function() {
           settings: {
             slidesToShow: 2,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
             dots: true
           }
         },
@@ -482,7 +501,7 @@ $(document).ready(function() {
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
+            arrows: true,
             dots: true
           }
         }

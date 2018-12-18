@@ -40,15 +40,17 @@
   .awards
     padding: 60px 0
     &__h-title
-      font-size: 29px
-      text-align: center
+      font-size: 24px
+      text-align: left
       width: 100%
+      font-weight: 600
+      max-width: 100%
     .container
       padding: 0 40px
     .slick-dots
       position: absolute
       margin: 0 auto
-      top: -20px
+      bottom: -20px
       left: 50%
       transform: translateX(-50%)
       line-height: 0
@@ -73,6 +75,9 @@
         transition: all $transitionSpeed $ease
     &__item-content
       margin: 0 auto
+    &__slider-container
+      padding-top: 20px
+      padding-bottom: 30px
 
 +r($mobile)
   .awards

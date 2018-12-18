@@ -27,9 +27,9 @@ block content
               p Сортировка
               select(name="")
                 option(value="По рейтингу и стоимости") По рейтингу и стоимости
-                option(value="Рейтинг вниз") Рейтинг вниз
-                option(value="Стоимость вверх") Стоимость вверх
-                option(value="Стоимость вниз") Стоимость вниз
+                option.down-arrow(value="Рейтинг") Рейтинг
+                option.top-arrow(value="Стоимость вверх") Стоимость
+                option.down-arrow(value="Стоимость вниз") Стоимость
       .container.container--typical
         .filter__items
           .filter__p-item

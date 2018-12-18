@@ -189,11 +189,12 @@
     &__desc
       font-size: 16px
     &__slider
-      padding: 80px 0 0
+      padding: 20px 0 0
+      margin-bottom: 30px
     .slick-dots
       position: absolute
       margin: 0 auto
-      top: 32px
+      bottom: -36px
       left: 50%
       transform: translateX(-50%)
       line-height: 0
@@ -221,3 +222,44 @@
     &__btn
       font-size: 12px
       padding: 12px 17px
+      max-width: 320px
+      width: 100%
+      display: inline-block
+    .slick-arrow
+      position: absolute
+      width: 35px
+      height: 35px
+      background: rgba($fontColor, 0.3)
+      transition: all $transitionSpeed $ease
+      top: auto
+      transform: translateY(0)
+      bottom: -50px
+      border: none
+      font-size: 0
+      color: transparent
+      cursor: pointer
+      z-index: 2
+      &:hover
+        background: rgba($fontColor, 0.7)
+      &.slick-prev
+        left: 8px
+        &:before
+          border-top: none
+          border-right: none
+          left: 57%
+      &.slick-next
+        right: 8px
+        &:before
+          border-bottom: none
+          border-left: none
+          left: 43%
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 10px
+        height: 10px
+        border: 2px solid #fff
+        transform: translate(-50%, -50%) rotate(45deg)
+        top: 50%
+        left: 50%

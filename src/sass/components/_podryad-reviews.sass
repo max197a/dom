@@ -185,6 +185,7 @@
       margin: 0 auto
     &__slider
       padding: 0
+      margin: 10px 0 40px
     &__photo
       margin-top: 15px
       margin: 15px -5px 0
@@ -200,10 +201,36 @@
       max-height: 142px
       max-width: 100%
       -webkit-line-clamp: 7
+    // .slick-dots
+    //   position: absolute
+    //   margin: 0 auto
+    //   top: -20px
+    //   left: 50%
+    //   transform: translateX(-50%)
+    //   line-height: 0
+    //   height: auto
+    //   font-size: 0
+    //   padding: 0
+    //   li
+    //     margin: 0 8px
+    //     &.slick-active
+    //       button
+    //         background: $hoverRed
+    //   button
+    //     font-size: 0
+    //     padding: 0
+    //     margin: 0
+    //     line-height: 0
+    //     background: #e9e9e9
+    //     width: 7px
+    //     height: 7px
+    //     border-radius: 50%
+    //     border: none
+    //     transition: all $transitionSpeed $ease
     .slick-dots
       position: absolute
       margin: 0 auto
-      top: -20px
+      bottom: -36px
       left: 50%
       transform: translateX(-50%)
       line-height: 0
@@ -226,3 +253,41 @@
         border-radius: 50%
         border: none
         transition: all $transitionSpeed $ease
+    .slick-arrow
+      position: absolute
+      width: 35px
+      height: 35px
+      background: rgba($fontColor, 0.3)
+      transition: all $transitionSpeed $ease
+      top: auto
+      transform: translateY(0)
+      bottom: -50px
+      border: none
+      font-size: 0
+      color: transparent
+      cursor: pointer
+      z-index: 2
+      &:hover
+        background: rgba($fontColor, 0.7)
+      &.slick-prev
+        left: 10px
+        &:before
+          border-top: none
+          border-right: none
+          left: 57%
+      &.slick-next
+        right: 10px
+        &:before
+          border-bottom: none
+          border-left: none
+          left: 43%
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 10px
+        height: 10px
+        border: 2px solid #fff
+        transform: translate(-50%, -50%) rotate(45deg)
+        top: 50%
+        left: 50%

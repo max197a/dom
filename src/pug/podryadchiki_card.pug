@@ -7,7 +7,7 @@ block content
   // BEGIN SECTION :: general
   section.podr-general
     .container
-      .podr-general__grid
+      .podr-general__grid.podr-general__grid--editable
         .podr-general__left
           .podr-general__slider(js-g-slider)
             .podr-general__item
@@ -68,16 +68,19 @@ block content
             p Количество бригад
             p.regular 5
           .podr-general__row
+            p Готовые объекты
+            p.regular 21
+          .podr-general__row
             p Регион строительства
             p.regular Московская область
-          .podr-general__row
+          .podr-general__row.podr-general__row--wrap
             .podr-general__links
               a(href="#") + 7 (495) 24-99-079
               a(href="#") г. Москва, ул. Летчиков , д.20
               a.site(href="#") 
                 span mpd-rf.ru
             .podr-general__link
-              a.podr-general__all-of(href="#")
+              a.podr-general__all-of(href="#section-map")
                 span.info Все офисы
                 span.arrow
 
@@ -183,6 +186,7 @@ block content
 
   // BEGIN SECTION :: podr-map
   section.podr-map
+    a#section-map(href="#")
     .podr-map__map
       //- карту яндекса вставлять сюда
     .container.container--large

@@ -40,12 +40,16 @@
       transition: all $transitionSpeed $ease
     &:hover
       opacity: 1
-      border-color: #c6142d
-      &:after
-        opacity: 1
+      // border-color: #c6142d
+      background: rgba(106, 70, 75, 0.1)
+      // border-color: #dfdfdf !important
+      // &:after
+      //   opacity: 1
     &.is-active
       opacity: 1
       border-color: #c6142d
+      background: #c6142d
+      color: #fff
       &:after
         opacity: 1
   
@@ -63,13 +67,15 @@
     &__buttons
       margin-top: 10px
       margin-bottom: 25px
-      padding: 0 10px
+      // padding: 0 10px
       flex-direction: column
+      border-bottom: none
 
     &__btn
       width: 100%
       font-size: 18px
       margin-right: 0
-      padding: 12px 0 7px 
+      padding: 14px 0 9px 
       text-align: center
       border-bottom: 2px solid #dfdfdf
+      margin-bottom: 0

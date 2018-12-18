@@ -89,6 +89,9 @@
     color: #ffffff
     background: #cbcbcb
     text-transform: uppercase
+    transition: all $transitionSpeed $ease
+    &:hover
+      background: $hoverRed
   &__head-date
     margin-left: 15px
     font-family: $bold
@@ -135,10 +138,9 @@
       margin-left: 10px
       transition: all $transitionSpeed $ease
     &:hover
-      background: 
-      color: $fontColor
+      color: $hoverRed
       span
-        border-color: $fontColor
+        border-color: $hoverRed
 
   .pagination
     margin-top: 83px

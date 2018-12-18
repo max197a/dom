@@ -27,6 +27,13 @@
     align-items: center
     justify-content: space-between
     flex-direction: row-reverse
+    &--editable
+      .podr-general__row
+        p
+          font-family: "Geometria", sans-serif
+          color: #373737
+          &.regular
+            font-family: "Geometria-Bold", sans-serif
   &__top
     display: flex
     align-items: flex-start
@@ -301,8 +308,10 @@
       span
         &.arrow
           opacity: 1
+          border-color: $hoverRed
         &.info
           opacity: 1
+          color: $hoverRed
   &__left
     // max-width: 700px
     width: 66%
@@ -354,7 +363,7 @@
     cursor: pointer
     z-index: 5
     &:hover
-      background: darken($fontColor, 0.3)
+      background: $hoverRed
     &.slick-prev
       left: 0px
       &:before
@@ -542,24 +551,83 @@
         height: 7px
     &__grid
       flex-wrap: wrap
-      flex-direction: column-reverse
+      // flex-direction: column-reverse
+      position: relative
+      &--editable
+        flex-direction: column-reverse
+        .podr-general__right
+          display: flex
+          flex-direction: column
+          padding: 10px
+          background: #fff
+          margin-top: 20px
+        .podr-general__title
+          order: -2
+          margin-top: 40px
+          margin-bottom: 0
+          width: calc(100% - 60px)
+        .podr-general__image
+          margin-top: 10px
+        .podr-general__all-p
+          position: absolute
+          top: 35px
+          left: 12px
+        .podr-general__left
+          margin-top: 10px
+        .podr-general__rate
+          right: 10px
+          top: 67px
+        .podr-general__row
+          flex-wrap: nowrap
+          &--wrap
+            flex-wrap: wrap
+          p
+            width: auto
+            font-size: 14px
+            font-family: "Geometria", sans-serif
+            line-height: 1.2
+            color: #373737
+            &.regular
+              font-family: "Geometria-Bold", sans-serif
+    &__row
+      flex-wrap: nowrap
+      p
+        // max-width: 180px
+        width: auto
+    &__all-p
+      position: absolute
+      top: 20px
+      left: 0
+    &__title
+      &--editable
+        position: absolute
+        top: 50px
+        margin-top: 0
     &__right
       width: 100%
       max-width: 100%
       padding-top: 20px
       padding-right: 0
+      position: static
+      // margin-top: 20px
     &__left
       width: 100%
       max-width: 100%
       box-shadow: 6.356px 12.474px 47.94px 3.06px rgba(0, 0, 0, 0.24)
       border: 1px solid #c4c4c4
+      margin-top: 100px
       &:before
         display: none
     &__preview-slider
       display: none
     &__rate
-      top: 55px
+      top: 57px
       right: 0
+      img
+        height: 20px
+        margin-right: 5px
+      p
+        font-size: 22px
     &__image
       max-height: 80px
       img
@@ -568,17 +636,21 @@
     &__title
       font-size: 18px
       &--editable
-        font-size: 24px
+        font-size: 32px
     &__view-image
       max-height: 40px
     &__links
       width: 100%
       margin-bottom: 15px
+      // margin-bottom: 0
     &__link
       padding-left: 0
       margin-left: auto
       min-width: 1px
       padding-right: 2px
+      // position: absolute
+      // bottom: 0
+      // right: 0
     &__top-info
       padding: 5px 7px
       p
@@ -600,7 +672,9 @@
         padding-top: 15px
     &__row
       padding: 7px 0
+      position: relative
       &--price
+        flex-wrap: wrap
         p
           &.price
             font-size: 32px
