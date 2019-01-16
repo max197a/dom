@@ -41,3 +41,5 @@ PageList:
   ready: 40
 - file: nashy-doma-karta.html
   ready: 40
+- file: calculator.html
+  ready: 20

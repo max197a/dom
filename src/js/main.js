@@ -96,6 +96,31 @@ $(document).ready(function() {
     //     .fadeIn();
     // })
 
+    .on("click", "[js-step-button]", function(e) {
+      e.preventDefault();
+      var $self = $(this),
+        tabIndex = $self.index();
+      // $self.siblings().removeClass("is-active");
+      $self.addClass("is-active");
+      $(".want-form--calculator").removeClass("is-active");
+      $(".calc__tab")
+        .removeClass("is-active")
+        .eq(tabIndex)
+        .addClass("is-active");
+      if (tabIndex === 4) {
+        $(".calc__tab-step-5").addClass("is-active");
+        $(".want-form--calculator").addClass("is-active");
+      }
+    })
+
+    .on("click", "[js-open-result]", function(e) {
+      e.preventDefault();
+      $(".calc__tab").css("display", "none");
+      $(".calc__tab.calc__tab-step-5").css("display", "block");
+      $(".want-form--calculator").addClass("is-active");
+      $(".head--calculator p").css("display", "none");
+    })
+
     .on("click", "[js-complectation-button]", function(e) {
       e.preventDefault();
       $(this).toggleClass("is-open");
@@ -172,6 +197,44 @@ $(document).ready(function() {
       ease: easingSwing
     });
   }
+
+  $(document).ready(function() {
+    $("[js-range]").rangeSlider();
+  });
+
+  if (jQuery)
+    (function($) {
+      $.fn.rangeSlider = function(params) {
+        // default configuration
+        var conf = $.extend({}, params);
+        // end default configuration
+        return this.each(function() {
+          var configuration = conf,
+            object = $(this),
+            object_functions = this,
+            target = object.data("target");
+          $.extend(object_functions, {
+            init: function() {
+              object_functions.setValue();
+              // object_functions.setWarning();
+
+              object.on("input", function() {
+                object_functions.setValue();
+              });
+              $(target).on("change, keyup", function() {
+                object.val($(target).val());
+              });
+            },
+            setValue: function() {
+              $(target)
+                .val(object.val())
+                .trigger("change");
+            }
+          });
+          object_functions.init();
+        });
+      };
+    })(jQuery);
 
   ////////////////////
   // MAGNIFIC POPUPS

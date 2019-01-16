@@ -1,0 +1,484 @@
+---
+title: DOM Technonicol
+---
+extends shared/_layout
+block content
+
+  // BEGIN SECTION :: head
+  .head.head--calculator
+    .container.container--typical.container
+      h2 Расчёт строительства дома
+      p Чтобы рассчитать стоимость строительства дома - выберите интересующие вас материалы и конструкции, нажмите кнопку “Рассчитать стоимость” и получите готовый расчет на почту
+
+  // END SECTION :: head
+
+  // BEGIN SECTION :: calculator
+
+
+  form.js-form-want(action="#")
+    .calc
+      .container.container--typical
+        .calc__steps
+          a.calc__step.calc--step1.is-active(href="#" js-step-button)
+            .calc__triangle
+            p габариты
+            .calc__step-image
+              img(src="img/step-1.svg", alt="")
+          a.calc__step.calc--step2(href="#" js-step-button)
+            .calc__triangle
+            p фундамент
+            .calc__step-image
+              img(src="img/step-2.svg", alt="")
+          a.calc__step.calc--step3(href="#" js-step-button)
+            .calc__triangle
+            p стены
+            .calc__step-image
+              img(src="img/step-3.svg", alt="")
+          a.calc__step.calc--step4(href="#" js-step-button)
+            .calc__triangle
+            p кровля
+            .calc__step-image
+              img(src="img/step-4.svg", alt="")
+          a.calc__step.calc--step5(href="#" js-step-button)
+            .calc__triangle
+            p готовый дом
+            .calc__step-image
+              img(src="img/step-5.svg", alt="")
+        .calc__tabs
+          .calc__tab.is-active
+            h2.calc__title Габариты
+            .calc__step-grid
+              .calc__step-left
+                .calc__step-row
+                  p Площадь дома, м
+                    sup 2
+                  .calc__range-pl
+                    .wrapper-input-range
+                      input(type='range' name='range' min='0' step='1' max='200' value='50' data-target='#range-value' js-range)
+                      .calc__pl-items
+                        .calc__pl-item
+                          p отапливаемая
+                          p
+                            span 50 м
+                              sup 2
+                        .calc__pl-item
+                          p строительная
+                          p
+                            span 65 м
+                              sup 2
+                    .wrapper-input-value.form-group
+                      input#range-value(type='number' name='range-value')
+                .calc__step-row
+                  p Количество этажей
+                  .calc__input
+                    .checkbox-container
+                      input#c1(type='radio' name='radio1')
+                      label.label-container(for="c1")
+                        span 1
+                        
+                    .checkbox-container
+                      input#c2(type='radio' name='radio1')
+                      label.label-container(for="c2")
+                        span 2
+
+                .calc__step-row.calc__step-row--editable
+                  p Наличие открытой вернады с навесом
+                  .calc__input
+                    .checkbox-container
+                      input#c3(type='radio' name='radio2')
+                      label.label-container(for="c3")
+                        span да
+                        
+                    .checkbox-container
+                      input#c4(type='radio' name='radio2')
+                      label.label-container(for="c4")
+                        span нет
+
+                .calc__step-row
+                  p Высота потолков, м
+                  .calc__range-pl
+                    .wrapper-input-range
+                      input(type='range' name='range' min='0' step='0.05' max='6' value='2.35' data-target='#range-value2' js-range)
+                    .wrapper-input-value.form-group
+                      input#range-value2(type='number' name='range-value2')
+              .calc__step-right
+                .calc__step-image
+                  img(src="img/step-4.png", alt="")
+          .calc__tab.calc__tab-step-2
+            h2.calc__title Фундамент
+            .calc__step-grid
+              .calc__step-left
+                .calc__step-row.calc__step-row--select
+                  p Тип фундамента
+                  select(name="")
+                    option(value="Свайно-винтовой фундамент") Свайно-винтовой фундамент
+                    option(value="Утепленная шведская плита") Утепленная шведская плита
+
+                .calc__step-row.calc__step-row--type
+                  p Тип фундамента
+                  .calc__input.calc__input--editable
+                    .checkbox-container
+                      input#c11(type='radio' name='radio3')
+                      label.label-container(for="c11")
+                        span Свайно-винтовой фундамент
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                        
+                    .checkbox-container
+                      input#c12(type='radio' name='radio3')
+                      label.label-container(for="c12")
+                        span Утепленная шведская плита
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+
+                .calc__step-row.calc__step-row--editable
+                  p Форма здания
+                  .calc__input.calc__input--form
+                    .checkbox-container.checkbox-container--form
+                      input#c13(type='radio' name='radio4')
+                      label.label-container.label-container--form(for="c13")
+                        .form-image.g-form
+                          svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewBox='0 0 27 33.6')
+                            defs
+                              path#SVGID_1_(d='M0 0h27v33.6H0z')
+                            clippath#SVGID_2_
+                              use(xlink:href='#SVGID_1_', overflow='visible')
+                            path(clip-path='url(#SVGID_2_)', fill='none', stroke='#231f20', stroke-width='3', stroke-miterlimit='10', d='M1.5 1.5v30.6h24v-15H12.2V1.5z')
+                        span Г-образная
+                        
+                    .checkbox-container.checkbox-container--form
+                      input#c14(type='radio' name='radio4')
+                      label.label-container.label-container--form(for="c14")
+                        .form-image
+                          svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewBox='0 0 40.3 33.6')
+                            defs
+                              path#SVGID_10_(d='M0 0h40.3v33.6H0z')
+                            clippath#SVGID_20_
+                              use(xlink:href='#SVGID_10_', overflow='visible')
+                            path(clip-path='url(#SVGID_20_)', fill='none', stroke='#231f20', stroke-width='3', stroke-miterlimit='10', d='M38.8 1.5H1.5V14h11v18.1h15.3V14h11z')
+                        span Т-образная
+                    
+                    .checkbox-container.checkbox-container--form
+                      input#c15(type='radio' name='radio4')
+                      label.label-container.label-container--form(for="c15")
+                        .form-image
+                          svg(xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', viewBox='0 0 47.4 33.6')
+                            defs
+                              path#SVGID_30_(d='M0 0h47.4v33.6H0z')
+                            clippath#SVGID_40_
+                              use(xlink:href='#SVGID_30_', overflow='visible')
+                            path(clip-path='url(#SVGID_40_)', fill='none', stroke='#231f20', stroke-width='3', stroke-miterlimit='10', d='M1.5 1.5h44.4v30.6H1.5z')
+
+                        span Прямоугольная
+                        
+
+              .calc__step-right
+                .calc__step-image
+                  img(src="img/step-4.png", alt="")
+          .calc__tab.calc__tab-step-3
+            h2.calc__title Стены
+            .calc__step-grid
+              .calc__step-left.calc__step-left--editable.calc__step-left--out
+                .calc__step-row.calc__step-row--select
+                  p Внутренняя отделка
+                  select(name="")
+                    option(value="Гипсокартон") Гипсокартон
+                    option(value="Без отделки") Без отделки
+                    option(value="Обшивка деревом с покраской") Обшивка деревом с покраской
+                .calc__step-row.calc__step-row--type
+                  p Внутренняя отделка
+                  .calc__input.calc__input--editable
+                    .checkbox-container
+                      input#c51(type='radio' name='radio8')
+                      label.label-container(for="c51")
+                        span Гипсокартон
+                        
+                    .checkbox-container
+                      input#c52(type='radio' name='radio8')
+                      label.label-container(for="c52")
+                        span Без отделки
+                    
+                    .checkbox-container
+                      input#c53(type='radio' name='radio8')
+                      label.label-container(for="c53")
+                        span Обшивка деревом с покраской
+                .calc__step-row
+                  p Внешняя отделка
+                  .calc__step-row--out
+                    .checkbox-container.checkbox-container--out
+                      input#c61(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c61")
+                        img(src="img/m-out-1.jpg", alt="")
+                        p Обрезная доска, обожженная доска
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                    .checkbox-container.checkbox-container--out
+                      input#c62(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c62")
+                        img(src="img/m-out-2.jpg", alt="")
+                        p Имитация бруса, планкен, пр.
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                    .checkbox-container.checkbox-container--out
+                      input#c63(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c63")
+                        img(src="img/m-out-3.jpg", alt="")
+                        p HAUBERK
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                    .checkbox-container.checkbox-container--out
+                      input#c64(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c64")
+                        img(src="img/m-out-4.jpg", alt="")
+                        p Штукатурный фасад
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                    .checkbox-container.checkbox-container--out
+                      input#c65(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c65")
+                        img(src="img/m-out-5.jpg", alt="")
+                        p Кирпичная  кладка
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                    .checkbox-container.checkbox-container--out
+                      input#c66(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c66")
+                        img(src="img/m-out-6.jpg", alt="")
+                        p Фахверк
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                    .checkbox-container.checkbox-container--out
+                      input#c67(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c67")
+                        img(src="img/m-out-7.jpg", alt="")
+                        p Фиброцементный сайдинг
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+                    .checkbox-container.checkbox-container--out
+                      input#c68(type='radio' name='radio9')
+                      label.label-container.label-container--out(for="c68")
+                        img(src="img/m-out-8.jpg", alt="")
+                        p Виниловый  сайдинг
+                        div.hint
+                          p ?
+                          .hint-info
+                            p Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                              bold blanditiis assumenda.
+                            a(href="http://www.google.com.ua" target="_blank") Подробнее
+                              span.border
+              .calc__step-right
+                .calc__step-image
+                  img(src="img/step-4.png", alt="")
+          .calc__tab.calc__tab-step-4
+            h2.calc__title Кровля
+            .calc__step-grid
+              .calc__step-left.calc__step-left--editable
+                .calc__step-row.calc__step-row--select
+                  p Тип кровли
+                  select(name="")
+                    option(value="Мансардная") Мансардная
+                    option(value="Холодный чердак") Холодный чердак
+                    option(value="Плоская крыша") Плоская крыша
+                
+                .calc__step-row.calc__step-row--select
+                  p Форма кровли
+                  select(name="")
+                    option(value="Вальмовая") Вальмовая
+                    option(value="Фронтонная") Фронтонная
+
+                .calc__step-row.calc__step-row--select
+                  p Кровельное покрытие
+                  select(name="")
+                    option(value="Рулонная черепица") Рулонная черепица
+                    option(value="Финская черепица") Финская черепица
+                    option(value="Многослойная черепица SHINGLAS") Многослойная черепица SHINGLAS
+                    option(value="Luxard") Luxard
+
+                .calc__step-row.calc__step-row--type
+                  p Тип кровли
+                  .calc__input.calc__input--editable
+                    .checkbox-container
+                      input#c41(type='radio' name='radio5')
+                      label.label-container(for="c41")
+                        span Мансардная
+                        
+                    .checkbox-container
+                      input#c42(type='radio' name='radio5')
+                      label.label-container(for="c42")
+                        span Холодный чердак
+                    
+                    .checkbox-container
+                      input#c43(type='radio' name='radio5')
+                      label.label-container(for="c43")
+                        span Плоская крыша
+
+                .calc__step-row.calc__step-row--type
+                  p Форма кровли
+                  .calc__input.calc__input--editable
+                    .checkbox-container
+                      input#c44(type='radio' name='radio6')
+                      label.label-container(for="c44")
+                        span Вальмовая
+                        
+                    .checkbox-container
+                      input#c45(type='radio' name='radio6')
+                      label.label-container(for="c45")
+                        span Фронтонная
+
+                .calc__step-row.calc__step-row--type
+                  p Кровельное покрытие
+                  .calc__input.calc__input--editable
+                    .checkbox-container
+                      input#c46(type='radio' name='radio7')
+                      label.label-container(for="c46")
+                        span Рулонная черепица
+                        
+                    .checkbox-container
+                      input#c47(type='radio' name='radio7')
+                      label.label-container(for="c47")
+                        span Финская черепица
+
+                    .checkbox-container
+                      input#c48(type='radio' name='radio7')
+                      label.label-container(for="c48")
+                        span Многослойная черепица SHINGLAS
+                        
+                    .checkbox-container
+                      input#c49(type='radio' name='radio7')
+                      label.label-container(for="c49")
+                        span Luxard
+              .calc__step-button
+                a.btn(href="#" js-open-result) рассчитать стоимость
+              .calc__step-right
+                .calc__step-image
+                  img(src="img/step-4.png", alt="")
+          .calc__tab.calc__tab-step-5
+            .calc__step-grid
+              .calc__step-left.calc__step-left--info
+                .calc__step-info
+                  h2 Габариты
+                  .calc__step-info-row
+                    p Площадь дома, м
+                      sup 2
+                    p 130
+                  .calc__step-info-row
+                    p Количество этажей
+                    p 2
+                  .calc__step-info-row
+                    p Высота потолков, м
+                    p 2,6
+                  .calc__step-info-row
+                    p Наличие открытой веранды
+                    p да
+                .calc__step-info
+                  h2 Фундамент
+                  .calc__step-info-row
+                    p Тип
+                    p УШП
+                  .calc__step-info-row
+                    p Форма здания
+                    p Г-образная
+                .calc__step-info
+                  h2 Материалы для отделки стен
+                  .calc__step-info-row
+                    p Внешняя отделка
+                    p HAUBERK
+                  .calc__step-info-row
+                    p Внутренняя отделка
+                    p Гипсокартон
+                  
+              .calc__step-right
+                .calc__step-image
+                  img(src="img/step-4.png", alt="")
+                .calc__step-info
+                  h2 Кровля
+                  .calc__step-info-row
+                    p Тип
+                    p мансардная
+                  .calc__step-info-row
+                    p Форма
+                    p фронтоная
+                  .calc__step-info-row
+                    p Кровельное окрытие
+                    p SHINGLAS
+
+        .calc__bottom
+          .calc__buttons
+            a.prev.disable(href="#")
+              span.arrow
+              span.info Предыдущий шаг
+            a.next.open-step-2(href="#")
+              span.info Cледующий шаг
+              span.arrow
+          .calc__price
+            p Стоимость 
+              br
+              | строительства:
+            p.price 1 500 000 р
+            
+    // BEGIN SECTION :: want-form
+    section.want-form.want-form--calculator
+      .want-form__container
+        .container
+          p.want-form__title Получить смету на ДОМ ТЕХНОНИКОЛЬ
+          
+            .want-form__grid
+              .input-container
+                input(type="text" name="name" placeholder="Имя*")
+              .input-container
+                input(type="text" name="phone" placeholder="Телефон*")
+              .input-container
+                input(type="text" name="mail" placeholder="Электронная почта")
+              .input-container
+                input.btn(type="submit" value="получить смету")
+            p.want-form__personal Отправляя данную форму, я даю  
+              a(href="#")  согласие на обработку персональных данных
+            
+
+    // END SECTION :: want-form
+  // END SECTION :: calculator

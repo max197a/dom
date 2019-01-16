@@ -1,0 +1,844 @@
+.head--calculator
+  padding-top: 63px
+  p
+    display: none
+.calc
+  padding-bottom: 61px
+  &__steps
+    display: flex
+    align-items: center
+    justify-content: space-between
+    border: 1px solid #c3c3c3
+    overflow: hidden
+    background: #e9e9e9
+  &__step
+    display: flex
+    align-items: center
+    justify-content: center
+    background: #e9e9e9
+    transition: all $transitionSpeed $ease
+    // width: 100%
+    padding: 17px 10px 17px 30px
+    position: relative
+    // margin-right: -22px
+    width: 20%
+    &:nth-child(1)
+      z-index: 5
+    &:nth-child(2)
+      z-index: 4
+    &:nth-child(3)
+      z-index: 3
+    &:nth-child(4)
+      z-index: 2
+    &:nth-child(5)
+      z-index: 1
+    &:first-child
+      margin-left: 0
+    &:last-child
+      width: 25%
+      .calc__triangle
+        display: none
+    p
+      font-size: 16px
+      text-transform: uppercase
+      color: #777777
+      font-family: $montserrat
+      font-weight: 600
+      transition: all $transitionSpeed $ease
+      margin-right: 15px
+      line-height: 1
+    &.is-active
+      background: #fff
+      // z-index: 2
+      p
+        color: $fontColor
+      .calc__triangle
+        border-color: transparent transparent transparent #ffffff
+  &__triangle
+    position: absolute
+    display: block
+    right: -20px
+    top: 0
+    width: 0
+    height: 0
+    border-style: solid
+    border-width: 33.5px 0 33.5px 20px
+    border-color: transparent transparent transparent #e9e9e9
+    transition: all $transitionSpeed $ease
+    &:before
+      position: absolute
+      display: block
+      right: -12px
+      content: ''
+      top: -21px
+      width: 47px
+      height: 1px
+      background: #c3c3c3
+      transform: rotate(60deg)
+    &:after
+      position: absolute
+      display: block
+      right: -12px
+      content: ''
+      bottom: -20px
+      width: 47px
+      height: 1px
+      background: #c3c3c3
+      transform: rotate(-60deg)
+
+  &__step-image
+    font-size: 0
+    img
+      height: 36px
+      width: auto
+      margin-top: -3px
+
+  &__input
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding-top: 20px
+  .label-container
+    height: 50px
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: 18px
+    color: #343634
+    background: #fff
+    border: 1px solid #b4b2b2
+    font-family: $medium
+    text-align: center
+    min-width: 65px
+    width: auto
+    cursor: pointer
+    transition: all $transitionSpeed $ease
+    cursor: pointer
+    &--form
+      height: auto
+      background: transparent
+      color: #343634
+      opacity: 0.5
+      margin-right: 15px
+      padding: 15px
+      display: inline-block
+      span
+        padding: 0 !important
+
+    span
+      display: block
+      white-space: nowrap
+      width: 100%
+      padding: 0 15px
+    &:before
+      height: 100%
+      width: 1px
+      // background: #eaeaea
+      position: absolute
+      display: block
+      content: ''
+      left: 0
+      top: 0
+      opacity: 0
+      transition: all $transitionSpeed $ease
+    input
+      position: absolute
+      left: 0
+      top: 0
+      width: 0
+      height: 0
+  .checkbox-container
+    position: relative
+    min-width: 50px
+    width: auto
+    // width: 100%
+    height: 50px
+    margin-right: -1px
+    font-size: 0
+
+    &--out
+      height: auto !important
+      width: auto !important
+      &:hover
+        z-index: 10
+      .label-container
+        padding: 0
+        display: inline-block
+        height: auto
+        width: 100%
+        max-width: 120px
+        margin: 8px 0px 0 0 !important
+        background: transparent
+        border: none
+        opacity: 0.5
+        img
+          width: 118px
+          height: auto
+        > p
+          font-size: 12px
+          font-family: $light
+          text-align: center
+          margin-top: 5px
+        &:hover
+          opacity: 1
+          background: none
+    &--form
+      height: auto
+      min-width: auto
+      width: auto
+      text-align: left
+      justify-content: flex-start
+      .form-image
+        text-align: left
+        margin-bottom: 9px
+        &.g-form
+          font-size: 0
+          svg
+            transform: rotate(90deg)
+            transform-origin: center center
+            margin-left: 4px
+            height: 45px
+
+      svg
+        height: 40px
+        width: auto
+        path
+          transition: all $transitionSpeed $ease
+    &:hover input + label
+      background-color: #dcdbdb
+    input:checked + label
+      background-color: #c92031
+      border-color: #c92031
+      color: #fff
+      z-index: 2
+      &:before
+        opacity: 1
+    input:checked + label.label-container--form
+      opacity: 1
+      background: #fff
+      border-color: #c3c3c3
+      span
+        color: $fontColor
+      path
+        stroke: #c92031
+    input:checked + label.label-container--out
+      opacity: 1
+      background: none
+      border: none
+      > p
+        color: $fontColor
+      img
+        outline: 2px solid #c92031
+    &:hover
+      .hint
+        opacity: 1
+    .hint
+      position: absolute
+      font-size: 16px
+      display: flex
+      align-items: center
+      justify-content: center
+      color: #fff
+      width: 30px
+      height: 30px
+      background: #70c568
+      border-radius: 50%
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.7)
+      z-index: 5
+      line-height: 0.9
+      right: -15px
+      top: -15px
+      transition: all $transitionSpeed $ease
+      opacity: 0
+      &:hover
+        .hint-info
+          pointer-events: all
+          opacity: 1    
+    .hint-info
+      position: absolute
+      background: #fff
+      left: 36px
+      top: 50%
+      transform: translateY(-50%)
+      border: 1px solid #c3c3c3
+      width: 360px
+      padding: 15px
+      text-align: left
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.2)
+      pointer-events: none
+      opacity: 0
+      transition: all $transitionSpeed $ease
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        width: 10px
+        height: 10px
+        border: 1px solid #c3c3c3
+        border-right: none
+        border-top: none
+        left: -6px
+        top: 50%
+        transform: translateY(-50%) rotate(45deg)
+        background: #fff
+        z-index: 8
+      &:after
+        display: block
+        position: absolute
+        content: ''
+        height: 100%
+        width: 15px
+        left: -13px
+        top: 0
+      p
+        color: $fontColor
+        font-family: $light
+        font-size: 14px
+        line-height: 1.25
+        bold
+          font-family: $medium
+      a
+        font-family: $montserrat
+        display: inline-block
+        position: relative
+        font-size: 14px
+        color: #999
+        margin-top: 10px
+        transition: all $transitionSpeed $ease
+        span 
+          display: inline-block
+          width: 11px
+          height: 11px
+          border: 2px solid #999
+          transform: rotate(45deg)
+          padding: 0
+          margin: 0
+          margin-bottom: -2px
+          margin-left: 3px
+          border-left: none
+          border-bottom: none
+          transition: all $transitionSpeed $ease
+        &:hover
+          color: $fontColor
+          span 
+            border-color: $fontColor
+  &__tab
+    display: none
+    &.is-active
+      display: block
+  &__tabs
+    padding-top: 78px
+  &__step-grid
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+  &__step-right
+    max-width: 440px
+    width: 43%
+    margin-left: 20px
+    // padding-right: 30px
+    img
+      width: 100%
+      height: auto
+      margin-top: -30px
+      margin-right: -20px
+  &__step-image
+    margin-right: -12px
+  &__step-left
+    width: 50%
+    max-width: 415px
+    padding-left: 16px
+    margin-top: -1px
+    p
+      font-size: 18px
+      letter-spacing: 0.4px
+      sup
+        font-size: 12px
+    &--editable
+      max-width: 580px
+      width: 53%
+      .checkbox-container
+        max-width: 100% !important
+        width: auto !important
+        margin: 5px 10px 5px 0 !important
+        &:last-child
+          margin-bottom: 5px !important
+      .label-container
+        display: inline-block
+        padding: 15px 10px
+    &--out
+      max-width: 580px
+      width: 55%
+  .calc__range-pl
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 11px
+
+
+  .form-group
+    &.has-warning input
+      border-color: #D93000
+      color: #D93000
+    &.has-success input
+      border-color: #a5cd39
+
+  input
+    &[type=number]
+      &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+        -webkit-appearance: none
+        margin: 0
+    &::-ms-clear
+      display: none
+      width: 0
+      height: 0
+    &[type=number]
+      -moz-appearance: textfield
+      padding: 12px
+      display: flex
+      align-items: center
+      justify-content: center
+      font-size: 20px
+      color: #343634
+      background: #fff
+      border: 1px solid #b4b2b2
+      font-family: $medium
+      text-align: center
+      min-width: 50px
+      width: auto
+      cursor: pointer
+      transition: all $transitionSpeed $ease
+      cursor: pointer
+      max-width: 75px
+      width: 100%
+      margin-left: 10px
+
+  .wrapper-input-value
+    // float: right
+    // width: 60px
+    // margin-top: 10px
+
+  .wrapper-input-range
+    position: relative
+    z-index: 10
+    width: 100%
+    max-width: 315px
+    font-size: 0
+    margin-top: 4px
+
+  input[type=range]
+    position: relative
+    -webkit-appearance: none
+    width: 100%
+    margin: 0
+    padding: 0
+    background: transparent
+    border: none
+    overflow: visible
+    z-index: 20
+    min-height: 40px
+    &:focus
+      outline: none
+    &::-webkit-slider-thumb
+      -webkit-appearance: none
+      position: relative
+      width: 14px
+      height: 34px
+      border-radius: 10px
+      background: #c6142d
+      border: 3px solid #b71830
+      transition: all $transitionSpeed $ease
+      box-shadow: 0 0 3px #b71830
+      cursor: pointer
+      content: ""
+      z-index: 30
+      margin-top: -14px
+      &:hover
+        background: #b71830
+    &::-moz-range-thumb
+      position: relative
+      width: 14px
+      height: 34px
+      border-radius: 10px
+      background: #c6142d
+      border: 3px solid #b71830
+      transition: all $transitionSpeed $ease
+      box-shadow: 0 0 3px #b71830
+      cursor: pointer
+      content: ""
+      z-index: 30
+      margin-top: -14px
+      &:hover
+        background: #b71830
+    &::-ms-thumb
+      position: relative
+      width: 14px
+      height: 34px
+      border-radius: 10px
+      background: #c6142d
+      border: 3px solid #b71830
+      transition: all $transitionSpeed $ease
+      box-shadow: 0 0 3px #b71830
+      cursor: pointer
+      content: ""
+      z-index: 30
+      margin-top: -14px
+      &:hover
+        background: #b71830
+    &::-webkit-slider-runnable-track
+      display: block
+      width: 100%
+      height: 8px
+      cursor: pointer
+      border-radius: 6px
+      background: #fff
+      border: 1px solid #c3c3c3
+    &::-moz-range-track
+      display: block
+      width: 100%
+      height: 8px
+      cursor: pointer
+      border-radius: 6px
+      background: #fff
+      border: 1px solid #c3c3c3
+    &::-ms-track
+      width: 100%
+      height: 8px
+      cursor: pointer
+      border-radius: 6px
+      background: #fff
+      border: 1px solid #c3c3c3
+      color: transparent
+    &::-ms-fill-lower
+      background: dodgerblue
+    &::-ms-fill-upper
+      background: dodgerblue
+  &__pl-items
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    margin-top: 28px
+  &__pl-item
+    text-align: center
+    p
+      font-size: 16px
+      span
+        font-family: $medium
+        color: #343634
+        font-size: 20px
+        margin-top: 7px
+        display: inline-block
+  &__step-row
+    margin-bottom: 31px
+    &--out
+      display: flex
+      align-items: flex-start
+      justify-content: flex-start
+      flex-wrap: wrap
+    &--editable
+      margin-bottom: 46px
+      margin-top: -4px
+    &--select
+      display: none
+  &__bottom
+    margin-top: 6px
+    padding-top: 30px
+    border-top: 1px solid #c3c3c3
+    display: flex
+    align-items: center
+    justify-content: space-between
+  &__buttons
+    display: flex
+    align-items: flex-start
+    justify-content: flex-start
+    margin-right: 30px
+    max-width: 450px
+    width: 100%
+    a
+      padding: 16px 29px
+      border: 1px solid #c3c3c3
+      display: flex
+      align-items: center
+      justify-content: center
+      max-width: 214px
+      width: 100%
+      transition: all $transitionSpeed $ease
+      margin-right: 15px
+      text-align: center
+      span
+        transition: all $transitionSpeed $ease
+        &.info
+          font-size: 14px
+          font-family: $regular
+          color: $fontColor
+          opacity: 0.7
+      &.prev,
+      &.next
+        display: flex
+        align-items: center
+      &.prev
+        padding-left: 16px
+        span.arrow
+          display: block
+          width: 12px
+          height: 12px
+          border: 3px solid #c6142d
+          transform: rotate(45deg)
+          border-top: none
+          border-right: none
+          transform-origin: center center
+          margin-right: 17px
+      &.next
+        padding-right: 16px
+        span.arrow
+          display: block
+          width: 12px
+          height: 12px
+          border: 3px solid #c6142d
+          transform: rotate(45deg)
+          border-bottom: none
+          border-left: none
+          transform-origin: center center
+          margin-left: 15px
+      &:hover
+        span
+          &.info
+            opacity: 1
+      &.disable
+        pointer-events: none
+        color: #999999
+        border-color: #999999
+        opacity: 0.5
+        span.arrow
+          border-color: #999999 !important
+        
+  &__price
+    display: flex
+    align-items: center
+    justify-content: flex-end
+    min-width: 470px
+    p
+      font-size: 18px
+      color: $fontColor
+      line-height: 1.2
+      &.price
+        font-family: $bold
+        font-size: 36px
+        padding-left: 20px
+        letter-spacing: 0.4px
+        margin: 0
+  &__title
+    display: none
+  &__input
+    &--editable
+      flex-wrap: wrap
+      .checkbox-container
+        margin-bottom: 15px
+        width: 100%
+        max-width: 357px
+        &:last-child
+          margin-bottom: 7px
+  &__step-button
+    display: none
+  .calc__step-left--info
+    margin-top: -24px
+    width: 53%
+    max-width: 480px
+  &__step-info-row
+    display: flex
+    align-items: flex-start
+    justify-content: space-between
+    padding: 10px 10px 5px 0
+    position: relative
+    margin-bottom: 2px
+    &:before
+      position: absolute
+      display: block
+      content: ''
+      width: calc(100% + 10px)
+      height: 1px
+      background: #c3c3c3
+      left: -10px
+      bottom: 0
+    p
+      &:last-child
+        padding-left: 20px
+        font-family: $medium
+  .calc__step-right
+    .calc__step-info
+      margin-top: 13px
+      margin-bottom: 50px
+  &__step-info
+    margin-bottom: 42px
+    &:nth-child(2)
+      margin-bottom: 60px
+    
+    h2
+      font-size: 30px
+      position: relative
+      padding-bottom: 5px
+      margin-bottom: 6px
+      &:before
+        display: block
+        position: absolute
+        content: ''
+        height: 2px
+        background: $hoverRed
+        width: calc(100% + 10px)
+        left: -10px
+        bottom: 0
+
+.want-form--calculator
+  display: none
+  background: #e7e7e7
+  background-image: url(../img/bg-form.svg)
+  background-size: contain
+  background-repeat: no-repeat
+  background-position: right bottom 70px
+  .want-form__container
+    background: none
+  .want-form__title
+    color: #343634
+  p
+    color: rgba(#514d4b, 0.5)
+    a
+      border-color: rgba(#514d4b, 0.5)
+  &.is-active
+    display: block
+
+
++r($desktop)
+  .calc
+    &__buttons
+      flex-wrap: wrap
+      a
+        margin: 10px 0
+    &__step
+      padding: 15px 8px 15px 20px
+      p
+        font-size: 14px
+      img
+        height: 25px
+    &__triangle
+      right: -15px
+      top: -6px
+
++r($tablet)
+  .head--calculator
+    padding-top: 30px
+    text-align: left
+    h2
+      text-align: left
+    p
+      text-align: left
+      font-size: 16px
+      font-family: $light
+      line-height: 1.25
+      margin-top: 15px
+      display: inline-block
+  .calc
+    padding-bottom: 30px
+    &__tab
+      display: block
+    &__tabs
+      padding-top: 41px
+    &__steps
+      display: none
+    &__title
+      display: inline-block
+      width: 100%
+      font-size: 26px
+      font-family: $regular
+      color: $fontColor
+      padding-bottom: 6px
+      position: relative
+      &:before
+        display: block
+        position: absolute
+        bottom: 0
+        width: 200%
+        height: 2px
+        background: #c6142c
+        content: ''
+        left: 0
+    &__step-grid
+      flex-wrap: wrap
+    &__step-left
+      width: 100%
+      padding-left: 0
+      p
+        font-size: 14px
+    &__step-right
+      display: none
+    &__step-row
+      margin-top: 20px
+      margin-bottom: 20px
+      .wrapper-input-range
+        display: none
+      &--editable
+        margin-top: 0px
+        margin-bottom: -4px
+      &--type
+        display: none
+      &--select
+        display: block
+        margin: 15px 0 10px
+        p
+          margin-bottom: 7px
+    input[type=number]
+      margin-left: 0
+      font-size: 16px
+      max-width: 160px
+      text-align: left
+      padding: 10px 15px
+    .calc__range-pl
+      margin-top: 9px
+    &__input
+      padding-top: 8px
+      &--form
+        flex-wrap: wrap
+        margin-bottom: 15px
+      .checkbox-container
+        height: 40px
+        margin-right: 10px
+        &--form
+          height: auto
+    .label-container
+      height: 40px
+      min-width: 59px
+      &--form
+        height: auto
+        min-width: auto
+        margin: 10px 10px 10px 0
+    &__bottom
+      display: none
+    &__step-button
+      display: block
+      width: 100%
+      .btn
+        font-size: 12px
+        margin-top: 15px
+        width: 100%
+    
+  .calc__tab-step-5
+    display: none
+    .calc__step-info
+      margin-bottom: 20px
+      h2
+        font-size: 26px
+        &:before
+          width: 200%
+      p
+        font-size: 14px
+    .calc__step-left
+      width: 100%
+      max-width: 100%
+    .calc__step-right
+      display: block
+      margin-left: 0
+      width: 100%
+      max-width: 100%
+      .calc__step-info
+        margin: 0
+      .calc__step-image
+        display: none
