@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Technonicol</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- place where pjax bindings happen's-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header" data-aos="fade-down">
+        <div class="container">
+          <div class="header__wrapper"><a class="header__logotype" href="/homepage.html"><img src="img/logo-footer.svg" alt=""></a><a class="header__calc" href="#"><img src="img/calculator-2.svg" alt=""><span>калькулятор</span></a>
+            <div class="header__menu">
+              <div class="header__item"><a href="#">о нас </a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">технологии</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">наши дома</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">подрядчики</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/blog-all.html">блог</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/contacts.html">контакты</a></div>
+              <div class="header__item"><a class="phone" href="#">8 800 100 16 31</a></div>
+            </div><a class="header__tehno" href="#"><img src="img/tehnonikol.svg" alt=""></a>
+            <div class="hamburger hamburger--slider" js-hamburger>
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- what should be changed with every pjax-->
+      <div class="page">
+        <div class="page__content">
+          <!-- BEGIN SECTION :: head-->
+          <div class="head">
+            <div class="container container--large">
+              <h2>Проект дома OPEN VILLAGE</h2>
+              <div class="head__buttons"><a class="prev" href="#"> <span class="arrow"></span><span class="info">Все проекты</span></a></div>
+            </div>
+          </div>
+          <!-- END SECTION :: head-->
+          <!-- BEGIN SECTION :: general-->
+          <section class="general">
+            <div class="container container--large">
+              <div class="general__grid">
+                <div class="general__left">
+                  <div class="general__slider" js-g-slider>
+                    <div class="general__item">
+                      <div class="general__item-container"><img src="img/of-slide-1.jpg" alt=""></div>
+                    </div>
+                    <div class="general__item">
+                      <div class="general__item-container"><img src="img/gal-1.jpg" alt=""></div>
+                    </div>
+                    <div class="general__item">
+                      <div class="general__item-container"><img src="img/gal-2.jpg" alt=""></div>
+                    </div>
+                    <div class="general__item">
+                      <div class="general__item-container"><img src="img/gal-3.jpg" alt=""></div>
+                    </div>
+                    <div class="general__item">
+                      <div class="general__item-container"><img src="img/gal-4.jpg" alt=""></div>
+                    </div>
+                    <div class="general__item">
+                      <div class="general__item-container"><img src="img/gal-5.jpg" alt=""></div>
+                    </div>
+                  </div>
+                  <div class="general__preview-slider" js-g-preview-slider>
+                    <div class="general__preview-item">
+                      <div class="general__preview-item-container"><img src="img/of-slide-1.jpg" alt=""></div>
+                    </div>
+                    <div class="general__preview-item">
+                      <div class="general__preview-item-container"><img src="img/gal-1.jpg" alt=""></div>
+                    </div>
+                    <div class="general__preview-item">
+                      <div class="general__preview-item-container"><img src="img/gal-2.jpg" alt=""></div>
+                    </div>
+                    <div class="general__preview-item">
+                      <div class="general__preview-item-container"><img src="img/gal-3.jpg" alt=""></div>
+                    </div>
+                    <div class="general__preview-item">
+                      <div class="general__preview-item-container"><img src="img/gal-4.jpg" alt=""></div>
+                    </div>
+                    <div class="general__preview-item">
+                      <div class="general__preview-item-container"><img src="img/gal-5.jpg" alt=""></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="general__right">
+                  <p class="general__title">Основные характеристики</p>
+                  <div class="general__row">
+                    <p>Общая площадь, м2</p>
+                    <p class="bold">186</p>
+                  </div>
+                  <div class="general__row">
+                    <p>Срок строительства</p>
+                    <p class="bold">от 2 месяцев</p>
+                  </div>
+                  <div class="general__row">
+                    <p>Фундамент</p>
+                    <p class="bold">утеплённая шведская плита с контуром тёплого пола и колектором</p>
+                  </div>
+                  <div class="general__row">
+                    <p>Внешняя отделка</p>
+                    <div class="general__view"><a class="general__view-item is-active" href="#" js-general-view-btn>
+                        <div class="general__view-image"><img src="img/g-view-1.jpg" alt=""></div>
+                        <p>hauberG</p></a><a class="general__view-item" href="#" js-general-view-btn>
+                        <div class="general__view-image"><img src="img/g-view-2.jpg" alt=""></div>
+                        <p>Имитация бруса</p></a><a class="general__view-item" href="#" js-general-view-btn>
+                        <div class="general__view-image"><img src="img/g-view-3.jpg" alt=""></div>
+                        <p>Сайдинг</p></a><a class="general__view-item" href="#" js-general-view-btn>
+                        <div class="general__view-image"><img src="img/g-view-4.jpg" alt=""></div>
+                        <p>Штукатурка</p></a><a class="general__view-item" href="#" js-general-view-btn>
+                        <div class="general__view-image"><img src="img/g-view-5.jpg" alt=""></div>
+                        <p>Кирпичная кладка</p></a></div>
+                  </div>
+                  <div class="general__row general__row--price">
+                    <p>Стоимость строительства:</p>
+                    <p class="price">от 1 500 000 р</p>
+                  </div><a class="btn" href="#">заказать консультацию</a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: general-->
+          <!-- BEGIN SECTION :: g-plans-->
+          <section class="g-plans">
+            <div class="container container--large">
+              <h2 class="g-plans__title">Планировки</h2>
+              <div class="g-plans__grid">
+                <div class="g-plans__item">
+                  <p class="g-plans__info"><span>1 этаж</span><span class="line">|</span>110 м²</p>
+                  <div class="g-plans__image"><a class="no-barba" href="img/plan-1.jpg" js-popup-image data-effect="mfp-zoom-in"><img src="img/plan-1.jpg" alt=""></a></div>
+                </div>
+                <div class="g-plans__item">
+                  <p class="g-plans__info"><span>2 этаж</span><span class="line">|</span>102 м²</p>
+                  <div class="g-plans__image"><a class="no-barba" href="img/plan-2.jpg" js-popup-image data-effect="mfp-zoom-in"><img src="img/plan-2.jpg" alt=""></a></div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: g-plans-->
+          <!-- BEGIN SECTION :: g-complectation-->
+          <section class="g-complectation">
+            <div class="container container--large">
+              <h2 class="g-plans__title">Комплектация</h2>
+              <div class="container container--typical">
+                <div class="g-complectation__head"><a class="g-complectation__item is-active" href="#" js-open-g-tab>
+                    <p class="g-name">Базовая комплектация</p>
+                    <p class="g-price">от 2 400 000 Р</p>
+                    <p class="g-time">2,5 месяца</p></a><a class="g-complectation__item" href="#" js-open-g-tab>
+                    <p class="g-name">С черновой отделкой</p>
+                    <p class="g-price">от 2 464 000 Р</p>
+                    <p class="g-time">3 месяца</p></a><a class="g-complectation__item" href="#" js-open-g-tab>
+                    <p class="g-name">Дом «под ключ»</p>
+                    <p class="g-price">от 2 688 000 Р</p>
+                    <p class="g-time">4,5 месяца</p></a></div>
+                <div class="g-complectation__info">
+                  <div class="g-complectation__tab is-active">
+                    <div class="g-complectation__tab-container">
+                      <div class="g-complectation__column is-open"><a class="g-title" href="#" js-open-info>Фундамент #1</a>
+                        <div class="g-complectation__toggle">
+                          <p>Утеплённая шведская плита с контуром тёплого пола и коллекторам;</p>
+                          <p>Закладные под ввод водоснабжения и электроснабжения дома под фундаментом;</p>
+                          <p>Канализационные отводы от стояков под плитой фундамента;</p>
+                          <p>Дренажная система по периметру дома и отводом в коллектор;</p>
+                          <p>Ливневая система канализации дождевой воды вокруг дома с отводом в коллектор;</p>
+                          <p>Утепленная отмостка с водоотводящим слоем из мембраны Planter;</p>
+                          <p>Утепленный цоколь с отделкой фасадными панелями.</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Стены</a>
+                        <div class="g-complectation__toggle">
+                          <p>Перекрестный каркас внешних стен с толщиной утепления 250мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА</p>
+                          <p>Внешняя защита каркаса диффузионной пленкой Tyvek ТЕХНОНИКОЛЬ</p>
+                          <p>Внутренняя защита каркаса усиленной пароизоляцией ТЕХНОНИКОЛЬ</p>
+                          <p>Внешняя отделка фасада виниловым сайдингом/ штукатурка/декоративный кирпич</p>
+                          <p>Энергоэффективные окна Deceuninck с толщиной профиля 76мм</p>
+                          <p>Перекрестное утепление крыша толщиной 300мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА</p>
+                          <p class="g-light">Шпаклевка гипсокартон</p>
+                          <p class="g-light">Поклейка обоев на стены</p>
+                          <p class="g-light">Покраска потолков</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Кровля, полы, перекрытия</a>
+                        <div class="g-complectation__toggle">
+                          <p>Перекрытие из досок 200х50 с шагом 40см, с шумоизоляцией ТЕХНО АКУСТИК 100мм</p>
+                          <p>Черновой настил перекрытия ОСП 18мм по и акустическому герметику</p>
+                          <p>Кровельное покрытие из многослойной черепицы SHINGLAS</p>
+                          <p>Подшивка кровельных свесов виниловыми софитами</p>
+                          <p class="g-light">Водосточная система ТЕХНОНИКОЛЬ</p>
+                          <p class="g-light">Укладка напольных покрытий (плитка /ламинат)</p>
+                          <p class="g-light">Монтаж плинтуса</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Прочее</a>
+                        <div class="g-complectation__toggle">
+                          <p>Деревянная лестница в доме из клееных щитов лиственницы покрытая лаком</p>
+                          <p>Крыльцо и веранда у дома</p>
+                          <p>Входная дверь из профиля Deceuninck</p>
+                          <p>Скрытая разводка труб водоснабжения из сшитого полиэтилена по потребителям.</p>
+                          <p class="g-light">Черновая обшивка стен гипсокартоном по стальному каркасу</p>
+                          <p class="g-light">Монтаж межкомнатных дверей</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="g-complectation__tab">
+                    <div class="g-complectation__tab-container">
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Фундамент #2</a>
+                        <div class="g-complectation__toggle">
+                          <p>Утеплённая шведская плита с контуром тёплого пола и коллекторам;</p>
+                          <p>Закладные под ввод водоснабжения и электроснабжения дома под фундаментом;</p>
+                          <p>Канализационные отводы от стояков под плитой фундамента;</p>
+                          <p>Дренажная система по периметру дома и отводом в коллектор;</p>
+                          <p>Ливневая система канализации дождевой воды вокруг дома с отводом в коллектор;</p>
+                          <p>Утепленная отмостка с водоотводящим слоем из мембраны Planter;</p>
+                          <p>Утепленный цоколь с отделкой фасадными панелями.</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Стены</a>
+                        <div class="g-complectation__toggle">
+                          <p>Перекрестный каркас внешних стен с толщиной утепления 250мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА</p>
+                          <p>Внешняя защита каркаса диффузионной пленкой Tyvek ТЕХНОНИКОЛЬ</p>
+                          <p>Внутренняя защита каркаса усиленной пароизоляцией ТЕХНОНИКОЛЬ</p>
+                          <p>Внешняя отделка фасада виниловым сайдингом/ штукатурка/декоративный кирпич</p>
+                          <p>Энергоэффективные окна Deceuninck с толщиной профиля 76мм</p>
+                          <p>Перекрестное утепление крыша толщиной 300мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА</p>
+                          <p class="g-light">Шпаклевка гипсокартон</p>
+                          <p class="g-light">Поклейка обоев на стены</p>
+                          <p class="g-light">Покраска потолков</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Кровля, полы, перекрытия</a>
+                        <div class="g-complectation__toggle">
+                          <p>Перекрытие из досок 200х50 с шагом 40см, с шумоизоляцией ТЕХНО АКУСТИК 100мм</p>
+                          <p>Черновой настил перекрытия ОСП 18мм по и акустическому герметику</p>
+                          <p>Кровельное покрытие из многослойной черепицы SHINGLAS</p>
+                          <p>Подшивка кровельных свесов виниловыми софитами</p>
+                          <p class="g-light">Водосточная система ТЕХНОНИКОЛЬ</p>
+                          <p class="g-light">Укладка напольных покрытий (плитка /ламинат)</p>
+                          <p class="g-light">Монтаж плинтуса</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Прочее</a>
+                        <div class="g-complectation__toggle">
+                          <p>Деревянная лестница в доме из клееных щитов лиственницы покрытая лаком</p>
+                          <p>Крыльцо и веранда у дома</p>
+                          <p>Входная дверь из профиля Deceuninck</p>
+                          <p>Скрытая разводка труб водоснабжения из сшитого полиэтилена по потребителям.</p>
+                          <p class="g-light">Черновая обшивка стен гипсокартоном по стальному каркасу</p>
+                          <p class="g-light">Монтаж межкомнатных дверей</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="g-complectation__tab">
+                    <div class="g-complectation__tab-container">
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Фундамент #3</a>
+                        <div class="g-complectation__toggle">
+                          <p>Утеплённая шведская плита с контуром тёплого пола и коллекторам;</p>
+                          <p>Закладные под ввод водоснабжения и электроснабжения дома под фундаментом;</p>
+                          <p>Канализационные отводы от стояков под плитой фундамента;</p>
+                          <p>Дренажная система по периметру дома и отводом в коллектор;</p>
+                          <p>Ливневая система канализации дождевой воды вокруг дома с отводом в коллектор;</p>
+                          <p>Утепленная отмостка с водоотводящим слоем из мембраны Planter;</p>
+                          <p>Утепленный цоколь с отделкой фасадными панелями.</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Стены</a>
+                        <div class="g-complectation__toggle">
+                          <p>Перекрестный каркас внешних стен с толщиной утепления 250мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА</p>
+                          <p>Внешняя защита каркаса диффузионной пленкой Tyvek ТЕХНОНИКОЛЬ</p>
+                          <p>Внутренняя защита каркаса усиленной пароизоляцией ТЕХНОНИКОЛЬ</p>
+                          <p>Внешняя отделка фасада виниловым сайдингом/ штукатурка/декоративный кирпич</p>
+                          <p>Энергоэффективные окна Deceuninck с толщиной профиля 76мм</p>
+                          <p>Перекрестное утепление крыша толщиной 300мм каменной ватой ТЕХНО ЛАЙТ ОПТИМА</p>
+                          <p class="g-light">Шпаклевка гипсокартон</p>
+                          <p class="g-light">Поклейка обоев на стены</p>
+                          <p class="g-light">Покраска потолков</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Кровля, полы, перекрытия</a>
+                        <div class="g-complectation__toggle">
+                          <p>Перекрытие из досок 200х50 с шагом 40см, с шумоизоляцией ТЕХНО АКУСТИК 100мм</p>
+                          <p>Черновой настил перекрытия ОСП 18мм по и акустическому герметику</p>
+                          <p>Кровельное покрытие из многослойной черепицы SHINGLAS</p>
+                          <p>Подшивка кровельных свесов виниловыми софитами</p>
+                          <p class="g-light">Водосточная система ТЕХНОНИКОЛЬ</p>
+                          <p class="g-light">Укладка напольных покрытий (плитка /ламинат)</p>
+                          <p class="g-light">Монтаж плинтуса</p>
+                        </div>
+                      </div>
+                      <div class="g-complectation__column"><a class="g-title" href="#" js-open-info>Прочее</a>
+                        <div class="g-complectation__toggle">
+                          <p>Деревянная лестница в доме из клееных щитов лиственницы покрытая лаком</p>
+                          <p>Крыльцо и веранда у дома</p>
+                          <p>Входная дверь из профиля Deceuninck</p>
+                          <p>Скрытая разводка труб водоснабжения из сшитого полиэтилена по потребителям.</p>
+                          <p class="g-light">Черновая обшивка стен гипсокартоном по стальному каркасу</p>
+                          <p class="g-light">Монтаж межкомнатных дверей</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: g-complectation-->
+          <!-- BEGIN SECTION :: g-offer-->
+          <section class="g-offer">
+            <div class="container container--large">
+              <h2 class="g-plans__title">Предложения подрядчиков</h2>
+              <div class="g-offer__slider" js-offer-slider>
+                <div class="g-offer__item">
+                  <div class="g-offer__item-container"><a class="g-offer__star" href="#"> <img src="img/star.svg" alt=""><span>8,5</span></a>
+                    <div class="g-offer__image"><img src="img/g-offer-1.jpg" alt=""></div>
+                    <p class="g-offer__price">от 2 464 000 Р</p><a class="g-offer__detail">подробнее о подрядчике</a><a class="g-offer__button">отправить запрос</a>
+                  </div>
+                </div>
+                <div class="g-offer__item">
+                  <div class="g-offer__item-container"><a class="g-offer__star" href="#"> <img src="img/star.svg" alt=""><span>9,5</span></a>
+                    <div class="g-offer__image"><img src="img/g-offer-2.jpg" alt=""></div>
+                    <p class="g-offer__price">от 2 580 000 Р</p><a class="g-offer__detail">подробнее о подрядчике</a><a class="g-offer__button">отправить запрос</a>
+                  </div>
+                </div>
+                <div class="g-offer__item">
+                  <div class="g-offer__item-container"><a class="g-offer__star" href="#"> <img src="img/star.svg" alt=""><span>4,5</span></a>
+                    <div class="g-offer__image"><img src="img/g-offer-3.jpg" alt=""></div>
+                    <p class="g-offer__price">от 2 620 000 Р</p><a class="g-offer__detail">подробнее о подрядчике</a><a class="g-offer__button">отправить запрос</a>
+                  </div>
+                </div>
+                <div class="g-offer__item">
+                  <div class="g-offer__item-container"><a class="g-offer__star" href="#"> <img src="img/star.svg" alt=""><span>8,5</span></a>
+                    <div class="g-offer__image"><img src="img/g-offer-4.jpg" alt=""></div>
+                    <p class="g-offer__price">от 2 580 000 Р</p><a class="g-offer__detail">подробнее о подрядчике</a><a class="g-offer__button">отправить запрос</a>
+                  </div>
+                </div>
+                <div class="g-offer__item">
+                  <div class="g-offer__item-container"><a class="g-offer__star" href="#"> <img src="img/star.svg" alt=""><span>10</span></a>
+                    <div class="g-offer__image"><img src="img/g-offer-2.jpg" alt=""></div>
+                    <p class="g-offer__price">от 2 580 000 Р</p><a class="g-offer__detail">подробнее о подрядчике</a><a class="g-offer__button">отправить запрос</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: g-offer-->
+          <!-- BEGIN SECTION :: g-calc-->
+          <section class="g-calc">
+            <div class="container container--typical">
+              <div class="g-calc__grid">
+                <p>Вы всегда можете рассчитать дом  по своим личным параметрам на нашем калькуляторе</p><a class="btn" href="#">рассчитать стоимость</a>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: g-calc-->
+          <!-- BEGIN SECTION :: g-individual-->
+          <section class="g-individual">
+            <div class="container container--typical"><img src="img/individual.png" alt="">
+              <p class="g-individual__title">Индивидуальный проект</p>
+              <form action="#">
+                <p class="g-individual__desc">Также мы можем выполнить индивидуальный проект с учетом ваших пожеланий. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+                <div class="input-container">
+                  <input type="text" placeholder="Имя">
+                </div>
+                <div class="input-container">
+                  <input type="text" placeholder="Эл. почта">
+                </div>
+                <div class="input-container">
+                  <input type="text" placeholder="Телефон">
+                </div>
+                <p class="g-individual__personal">Отправляя форму даю согласие на обработку <a href="#">персональных данных</a></p>
+                <div class="input-container">
+                  <input class="btn" type="submit" value="ОТПРАВИТЬ">
+                </div>
+              </form>
+            </div>
+          </section>
+          <!-- END SECTION :: g-individual-->
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__grid">
+                <div class="footer__left">
+                  <div class="footer__logo"><a href="#"><img src="img/logo-footer.svg" alt=""></a></div><a class="footer__phone" href="tel:+88001001631">8 800 100 16 31</a>
+                  <p>Ежедневно с 8:00 до 20:00</p><a class="footer__map" href="https://yandex.ru/maps/-/CBBdfAAQsA" target="_blank"> <span>Москва, ул. Гиляровского, д, 47, стр. 5</span></a>
+                </div>
+                <div class="footer__menu">
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">о проекте</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">технологии</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">наши дома</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">подрядчики</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">блог</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">контакты</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__polit">
+                <p>© 2017 ДОМ ТЕХНОНИКОЛЬ</p><a href="#"><span>Политика обработки персональных данных</span></a>
+              </div><a class="footer__minisol" href="#">Разработка сайта - MINISOL</a>
+            </div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>

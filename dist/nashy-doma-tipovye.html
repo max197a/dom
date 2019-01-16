@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Technonicol</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- place where pjax bindings happen's-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header" data-aos="fade-down">
+        <div class="container">
+          <div class="header__wrapper"><a class="header__logotype" href="/homepage.html"><img src="img/logo-footer.svg" alt=""></a><a class="header__calc" href="#"><img src="img/calculator-2.svg" alt=""><span>калькулятор</span></a>
+            <div class="header__menu">
+              <div class="header__item"><a href="#">о нас </a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">технологии</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">наши дома</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">подрядчики</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/blog-all.html">блог</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/contacts.html">контакты</a></div>
+              <div class="header__item"><a class="phone" href="#">8 800 100 16 31</a></div>
+            </div><a class="header__tehno" href="#"><img src="img/tehnonikol.svg" alt=""></a>
+            <div class="hamburger hamburger--slider" js-hamburger>
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- what should be changed with every pjax-->
+      <div class="page">
+        <div class="page__content">
+          <!-- BEGIN SECTION :: head-->
+          <div class="head head--houses">
+            <div class="container container--typical">
+              <h2>Наши дома</h2>
+            </div>
+          </div>
+          <!-- END SECTION :: head-->
+          <!-- BEGIN SECTION :: typical-->
+          <section class="typical">
+            <div class="container container--typical">
+              <div class="typical__buttons"><a class="typical__btn is-active" href="/nashy-doma-tipovye.html">типовые проекты</a><a class="typical__btn" href="/nashy-doma-gotovye.html">готовые</a><a class="typical__btn" href="/blog-help.html">строящиеся</a><a class="typical__btn" href="/blog-faq.html">на карте</a></div>
+            </div>
+          </section>
+          <section class="typical typical--filter">
+            <div class="container container--typical">
+              <form action="#">
+                <div class="typical__filter">
+                  <div class="typical__item">
+                    <p>Этажность</p>
+                    <div class="typical__input">
+                      <div class="checkbox-container">
+                        <input id="c1" type="checkbox" name="checkbox">
+                        <label class="label-container" for="c1"><span>1</span></label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="c2" type="checkbox" name="checkbox">
+                        <label class="label-container" for="c2"><span>2</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="typical__item">
+                    <p>Площадь жилой части, м<sup>2</sup></p>
+                    <div class="typical__input">
+                      <div class="checkbox-container">
+                        <input id="c11" type="checkbox" name="checkbox">
+                        <label class="label-container" for="c11"><span>до 100</span></label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="c12" type="checkbox" name="checkbox">
+                        <label class="label-container" for="c12"><span>от 100 до 150</span></label>
+                      </div>
+                      <div class="checkbox-container">
+                        <input id="c13" type="checkbox" name="checkbox">
+                        <label class="label-container" for="c13"><span>от 150</span></label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="typical__item">
+                    <p>Стоимость, р</p>
+                    <div class="typical__input">
+                      <div class="input-container" data-from="от">
+                        <input type="text" placeholder="600 000">
+                      </div>
+                      <div class="input-container" data-from="до">
+                        <input type="text" placeholder="20 000 000">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="typical__item">
+                    <p>Сортировка</p>
+                    <select name="">
+                      <option class="top-arrow" value="По рейтингу и стоимости">Площадь вверх</option>
+                      <option class="down-arrow" value="down">Площадь вниз</option>
+                      <option class="top-arrow" value="Стоимость вверх">Стоимость вверх</option>
+                      <option class="down-arrow" value="Стоимость вниз">Стоимость вниз</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+          <!-- END SECTION :: typical-->
+          <!-- BEGIN SECTION :: typical-items-->
+          <section class="projects projects--typical">
+            <div class="container container--typical">
+              <div class="projects__grid projects__grid--typical">
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">sine 2</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">186 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 5 месяцев</p>
+                        <p class="projects__price">от 490 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">Axiom 4</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">44 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 250 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">cos 3</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">91 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 820 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">cos 3</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">91 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 820 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">cos 3</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">91 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 820 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">Axiom 4</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">44 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 250 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">cos 3</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">91 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 820 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">cos 3</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">91 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 820 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="projects__item-slider">
+                  <div class="projects__item">
+                    <div class="projects__slider" js-projects-slider>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-2.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-1.jpg" alt=""></div>
+                      </div>
+                      <div class="projects__slider-item">
+                        <div class="projects__image"><img src="img/proj-3.jpg" alt=""></div>
+                      </div>
+                    </div>
+                    <div class="projects__info">
+                      <div class="projects__row">
+                        <p class="projects__name">cos 3</p>
+                        <p class="projects__kv"> <img src="img/typical.svg" alt="">91 м²</p>
+                      </div>
+                      <div class="projects__line"></div>
+                      <div class="projects__row">
+                        <p class="projects__time">от 2 месяцев</p>
+                        <p class="projects__price">от 1 820 000 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><a class="projects__more" href="#">посмотреть еще проекты</a>
+              <div class="pagination"><a class="prev" href="#"><span class="arrow"></span><span class="info">предыдущая</span></a>
+                <div class="pagination__list"><a class="pagination__item is-active" href="#">1</a><a class="pagination__item" href="#">2</a><a class="pagination__item" href="#">3</a><a class="pagination__item" href="#">4</a><a class="pagination__item" href="#">5</a><a class="pagination__item" href="#">...</a><a class="pagination__item" href="#">10</a></div><a class="next" href="#"><span class="info">следующая</span><span class="arrow"></span></a>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: typical-items-->
+          <!-- BEGIN SECTION :: g-calc-->
+          <section class="g-calc">
+            <div class="container container--typical">
+              <div class="g-calc__grid">
+                <p>Вы всегда можете рассчитать дом  по своим личным параметрам на нашем калькуляторе</p><a class="btn" href="#">рассчитать стоимость</a>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: g-calc-->
+          <!-- BEGIN SECTION :: podr-form-->
+          <section class="podr-form">
+            <div class="container container--typical">
+              <h2 class="podr__title">Оставьте заявку</h2>
+              <div class="podr-form__grid">
+                <div class="podr-form__form">
+                  <form action="#">
+                    <div class="input-container">
+                      <input type="text" placeholder="Имя">
+                    </div>
+                    <div class="input-container">
+                      <input type="text" placeholder="Телефон">
+                    </div>
+                    <p>Отправляя форму даю согласие на обработку <a href="#">персональных данных</a></p>
+                    <input class="btn" type="submit" value="ОТПРАВИТЬ">
+                  </form>
+                </div>
+                <div class="podr-form__info">
+                  <p class="podr-form__info-title">Заполните форму и наш специалист свяжется с вами в ближайшее время.</p>
+                  <p class="podr-form__info-text">1. Расскажем о всех наших инновационных решениях, материалах и технологии Дом Технониколь</p>
+                  <p class="podr-form__info-text">2. Ответим на все интересующие вас вопросы</p>
+                  <p class="podr-form__info-text">3. Подберем для вас оптимальный проект</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: podr-form-->
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__grid">
+                <div class="footer__left">
+                  <div class="footer__logo"><a href="#"><img src="img/logo-footer.svg" alt=""></a></div><a class="footer__phone" href="tel:+88001001631">8 800 100 16 31</a>
+                  <p>Ежедневно с 8:00 до 20:00</p><a class="footer__map" href="https://yandex.ru/maps/-/CBBdfAAQsA" target="_blank"> <span>Москва, ул. Гиляровского, д, 47, стр. 5</span></a>
+                </div>
+                <div class="footer__menu">
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">о проекте</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">технологии</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">наши дома</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">подрядчики</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">блог</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">контакты</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__polit">
+                <p>© 2017 ДОМ ТЕХНОНИКОЛЬ</p><a href="#"><span>Политика обработки персональных данных</span></a>
+              </div><a class="footer__minisol" href="#">Разработка сайта - MINISOL</a>
+            </div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>

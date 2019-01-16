@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Technonicol</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- place where pjax bindings happen's-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header" data-aos="fade-down">
+        <div class="container">
+          <div class="header__wrapper"><a class="header__logotype" href="/homepage.html"><img src="img/logo-footer.svg" alt=""></a><a class="header__calc" href="#"><img src="img/calculator-2.svg" alt=""><span>калькулятор</span></a>
+            <div class="header__menu">
+              <div class="header__item"><a href="#">о нас </a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">технологии</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">наши дома</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">подрядчики</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/blog-all.html">блог</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/contacts.html">контакты</a></div>
+              <div class="header__item"><a class="phone" href="#">8 800 100 16 31</a></div>
+            </div><a class="header__tehno" href="#"><img src="img/tehnonikol.svg" alt=""></a>
+            <div class="hamburger hamburger--slider" js-hamburger>
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- what should be changed with every pjax-->
+      <div class="page">
+        <div class="page__content">
+          <!-- BEGIN SECTION :: head-->
+          <div class="head head--calculator">
+            <div class="container container--typical container">
+              <h2>Расчёт строительства дома</h2>
+              <p>Чтобы рассчитать стоимость строительства дома - выберите интересующие вас материалы и конструкции, нажмите кнопку “Рассчитать стоимость” и получите готовый расчет на почту</p>
+            </div>
+          </div>
+          <!-- END SECTION :: head-->
+          <!-- BEGIN SECTION :: calculator-->
+          <form class="js-form-want" action="#">
+            <div class="calc">
+              <div class="container container--typical">
+                <div class="calc__steps"><a class="calc__step calc--step1 is-active" href="#" js-step-button>
+                    <div class="calc__triangle"></div>
+                    <p>габариты</p>
+                    <div class="calc__step-image"><img src="img/step-1.svg" alt=""></div></a><a class="calc__step calc--step2" href="#" js-step-button>
+                    <div class="calc__triangle"></div>
+                    <p>фундамент</p>
+                    <div class="calc__step-image"><img src="img/step-2.svg" alt=""></div></a><a class="calc__step calc--step3" href="#" js-step-button>
+                    <div class="calc__triangle"></div>
+                    <p>стены</p>
+                    <div class="calc__step-image"><img src="img/step-3.svg" alt=""></div></a><a class="calc__step calc--step4" href="#" js-step-button>
+                    <div class="calc__triangle"></div>
+                    <p>кровля</p>
+                    <div class="calc__step-image"><img src="img/step-4.svg" alt=""></div></a><a class="calc__step calc--step5" href="#" js-step-button>
+                    <div class="calc__triangle"></div>
+                    <p>готовый дом</p>
+                    <div class="calc__step-image"><img src="img/step-5.svg" alt=""></div></a></div>
+                <div class="calc__tabs">
+                  <div class="calc__tab is-active">
+                    <h2 class="calc__title">Габариты</h2>
+                    <div class="calc__step-grid">
+                      <div class="calc__step-left">
+                        <div class="calc__step-row">
+                          <p>Площадь дома, м<sup>2</sup></p>
+                          <div class="calc__range-pl">
+                            <div class="wrapper-input-range">
+                              <input type="range" name="range" min="0" step="1" max="200" value="50" data-target="#range-value" js-range>
+                              <div class="calc__pl-items">
+                                <div class="calc__pl-item">
+                                  <p>отапливаемая</p>
+                                  <p><span>50 м<sup>2</sup></span></p>
+                                </div>
+                                <div class="calc__pl-item">
+                                  <p>строительная</p>
+                                  <p><span>65 м<sup>2</sup></span></p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="wrapper-input-value form-group">
+                              <input id="range-value" type="number" name="range-value">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calc__step-row">
+                          <p>Количество этажей</p>
+                          <div class="calc__input">
+                            <div class="checkbox-container">
+                              <input id="c1" type="radio" name="radio1">
+                              <label class="label-container" for="c1"><span>1</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c2" type="radio" name="radio1">
+                              <label class="label-container" for="c2"><span>2</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calc__step-row calc__step-row--editable">
+                          <p>Наличие открытой вернады с навесом</p>
+                          <div class="calc__input">
+                            <div class="checkbox-container">
+                              <input id="c3" type="radio" name="radio2">
+                              <label class="label-container" for="c3"><span>да</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c4" type="radio" name="radio2">
+                              <label class="label-container" for="c4"><span>нет</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calc__step-row">
+                          <p>Высота потолков, м</p>
+                          <div class="calc__range-pl">
+                            <div class="wrapper-input-range">
+                              <input type="range" name="range" min="0" step="0.05" max="6" value="2.35" data-target="#range-value2" js-range>
+                            </div>
+                            <div class="wrapper-input-value form-group">
+                              <input id="range-value2" type="number" name="range-value2">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc__step-right">
+                        <div class="calc__step-image"><img src="img/step-4.png" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calc__tab calc__tab-step-2">
+                    <h2 class="calc__title">Фундамент</h2>
+                    <div class="calc__step-grid">
+                      <div class="calc__step-left">
+                        <div class="calc__step-row calc__step-row--select">
+                          <p>Тип фундамента</p>
+                          <select name="">
+                            <option value="Свайно-винтовой фундамент">Свайно-винтовой фундамент</option>
+                            <option value="Утепленная шведская плита">Утепленная шведская плита</option>
+                          </select>
+                        </div>
+                        <div class="calc__step-row calc__step-row--type">
+                          <p>Тип фундамента</p>
+                          <div class="calc__input calc__input--editable">
+                            <div class="checkbox-container">
+                              <input id="c11" type="radio" name="radio3">
+                              <label class="label-container" for="c11"><span>Свайно-винтовой фундамент</span>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c12" type="radio" name="radio3">
+                              <label class="label-container" for="c12"><span>Утепленная шведская плита</span>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calc__step-row calc__step-row--editable">
+                          <p>Форма здания</p>
+                          <div class="calc__input calc__input--form">
+                            <div class="checkbox-container checkbox-container--form">
+                              <input id="c13" type="radio" name="radio4">
+                              <label class="label-container label-container--form" for="c13">
+                                <div class="form-image g-form">
+                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 27 33.6">
+                                    <defs>
+                                      <path id="SVGID_1_" d="M0 0h27v33.6H0z"></path>
+                                    </defs>
+                                    <clippath id="SVGID_2_">
+                                      <use xlink:href="#SVGID_1_" overflow="visible"></use>
+                                    </clippath>
+                                    <path clip-path="url(#SVGID_2_)" fill="none" stroke="#231f20" stroke-width="3" stroke-miterlimit="10" d="M1.5 1.5v30.6h24v-15H12.2V1.5z"></path>
+                                  </svg>
+                                </div><span>Г-образная</span>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--form">
+                              <input id="c14" type="radio" name="radio4">
+                              <label class="label-container label-container--form" for="c14">
+                                <div class="form-image">
+                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40.3 33.6">
+                                    <defs>
+                                      <path id="SVGID_10_" d="M0 0h40.3v33.6H0z"></path>
+                                    </defs>
+                                    <clippath id="SVGID_20_">
+                                      <use xlink:href="#SVGID_10_" overflow="visible"></use>
+                                    </clippath>
+                                    <path clip-path="url(#SVGID_20_)" fill="none" stroke="#231f20" stroke-width="3" stroke-miterlimit="10" d="M38.8 1.5H1.5V14h11v18.1h15.3V14h11z"></path>
+                                  </svg>
+                                </div><span>Т-образная</span>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--form">
+                              <input id="c15" type="radio" name="radio4">
+                              <label class="label-container label-container--form" for="c15">
+                                <div class="form-image">
+                                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 47.4 33.6">
+                                    <defs>
+                                      <path id="SVGID_30_" d="M0 0h47.4v33.6H0z"></path>
+                                    </defs>
+                                    <clippath id="SVGID_40_">
+                                      <use xlink:href="#SVGID_30_" overflow="visible"></use>
+                                    </clippath>
+                                    <path clip-path="url(#SVGID_40_)" fill="none" stroke="#231f20" stroke-width="3" stroke-miterlimit="10" d="M1.5 1.5h44.4v30.6H1.5z"></path>
+                                  </svg>
+                                </div><span>Прямоугольная</span>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc__step-right">
+                        <div class="calc__step-image"><img src="img/step-4.png" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calc__tab calc__tab-step-3">
+                    <h2 class="calc__title">Стены</h2>
+                    <div class="calc__step-grid">
+                      <div class="calc__step-left calc__step-left--editable calc__step-left--out">
+                        <div class="calc__step-row calc__step-row--select">
+                          <p>Внутренняя отделка</p>
+                          <select name="">
+                            <option value="Гипсокартон">Гипсокартон</option>
+                            <option value="Без отделки">Без отделки</option>
+                            <option value="Обшивка деревом с покраской">Обшивка деревом с покраской</option>
+                          </select>
+                        </div>
+                        <div class="calc__step-row calc__step-row--type">
+                          <p>Внутренняя отделка</p>
+                          <div class="calc__input calc__input--editable">
+                            <div class="checkbox-container">
+                              <input id="c51" type="radio" name="radio8">
+                              <label class="label-container" for="c51"><span>Гипсокартон</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c52" type="radio" name="radio8">
+                              <label class="label-container" for="c52"><span>Без отделки</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c53" type="radio" name="radio8">
+                              <label class="label-container" for="c53"><span>Обшивка деревом с покраской</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calc__step-row">
+                          <p>Внешняя отделка</p>
+                          <div class="calc__step-row--out">
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c61" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c61"><img src="img/m-out-1.jpg" alt="">
+                                <p>Обрезная доска, обожженная доска</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c62" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c62"><img src="img/m-out-2.jpg" alt="">
+                                <p>Имитация бруса, планкен, пр.</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c63" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c63"><img src="img/m-out-3.jpg" alt="">
+                                <p>HAUBERK</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c64" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c64"><img src="img/m-out-4.jpg" alt="">
+                                <p>Штукатурный фасад</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c65" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c65"><img src="img/m-out-5.jpg" alt="">
+                                <p>Кирпичная  кладка</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c66" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c66"><img src="img/m-out-6.jpg" alt="">
+                                <p>Фахверк</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c67" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c67"><img src="img/m-out-7.jpg" alt="">
+                                <p>Фиброцементный сайдинг</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                            <div class="checkbox-container checkbox-container--out">
+                              <input id="c68" type="radio" name="radio9">
+                              <label class="label-container label-container--out" for="c68"><img src="img/m-out-8.jpg" alt="">
+                                <p>Виниловый  сайдинг</p>
+                                <div class="hint">
+                                  <p>?</p>
+                                  <div class="hint-info">
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet perspiciatis quas, reprehenderit natus eveniet, magni tenetur necessitatibus ipsa omnis doloribus possimus enim non quo, quis explicabo. Dolores nulla 
+                                      <bold>blanditiis assumenda.</bold>
+                                    </p><a href="http://www.google.com.ua" target="_blank">Подробнее<span class="border"></span></a>
+                                  </div>
+                                </div>
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc__step-right">
+                        <div class="calc__step-image"><img src="img/step-4.png" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calc__tab calc__tab-step-4">
+                    <h2 class="calc__title">Кровля</h2>
+                    <div class="calc__step-grid">
+                      <div class="calc__step-left calc__step-left--editable">
+                        <div class="calc__step-row calc__step-row--select">
+                          <p>Тип кровли</p>
+                          <select name="">
+                            <option value="Мансардная">Мансардная</option>
+                            <option value="Холодный чердак">Холодный чердак</option>
+                            <option value="Плоская крыша">Плоская крыша</option>
+                          </select>
+                        </div>
+                        <div class="calc__step-row calc__step-row--select">
+                          <p>Форма кровли</p>
+                          <select name="">
+                            <option value="Вальмовая">Вальмовая</option>
+                            <option value="Фронтонная">Фронтонная</option>
+                          </select>
+                        </div>
+                        <div class="calc__step-row calc__step-row--select">
+                          <p>Кровельное покрытие</p>
+                          <select name="">
+                            <option value="Рулонная черепица">Рулонная черепица</option>
+                            <option value="Финская черепица">Финская черепица</option>
+                            <option value="Многослойная черепица SHINGLAS">Многослойная черепица SHINGLAS</option>
+                            <option value="Luxard">Luxard</option>
+                          </select>
+                        </div>
+                        <div class="calc__step-row calc__step-row--type">
+                          <p>Тип кровли</p>
+                          <div class="calc__input calc__input--editable">
+                            <div class="checkbox-container">
+                              <input id="c41" type="radio" name="radio5">
+                              <label class="label-container" for="c41"><span>Мансардная</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c42" type="radio" name="radio5">
+                              <label class="label-container" for="c42"><span>Холодный чердак</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c43" type="radio" name="radio5">
+                              <label class="label-container" for="c43"><span>Плоская крыша</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calc__step-row calc__step-row--type">
+                          <p>Форма кровли</p>
+                          <div class="calc__input calc__input--editable">
+                            <div class="checkbox-container">
+                              <input id="c44" type="radio" name="radio6">
+                              <label class="label-container" for="c44"><span>Вальмовая</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c45" type="radio" name="radio6">
+                              <label class="label-container" for="c45"><span>Фронтонная</span></label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="calc__step-row calc__step-row--type">
+                          <p>Кровельное покрытие</p>
+                          <div class="calc__input calc__input--editable">
+                            <div class="checkbox-container">
+                              <input id="c46" type="radio" name="radio7">
+                              <label class="label-container" for="c46"><span>Рулонная черепица</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c47" type="radio" name="radio7">
+                              <label class="label-container" for="c47"><span>Финская черепица</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c48" type="radio" name="radio7">
+                              <label class="label-container" for="c48"><span>Многослойная черепица SHINGLAS</span></label>
+                            </div>
+                            <div class="checkbox-container">
+                              <input id="c49" type="radio" name="radio7">
+                              <label class="label-container" for="c49"><span>Luxard</span></label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc__step-button"><a class="btn" href="#" js-open-result>рассчитать стоимость</a></div>
+                      <div class="calc__step-right">
+                        <div class="calc__step-image"><img src="img/step-4.png" alt=""></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="calc__tab calc__tab-step-5">
+                    <div class="calc__step-grid">
+                      <div class="calc__step-left calc__step-left--info">
+                        <div class="calc__step-info">
+                          <h2>Габариты</h2>
+                          <div class="calc__step-info-row">
+                            <p>Площадь дома, м<sup>2</sup></p>
+                            <p>130</p>
+                          </div>
+                          <div class="calc__step-info-row">
+                            <p>Количество этажей</p>
+                            <p>2</p>
+                          </div>
+                          <div class="calc__step-info-row">
+                            <p>Высота потолков, м</p>
+                            <p>2,6</p>
+                          </div>
+                          <div class="calc__step-info-row">
+                            <p>Наличие открытой веранды</p>
+                            <p>да</p>
+                          </div>
+                        </div>
+                        <div class="calc__step-info">
+                          <h2>Фундамент</h2>
+                          <div class="calc__step-info-row">
+                            <p>Тип</p>
+                            <p>УШП</p>
+                          </div>
+                          <div class="calc__step-info-row">
+                            <p>Форма здания</p>
+                            <p>Г-образная</p>
+                          </div>
+                        </div>
+                        <div class="calc__step-info">
+                          <h2>Материалы для отделки стен</h2>
+                          <div class="calc__step-info-row">
+                            <p>Внешняя отделка</p>
+                            <p>HAUBERK</p>
+                          </div>
+                          <div class="calc__step-info-row">
+                            <p>Внутренняя отделка</p>
+                            <p>Гипсокартон</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="calc__step-right">
+                        <div class="calc__step-image"><img src="img/step-4.png" alt=""></div>
+                        <div class="calc__step-info">
+                          <h2>Кровля</h2>
+                          <div class="calc__step-info-row">
+                            <p>Тип</p>
+                            <p>мансардная</p>
+                          </div>
+                          <div class="calc__step-info-row">
+                            <p>Форма</p>
+                            <p>фронтоная</p>
+                          </div>
+                          <div class="calc__step-info-row">
+                            <p>Кровельное окрытие</p>
+                            <p>SHINGLAS</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="calc__bottom">
+                  <div class="calc__buttons"><a class="prev disable" href="#"><span class="arrow"></span><span class="info">Предыдущий шаг</span></a><a class="next open-step-2" href="#"><span class="info">Cледующий шаг</span><span class="arrow"></span></a></div>
+                  <div class="calc__price">
+                    <p>Стоимость <br>строительства:</p>
+                    <p class="price">1 500 000 р</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- BEGIN SECTION :: want-form-->
+            <section class="want-form want-form--calculator">
+              <div class="want-form__container">
+                <div class="container">
+                  <p class="want-form__title">Получить смету на ДОМ ТЕХНОНИКОЛЬ
+                    <div class="want-form__grid">
+                      <div class="input-container">
+                        <input type="text" name="name" placeholder="Имя*">
+                      </div>
+                      <div class="input-container">
+                        <input type="text" name="phone" placeholder="Телефон*">
+                      </div>
+                      <div class="input-container">
+                        <input type="text" name="mail" placeholder="Электронная почта">
+                      </div>
+                      <div class="input-container">
+                        <input class="btn" type="submit" value="получить смету">
+                      </div>
+                    </div>
+                    <p class="want-form__personal">Отправляя данную форму, я даю  <a href="#"> согласие на обработку персональных данных</a></p>
+                  </p>
+                </div>
+              </div>
+            </section>
+            <!-- END SECTION :: want-form-->
+          </form>
+          <!-- END SECTION :: calculator-->
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__grid">
+                <div class="footer__left">
+                  <div class="footer__logo"><a href="#"><img src="img/logo-footer.svg" alt=""></a></div><a class="footer__phone" href="tel:+88001001631">8 800 100 16 31</a>
+                  <p>Ежедневно с 8:00 до 20:00</p><a class="footer__map" href="https://yandex.ru/maps/-/CBBdfAAQsA" target="_blank"> <span>Москва, ул. Гиляровского, д, 47, стр. 5</span></a>
+                </div>
+                <div class="footer__menu">
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">о проекте</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">технологии</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">наши дома</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">подрядчики</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">блог</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">контакты</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__polit">
+                <p>© 2017 ДОМ ТЕХНОНИКОЛЬ</p><a href="#"><span>Политика обработки персональных данных</span></a>
+              </div><a class="footer__minisol" href="#">Разработка сайта - MINISOL</a>
+            </div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In  -->
+<svg version="1.1"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:a="http://ns.adobe.com/AdobeSVGViewerExtensions/3.0/"
+	 x="0px" y="0px" width="47.8px" height="45.5px" viewBox="0 0 47.8 45.5" style="enable-background:new 0 0 47.8 45.5;"
+	 xml:space="preserve">
+<style type="text/css">
+	
+		.st0{clip-path:url(#SVGID_2_);fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	
+		.st2{clip-path:url(#SVGID_4_);fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	
+		.st3{clip-path:url(#SVGID_6_);fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	
+		.st4{clip-path:url(#SVGID_8_);fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	
+		.st5{clip-path:url(#SVGID_10_);fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	
+		.st6{clip-path:url(#SVGID_12_);fill:none;stroke:#FFFFFF;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<defs>
+</defs>
+<g>
+	<defs>
+		<rect id="SVGID_1_" x="0" width="47.8" height="45.5"/>
+	</defs>
+	<clipPath id="SVGID_2_">
+		<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+	</clipPath>
+	<polygon class="st0" points="0.8,16.6 9.4,21.2 41.7,5.3 32.8,0.8 	"/>
+	<polygon class="st0" points="6.2,40.1 14.8,44.7 47.1,28.8 38.2,24.3 	"/>
+	<polyline class="st0" points="0.8,16.6 0.8,20.4 9.1,25.1 41.8,9 41.8,5.3 	"/>
+</g>
+<line class="st1" x1="9.4" y1="21.2" x2="9.4" y2="24.3"/>
+<g>
+	<defs>
+		<rect id="SVGID_3_" x="0" width="47.8" height="45.5"/>
+	</defs>
+	<clipPath id="SVGID_4_">
+		<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+	</clipPath>
+	<polyline class="st2" points="0.8,20.2 0.8,23.9 9.1,28.7 41.8,12.5 41.8,8.9 	"/>
+</g>
+<line class="st1" x1="9.4" y1="24.7" x2="9.4" y2="27.8"/>
+<g>
+	<defs>
+		<rect id="SVGID_5_" x="0" width="47.8" height="45.5"/>
+	</defs>
+	<clipPath id="SVGID_6_">
+		<use xlink:href="#SVGID_5_"  style="overflow:visible;"/>
+	</clipPath>
+	<polyline class="st3" points="0.8,23.7 0.8,27.5 9.1,32.2 41.8,16 41.8,12.4 	"/>
+</g>
+<line class="st1" x1="9.4" y1="28.3" x2="9.4" y2="31.4"/>
+<polyline class="st1" points="23.8,5.6 31.3,10.2 31.3,21.1 "/>
+<line class="st1" x1="34.4" y1="31.8" x2="37" y2="33.5"/>
+<line class="st1" x1="22.9" y1="37.4" x2="25.5" y2="39.1"/>
+<polygon class="st1" points="6.6,16.4 9.5,18.1 14,15.9 11.1,14.3 "/>
+</svg>

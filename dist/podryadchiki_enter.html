@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Technonicol</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- place where pjax bindings happen's-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header" data-aos="fade-down">
+        <div class="container">
+          <div class="header__wrapper"><a class="header__logotype" href="/homepage.html"><img src="img/logo-footer.svg" alt=""></a><a class="header__calc" href="#"><img src="img/calculator-2.svg" alt=""><span>калькулятор</span></a>
+            <div class="header__menu">
+              <div class="header__item"><a href="#">о нас </a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">технологии</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">наши дома</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">подрядчики</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/blog-all.html">блог</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/contacts.html">контакты</a></div>
+              <div class="header__item"><a class="phone" href="#">8 800 100 16 31</a></div>
+            </div><a class="header__tehno" href="#"><img src="img/tehnonikol.svg" alt=""></a>
+            <div class="hamburger hamburger--slider" js-hamburger>
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- what should be changed with every pjax-->
+      <div class="page">
+        <div class="page__content">
+          <!-- BEGIN SECTION :: head-->
+          <div class="head">
+            <div class="container container--typical">
+              <h2>Вход в личный кабинет</h2>
+              <p class="head__p-enter">Если вы еще не зарегистированы как подрядчик, то можете это сделать <a href="#">здесь</a></p>
+            </div>
+          </div>
+          <!-- END SECTION :: head-->
+          <!-- BEGIN SECTION :: podryad-enter-->
+          <section class="p-enter">
+            <div class="container container--typical">
+              <form class="js-form-enter" action="#">
+                <div class="input-container">
+                  <input type="text" name="login" placeholder="Логин">
+                </div>
+                <div class="input-container">
+                  <input type="text" name="pass" placeholder="Пароль">
+                </div><a href="#"> Забыли пароль?</a>
+                <input class="btn" type="submit" value="войти">
+              </form>
+            </div>
+          </section>
+          <!-- END SECTION :: podryad-enter-->
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__grid">
+                <div class="footer__left">
+                  <div class="footer__logo"><a href="#"><img src="img/logo-footer.svg" alt=""></a></div><a class="footer__phone" href="tel:+88001001631">8 800 100 16 31</a>
+                  <p>Ежедневно с 8:00 до 20:00</p><a class="footer__map" href="https://yandex.ru/maps/-/CBBdfAAQsA" target="_blank"> <span>Москва, ул. Гиляровского, д, 47, стр. 5</span></a>
+                </div>
+                <div class="footer__menu">
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">о проекте</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">технологии</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">наши дома</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">подрядчики</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">блог</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">контакты</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__polit">
+                <p>© 2017 ДОМ ТЕХНОНИКОЛЬ</p><a href="#"><span>Политика обработки персональных данных</span></a>
+              </div><a class="footer__minisol" href="#">Разработка сайта - MINISOL</a>
+            </div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>

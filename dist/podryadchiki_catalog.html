@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>DOM Technonicol</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#fff">
+    <meta name="format-detection" content="telephone=no">
+    <!-- remove for production-->
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/png" href="img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" media="all" href="css/app.css"><!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <!-- place where pjax bindings happen's-->
+    <div id="barba-wrapper">
+      <!-- HEADER :: START-->
+      <header class="header" data-aos="fade-down">
+        <div class="container">
+          <div class="header__wrapper"><a class="header__logotype" href="/homepage.html"><img src="img/logo-footer.svg" alt=""></a><a class="header__calc" href="#"><img src="img/calculator-2.svg" alt=""><span>калькулятор</span></a>
+            <div class="header__menu">
+              <div class="header__item"><a href="#">о нас </a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">технологии</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">наши дома</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="#">подрядчики</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/blog-all.html">блог</a>
+                <div class="header__drop">
+                  <div class="header__drop-container"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                </div>
+              </div>
+              <div class="header__item"><a href="/contacts.html">контакты</a></div>
+              <div class="header__item"><a class="phone" href="#">8 800 100 16 31</a></div>
+            </div><a class="header__tehno" href="#"><img src="img/tehnonikol.svg" alt=""></a>
+            <div class="hamburger hamburger--slider" js-hamburger>
+              <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- HEADER :: END-->
+      <!-- what should be changed with every pjax-->
+      <div class="page">
+        <div class="page__content">
+          <!-- BEGIN SECTION :: head-->
+          <div class="head">
+            <div class="container container--typical">
+              <h2>Подрядчики</h2>
+            </div>
+          </div>
+          <!-- END SECTION :: head-->
+          <!-- BEGIN SECTION :: filter-->
+          <section>
+            <form action="#">
+              <div class="filter">
+                <div class="container container--typical">
+                  <div class="filter__grid">
+                    <div class="filter__item">
+                      <p>Регион строительства</p>
+                      <select name="">
+                        <option value="Московская область">Московская область</option>
+                        <option value="Омская область">Омская область</option>
+                        <option value="Калининградская область">Калининградская область</option>
+                      </select>
+                    </div>
+                    <div class="filter__item">
+                      <p>Сортировка</p>
+                      <select name="">
+                        <option value="По рейтингу и стоимости">По рейтингу и стоимости</option>
+                        <option class="down-arrow" value="Рейтинг">Рейтинг</option>
+                        <option class="top-arrow" value="Стоимость вверх">Стоимость</option>
+                        <option class="down-arrow" value="Стоимость вниз">Стоимость</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container container--typical">
+                <div class="filter__items">
+                  <div class="filter__p-item">
+                    <div class="filter__image"><img src="img/logo-1.png" alt=""></div>
+                    <div class="filter__info">
+                      <div class="filter__head"><a class="filter__name" href="#">терем</a><a class="filter__rate" href="#"><img src="img/star.svg" alt=""><span>9,5</span></a></div>
+                      <div class="filter__info-body">
+                        <div class="filter__info-grid">
+                          <div class="filter__row">
+                            <p class="filter__regular">Регион строительства: </p>
+                            <p class="filter__bold">Московская Область</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Количество бригад:</p>
+                            <p class="filter__bold">5 бригад</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Готовых объектов:</p>
+                            <p class="filter__bold">21</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стаж в строительстве:</p>
+                            <p class="filter__bold">10 лет</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стадия  <span>BASIS: </span></p>
+                            <p class="filter__bold"><span> от 24 586 Р/м2</span></p>
+                          </div>
+                        </div>
+                        <div class="filter__line"></div>
+                        <div class="filter__bottom">
+                          <div class="filter__bottom-links"><a class="filter__link" href="#"><img src="img/video.svg" alt=""><span>Видеотрансляция</span></a><a class="filter__link" href="#"><img src="img/gift.svg" alt=""><span>Акции</span></a></div><a class="filter__more">Подробнее<span> </span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__p-item">
+                    <div class="filter__image"><img src="img/logo-2.png" alt=""></div>
+                    <div class="filter__info">
+                      <div class="filter__head"><a class="filter__name" href="#">ИМПЕРИЯ</a><a class="filter__rate" href="#"><img src="img/star.svg" alt=""><span>9,5</span></a></div>
+                      <div class="filter__info-body">
+                        <div class="filter__info-grid">
+                          <div class="filter__row">
+                            <p class="filter__regular">Регион строительства: </p>
+                            <p class="filter__bold">Московская Область</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Количество бригад:</p>
+                            <p class="filter__bold">5 бригад</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Готовых объектов:</p>
+                            <p class="filter__bold">21</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стаж в строительстве:</p>
+                            <p class="filter__bold">10 лет</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стадия  <span>BASIS: </span></p>
+                            <p class="filter__bold"><span> от 24 586 Р/м2</span></p>
+                          </div>
+                        </div>
+                        <div class="filter__line"></div>
+                        <div class="filter__bottom">
+                          <div class="filter__bottom-links"><a class="filter__link" href="#"><img src="img/gift.svg" alt=""><span>Акции</span></a></div><a class="filter__more">Подробнее<span> </span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__p-item">
+                    <div class="filter__image"><img src="img/logo-3.png" alt=""></div>
+                    <div class="filter__info">
+                      <div class="filter__head"><a class="filter__name" href="#">Мастер</a><a class="filter__rate" href="#"><img src="img/star.svg" alt=""><span>9,5</span></a></div>
+                      <div class="filter__info-body">
+                        <div class="filter__info-grid">
+                          <div class="filter__row">
+                            <p class="filter__regular">Регион строительства: </p>
+                            <p class="filter__bold">Московская Область</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Количество бригад:</p>
+                            <p class="filter__bold">5 бригад</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Готовых объектов:</p>
+                            <p class="filter__bold">21</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стаж в строительстве:</p>
+                            <p class="filter__bold">10 лет</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стадия  <span>BASIS: </span></p>
+                            <p class="filter__bold"><span> от 24 586 Р/м2</span></p>
+                          </div>
+                        </div>
+                        <div class="filter__line"></div>
+                        <div class="filter__bottom"><a class="filter__more">Подробнее<span> </span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__p-item">
+                    <div class="filter__image"><img src="img/logo-1.png" alt=""></div>
+                    <div class="filter__info">
+                      <div class="filter__head"><a class="filter__name" href="#">терем</a><a class="filter__rate" href="#"><img src="img/star.svg" alt=""><span>9,5</span></a></div>
+                      <div class="filter__info-body">
+                        <div class="filter__info-grid">
+                          <div class="filter__row">
+                            <p class="filter__regular">Регион строительства: </p>
+                            <p class="filter__bold">Московская Область</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Количество бригад:</p>
+                            <p class="filter__bold">5 бригад</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Готовых объектов:</p>
+                            <p class="filter__bold">21</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стаж в строительстве:</p>
+                            <p class="filter__bold">10 лет</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стадия  <span>BASIS: </span></p>
+                            <p class="filter__bold"><span> от 24 586 Р/м2</span></p>
+                          </div>
+                        </div>
+                        <div class="filter__line"></div>
+                        <div class="filter__bottom">
+                          <div class="filter__bottom-links"><a class="filter__link" href="#"><img src="img/video.svg" alt=""><span>Видеотрансляция</span></a><a class="filter__link" href="#"><img src="img/gift.svg" alt=""><span>Акции</span></a></div><a class="filter__more">Подробнее<span> </span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__p-item">
+                    <div class="filter__image"><img src="img/logo-2.png" alt=""></div>
+                    <div class="filter__info">
+                      <div class="filter__head"><a class="filter__name" href="#">ИМПЕРИЯ</a><a class="filter__rate" href="#"><img src="img/star.svg" alt=""><span>9,5</span></a></div>
+                      <div class="filter__info-body">
+                        <div class="filter__info-grid">
+                          <div class="filter__row">
+                            <p class="filter__regular">Регион строительства: </p>
+                            <p class="filter__bold">Московская Область</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Количество бригад:</p>
+                            <p class="filter__bold">5 бригад</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Готовых объектов:</p>
+                            <p class="filter__bold">21</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стаж в строительстве:</p>
+                            <p class="filter__bold">10 лет</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стадия  <span>BASIS: </span></p>
+                            <p class="filter__bold"><span> от 24 586 Р/м2</span></p>
+                          </div>
+                        </div>
+                        <div class="filter__line"></div>
+                        <div class="filter__bottom">
+                          <div class="filter__bottom-links"><a class="filter__link" href="#"><img src="img/gift.svg" alt=""><span>Акции</span></a></div><a class="filter__more">Подробнее<span> </span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter__p-item">
+                    <div class="filter__image"><img src="img/logo-3.png" alt=""></div>
+                    <div class="filter__info">
+                      <div class="filter__head"><a class="filter__name" href="#">Мастер</a><a class="filter__rate" href="#"><img src="img/star.svg" alt=""><span>9,5</span></a></div>
+                      <div class="filter__info-body">
+                        <div class="filter__info-grid">
+                          <div class="filter__row">
+                            <p class="filter__regular">Регион строительства: </p>
+                            <p class="filter__bold">Московская Область</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Количество бригад:</p>
+                            <p class="filter__bold">5 бригад</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Готовых объектов:</p>
+                            <p class="filter__bold">21</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стаж в строительстве:</p>
+                            <p class="filter__bold">10 лет</p>
+                          </div>
+                          <div class="filter__row">
+                            <p class="filter__regular">Стадия  <span>BASIS: </span></p>
+                            <p class="filter__bold"><span> от 24 586 Р/м2</span></p>
+                          </div>
+                        </div>
+                        <div class="filter__line"></div>
+                        <div class="filter__bottom"><a class="filter__more">Подробнее<span> </span></a></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pagination"><a class="prev" href="#"><span class="arrow"></span><span class="info">предыдущая</span></a>
+                    <div class="pagination__list"><a class="pagination__item is-active" href="#">1</a><a class="pagination__item" href="#">2</a><a class="pagination__item" href="#">3</a><a class="pagination__item" href="#">4</a><a class="pagination__item" href="#">5</a><a class="pagination__item" href="#">...</a><a class="pagination__item" href="#">10</a></div><a class="next" href="#"><span class="info">следующая</span><span class="arrow"></span></a>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </section>
+          <!-- END SECTION :: filter-->
+          <!-- BEGIN SECTION :: p-sert-->
+          <section class="p-sert">
+            <div class="container container--typical">
+              <p class="p-sert__title">Сертификация</p>
+              <div class="p-sert__grid">
+                <div class="p-sert__image"><img src="img/sert.jpg" alt=""></div>
+                <div class="p-sert__info">
+                  <p>Все наши подрядчики проходят обучение в корпорации ТехноНИКОЛЬ и сертифицируются согласно стандартам технологии ДОМ ТЕХНОНИКОЛЬ.</p>
+                  <p>Стандартизация технологии строительства снижает человеческий фактор и возможность ошибки и обеспечивает заранее прогнозируемый результат построенного дома высокого качества.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: p-sert-->
+          <!-- BEGIN SECTION :: p-system-->
+          <section class="p-system">
+            <div class="container container--typical">
+              <p class="p-sert__title">Рейтинговая система</p>
+              <div class="p-system__grid">
+                <div class="p-system__image"><img src="img/star2.svg" alt=""></div>
+                <div class="p-system__info">
+                  <p>Рейтинговая система — удобный и прозрачный инструмент выбора исполнителя из перечня обученных  подрядчиков на основе их работы в системе. У каждого подрядчика есть возможность иметь рейтинг в  виде 0-10,0 звёзд.</p>
+                  <p>Рейтинг зависит от :</p>
+                </div>
+              </div>
+              <div class="p-system__item">
+                <div class="p-system__item-image"><img src="img/p-system-1.svg" alt=""></div>
+                <div class="p-system__item-info">
+                  <p>Отзывов клиентов</p>
+                </div>
+              </div>
+              <div class="p-system__item">
+                <div class="p-system__item-image"><img src="img/p-system-2.svg" alt=""></div>
+                <div class="p-system__item-info">
+                  <p>Количества реализованных проектов</p>
+                </div>
+              </div>
+              <div class="p-system__item">
+                <div class="p-system__item-image"><img src="img/p-system-3.svg" alt=""></div>
+                <div class="p-system__item-info">
+                  <p>Соответствия всем стандартам ДОМА ТЕХНОНИКОЛЬ и своевременного  выполнения замечаний и рекомендаций технадзора</p>
+                </div>
+              </div>
+              <div class="p-system__item">
+                <div class="p-system__item-image"><img src="img/p-system-4.svg" alt=""></div>
+                <div class="p-system__item-info">
+                  <p>Выполнения сроков и отсутствие нарушений</p>
+                </div>
+              </div>
+              <div class="p-system__item">
+                <div class="p-system__item-image"><img src="img/p-system-5.svg" alt=""><img src="img/p-system-6.svg" alt=""></div>
+                <div class="p-system__item-info">
+                  <p>Наличия объектов с видеотрансляцией и возможностью посещения</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- END SECTION :: p-system-->
+          <!-- BEGIN SECTION :: podryadchikom-->
+          <section class="be">
+            <div class="container container--typical">
+              <p class="be__title">Стать подрядчиком</p>
+              <p class="be__info">Если вы строительная компания или частная бригада и хотите строить комфортные современные дома — приглашаем вас стать нашим партнёром!</p>
+              <p class="be__info"> <span>ДОМ ТЕХНОНИКОЛЬ  </span> — это каркасные дома для всесезонного проживания. Технология их возведения основывается на передовом мировом опыте.</p>
+              <p class="be__sub-title">Преимущества для наших партнёров</p>
+              <div class="be__list">
+                <p><span>Кобрендинг с ТЕХНОНИКОЛЬ.  </span>ТЕХНОНИКОЛЬ — один из крупнейших международных производителей надежных и эффективных строительных материалов. Корпорация предоставляет информационную, логистическую и маркетинговую поддержку, а также специальные цены на материалы для возводимых объектов.</p>
+                <p><span>Простая и понятная система строительства современных домов. </span> Система строительных стандартов ДОМ ТЕХНОНИКОЛЬ основывается на передовом мировом опыте каркасного домостроения. Строить по нашим стандартам быстро и просто. Наши дома могут иметь почти любую архитектуру и решения для фасадов, отличаются высокой энергоэффективностью и показателями комфорта.</p>
+                <p><span>Подробная программа обучения. </span> Все строительные партнеры ТЕХНОНИКОЛЬ проходят обязательную программу обучения, в ходе которой изучают конструктивные решения в рамках Стандартов.</p>
+                <p><span>Техническая поддержка </span> при строительстве. Если у вас возникнут сложности или вопросы по возведению дома — мы проконсультируем вас по телефону или видеосвязи. Также возможен выезд инженера на площадку.</p>
+              </div>
+              <div class="be__buttons"><a class="btn btn--red" href="#">регистрация</a><a class="btn btn--transparent" href="#">личный кабинет</a></div>
+            </div>
+          </section>
+          <!-- END SECTION :: podryadchikom-->
+        </div>
+        <!-- FOOTER :: START-->
+        <footer class="footer">
+          <div class="container">
+            <div class="footer__wrapper">
+              <div class="footer__grid">
+                <div class="footer__left">
+                  <div class="footer__logo"><a href="#"><img src="img/logo-footer.svg" alt=""></a></div><a class="footer__phone" href="tel:+88001001631">8 800 100 16 31</a>
+                  <p>Ежедневно с 8:00 до 20:00</p><a class="footer__map" href="https://yandex.ru/maps/-/CBBdfAAQsA" target="_blank"> <span>Москва, ул. Гиляровского, д, 47, стр. 5</span></a>
+                </div>
+                <div class="footer__menu">
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">о проекте</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">описание</a><a href="#">преимущества</a><a href="#">схема работы</a><a href="#">партнерам</a><a href="#">награды</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">технологии</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каркасные дома</a><a href="#">дом тн</a><a href="#">энергоэффективность</a><a href="#">материалы</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">наши дома</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">Типовые проекты</a><a href="#">строящиеся дома</a><a href="#">готовые дома</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">подрядчики</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">каталог</a><a href="#">сертификация</a><a href="#">стать подрядчиком</a><a href="#">личный кабинет</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">блог</a><a class="open-drop" href="#" js-open-drop>+</a></div>
+                    <div class="footer__drop"><a href="#">сми о нас</a><a href="#">полезные статьи</a><a href="#">faq</a><a href="#">видео</a></div>
+                  </div>
+                  <div class="footer__item">
+                    <div class="footer__item-head"><a href="#">контакты</a></div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__polit">
+                <p>© 2017 ДОМ ТЕХНОНИКОЛЬ</p><a href="#"><span>Политика обработки персональных данных</span></a>
+              </div><a class="footer__minisol" href="#">Разработка сайта - MINISOL</a>
+            </div>
+          </div>
+        </footer>
+        <!-- FOOTER :: END-->
+      </div>
+      <script src="js/vendor.js"></script>
+      <script src="js/app.js"></script>
+    </div>
+  </body>
+</html>
