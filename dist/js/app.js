@@ -814,126 +814,126 @@ $(document).ready(function() {
   // BARBA PJAX
   //////////
 
-  Barba.Pjax.Dom.containerClass = "page";
+  // Barba.Pjax.Dom.containerClass = "page";
 
-  var OverlayTransition = Barba.BaseTransition.extend({
-    start: function() {
-      Promise.all([this.newContainerLoading, this.fadeOut()]).then(
-        this.fadeIn.bind(this)
-      );
-    },
+  // var OverlayTransition = Barba.BaseTransition.extend({
+  //   start: function() {
+  //     Promise.all([this.newContainerLoading, this.fadeOut()]).then(
+  //       this.fadeIn.bind(this)
+  //     );
+  //   },
 
-    fadeOut: function() {
-      var deferred = Barba.Utils.deferred();
+  //   fadeOut: function() {
+  //     var deferred = Barba.Utils.deferred();
 
-      // store overlay globally to access in fadein
-      this.$overlay = $('<div class="js-transition-overlay"></div>');
-      this.$overlay.insertAfter(".header");
-      $("body").addClass("is-transitioning");
+  //     // store overlay globally to access in fadein
+  //     this.$overlay = $('<div class="js-transition-overlay"></div>');
+  //     this.$overlay.insertAfter(".header");
+  //     $("body").addClass("is-transitioning");
 
-      TweenLite.fromTo(
-        this.$overlay,
-        0.6,
-        {
-          x: "0%"
-        },
-        {
-          x: "100%",
-          ease: Quart.easeIn,
-          onComplete: function() {
-            deferred.resolve();
-          }
-        }
-      );
+  //     TweenLite.fromTo(
+  //       this.$overlay,
+  //       0.6,
+  //       {
+  //         x: "0%"
+  //       },
+  //       {
+  //         x: "100%",
+  //         ease: Quart.easeIn,
+  //         onComplete: function() {
+  //           deferred.resolve();
+  //         }
+  //       }
+  //     );
 
-      return deferred.promise;
-    },
+  //     return deferred.promise;
+  //   },
 
-    fadeIn: function() {
-      var _this = this; // copy to acces inside animation callbacks
-      var $el = $(this.newContainer);
+  //   fadeIn: function() {
+  //     var _this = this; // copy to acces inside animation callbacks
+  //     var $el = $(this.newContainer);
 
-      $(this.oldContainer).hide();
+  //     $(this.oldContainer).hide();
 
-      $el.css({
-        visibility: "visible"
-      });
+  //     $el.css({
+  //       visibility: "visible"
+  //     });
 
-      TweenLite.to(window, 0.2, {
-        scrollTo: 1,
-        ease: easingSwing
-      });
+  //     TweenLite.to(window, 0.2, {
+  //       scrollTo: 1,
+  //       ease: easingSwing
+  //     });
 
-      AOS.refreshHard();
+  //     AOS.refreshHard();
 
-      // TweenLite.set(this.$overlay, {
-      //   rotation: 0.01,
-      //   force3D: true
-      // });
+  //     // TweenLite.set(this.$overlay, {
+  //     //   rotation: 0.01,
+  //     //   force3D: true
+  //     // });
 
-      TweenLite.fromTo(
-        this.$overlay,
-        1,
-        {
-          x: "100%",
-          overwrite: "all"
-        },
-        {
-          x: "200%",
-          ease: Expo.easeOut,
-          delay: 0.2,
-          onComplete: function() {
-            _this.$overlay.remove();
-            triggerBody();
-            $("body").removeClass("is-transitioning");
-            _this.done();
-          }
-        }
-      );
-    }
-  });
+  //     TweenLite.fromTo(
+  //       this.$overlay,
+  //       1,
+  //       {
+  //         x: "100%",
+  //         overwrite: "all"
+  //       },
+  //       {
+  //         x: "200%",
+  //         ease: Expo.easeOut,
+  //         delay: 0.2,
+  //         onComplete: function() {
+  //           _this.$overlay.remove();
+  //           triggerBody();
+  //           $("body").removeClass("is-transitioning");
+  //           _this.done();
+  //         }
+  //       }
+  //     );
+  //   }
+  // });
 
-  // set barba transition
-  Barba.Pjax.getTransition = function() {
-    // return FadeTransition;
-    return OverlayTransition;
-  };
+  // // set barba transition
+  // Barba.Pjax.getTransition = function() {
+  //   // return FadeTransition;
+  //   return OverlayTransition;
+  // };
 
-  Barba.Prefetch.init();
-  Barba.Pjax.start();
+  // Barba.Prefetch.init();
+  // Barba.Pjax.start();
 
-  // event handlers
-  Barba.Dispatcher.on("linkClicked", function(el) {
-    lastClickEl = el; // save last click to detect transition type
-  });
+  // // event handlers
+  // Barba.Dispatcher.on("linkClicked", function(el) {
+  //   lastClickEl = el; // save last click to detect transition type
+  // });
 
-  Barba.Dispatcher.on("initStateChange", function(currentStatus) {
-    var container = Barba.Pjax.Dom.getContainer();
-    var haveContainer = $(container).find(".page__content").length > 0;
+  // Barba.Dispatcher.on("initStateChange", function(currentStatus) {
+  //   var container = Barba.Pjax.Dom.getContainer();
+  //   var haveContainer = $(container).find(".page__content").length > 0;
 
-    if (!haveContainer) {
-      // handle error - redirect ot page regular way
-      window.location.href = currentStatus.url;
-    }
-  });
+  //   if (!haveContainer) {
+  //     // handle error - redirect ot page regular way
+  //     window.location.href = currentStatus.url;
+  //   }
+  // });
 
-  Barba.Dispatcher.on("newPageReady", function(
-    currentStatus,
-    oldStatus,
-    container,
-    newPageRawHTML
-  ) {
-    pageReady();
-  });
+  // Barba.Dispatcher.on("newPageReady", function(
+  //   currentStatus,
+  //   oldStatus,
+  //   container,
+  //   newPageRawHTML
+  // ) {
+  //   pageReady();
+  // });
 
-  Barba.Dispatcher.on("transitionCompleted", function() {
-    // getPaginationSections();
-    // pagination();
+  // Barba.Dispatcher.on("transitionCompleted", function() {
+  //   // getPaginationSections();
+  //   // pagination();
 
-    if ($(lastClickEl).data("section")) {
-      scrollToSection($($(lastClickEl).attr("href")));
-    }
-  });
+  //   if ($(lastClickEl).data("section")) {
+  //     scrollToSection($($(lastClickEl).attr("href")));
+  //   }
+  // });
 
   // some plugins get bindings onNewPage only that way
   function triggerBody() {
