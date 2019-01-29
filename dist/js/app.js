@@ -56,33 +56,33 @@ $(document).ready(function() {
 
   // Prevent # behavior
   _document
-    .on("click", '[href="#"]', function(e) {
-      e.preventDefault();
-    })
-    .on("click", "a[href]", function(e) {
-      if (Barba.Pjax.transitionProgress) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
+    // .on("click", '[href="#"]', function(e) {
+    //   e.preventDefault();
+    // })
+    // .on("click", "a[href]", function(e) {
+    //   // if (Barba.Pjax.transitionProgress) {
+    //   //   e.preventDefault();
+    //   //   e.stopPropagation();
+    //   // }
 
-      if (e.currentTarget.href === window.location.href) {
-        e.preventDefault();
-        e.stopPropagation();
-      }
-    })
-    .on("click", 'a[href^="#section"]', function(e) {
-      // section scroll
-      var el = $(this).attr("href");
+    //   if (e.currentTarget.href === window.location.href) {
+    //     e.preventDefault();
+    //     e.stopPropagation();
+    //   }
+    // })
+    // .on("click", 'a[href^="#section"]', function(e) {
+    //   // section scroll
+    //   var el = $(this).attr("href");
 
-      if ($(el).length === 0) {
-        lastClickEl = $(this).get(0);
-        Barba.Pjax.goTo($(".header__logo").attr("href"));
-      } else {
-        scrollToSection($(el));
-      }
+    //   if ($(el).length === 0) {
+    //     lastClickEl = $(this).get(0);
+    //     Barba.Pjax.goTo($(".header__logo").attr("href"));
+    //   } else {
+    //     scrollToSection($(el));
+    //   }
 
-      return false;
-    })
+    //   return false;
+    // })
     // .on("click", "[js-open-g-tab]", function(e) {
     //   e.preventDefault();
     //   var $self = $(this),
