@@ -43,3 +43,5 @@ PageList:
   ready: 40
 - file: calculator.html
   ready: 20
+- file: about.html
+  ready: 20

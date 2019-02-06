@@ -130,26 +130,6 @@ $(document).ready(function() {
         .slideToggle();
     })
 
-    .on("click", "[js-p-map-btn]", function(e) {
-      e.preventDefault();
-      var $self = $(this),
-        tabIndex = $self.index();
-      $self.siblings().removeClass("is-active");
-      $(".podr-map__detail-proccess").removeClass("is-active");
-      $(".podr-map__detail-ready").removeClass("is-active");
-      $self.addClass("is-active");
-      $(".podr-map__tab")
-        .removeClass("is-active")
-        .css("display", "none")
-        .eq(tabIndex)
-        .fadeIn();
-      $(".podr-map__head-tab")
-        .removeClass("is-active")
-        .css("display", "none")
-        .eq(tabIndex)
-        .fadeIn();
-    })
-
     .on("click", "[js-general-view-btn]", function(e) {
       e.preventDefault();
       $(".general__view-item").removeClass("is-active");
